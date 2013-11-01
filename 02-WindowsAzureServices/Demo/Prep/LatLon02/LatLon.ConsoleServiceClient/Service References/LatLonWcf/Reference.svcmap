@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8000/LatLon" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:1767/LatLonUtilitiesService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="LatLonUtilitiesService.wsdl" MetadataType="Wsdl" ID="67a62309-a69d-4adb-b28b-33c41d12a10a" SourceId="1" SourceUrl="http://localhost:8000/LatLon?wsdl" />
-    <MetadataFile FileName="LatLon.disco" MetadataType="Disco" ID="6a3ea411-b912-4f2e-bef2-b171216ff8b9" SourceId="1" SourceUrl="http://localhost:8000/LatLon?disco" />
-    <MetadataFile FileName="LatLon.xsd" MetadataType="Schema" ID="b6eb8e7d-89d1-44b0-81b6-650683a77ed3" SourceId="1" SourceUrl="http://localhost:8000/LatLon?xsd=xsd0" />
-    <MetadataFile FileName="LatLon.wsdl" MetadataType="Wsdl" ID="81291963-55f8-447d-84e2-e47024be6b64" SourceId="1" SourceUrl="http://localhost:8000/LatLon?wsdl=wsdl0" />
-    <MetadataFile FileName="LatLon1.xsd" MetadataType="Schema" ID="ff828a57-252f-4a77-9761-b67378652984" SourceId="1" SourceUrl="http://localhost:8000/LatLon?xsd=xsd1" />
+    <MetadataFile FileName="LatLonUtilitiesService.xsd" MetadataType="Schema" ID="f1addc87-fa9e-4918-9fa3-901f1b555da5" SourceId="1" SourceUrl="http://localhost:1767/LatLonUtilitiesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LatLonUtilitiesService.disco" MetadataType="Disco" ID="c1c795be-b839-42f4-9083-7266f7502491" SourceId="1" SourceUrl="http://localhost:1767/LatLonUtilitiesService.svc?disco" />
+    <MetadataFile FileName="LatLonUtilitiesService1.wsdl" MetadataType="Wsdl" ID="68742089-2c9d-4f87-9711-2fd831fdaaab" SourceId="1" SourceUrl="http://localhost:1767/LatLonUtilitiesService.svc?wsdl" />
+    <MetadataFile FileName="LatLonUtilitiesService11.wsdl" MetadataType="Wsdl" ID="c3f8a8d3-4835-43d9-acf2-2c306f4645b3" SourceId="1" SourceUrl="http://localhost:1767/LatLonUtilitiesService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="LatLonUtilitiesService1.xsd" MetadataType="Schema" ID="dd882da4-d51b-42ee-9bd3-afcc05e5a509" SourceId="1" SourceUrl="http://localhost:1767/LatLonUtilitiesService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

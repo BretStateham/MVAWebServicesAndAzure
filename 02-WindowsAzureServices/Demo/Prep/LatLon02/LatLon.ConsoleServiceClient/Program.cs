@@ -24,16 +24,23 @@ namespace LatLon.ConsoleServiceClient
       double latWork = 32.87611182572401; //N 32° 52' 34.0026"
       double lonWork = -117.20739752054214; //W 117° 12' 26.6292"
 
-      LatLonUtilitiesServiceClient svc = new LatLonUtilitiesServiceClient();
+      try
+      {
+        LatLonUtilitiesServiceClient svc = new LatLonUtilitiesServiceClient();
 
-      Console.WriteLine("Service Client:");
-      Console.WriteLine("Home: {0}, {1}", latHome, lonHome);
-      Console.WriteLine("Work: {0}, {1}", latWork, lonWork);
-      Console.WriteLine("Distance (Rads): {0}", svc.RadiansBetweenToPoints(latHome, lonHome, latWork, lonWork));
-      Console.WriteLine("Distance (NM):   {0}", svc.NauticalMilesBetweenToPoints(latHome, lonHome, latWork, lonWork));
-      Console.WriteLine("Distance (KM):   {0}", svc.KilometersBetweenToPoints(latHome, lonHome, latWork, lonWork));
-      Console.WriteLine("Distance (MI):   {0}", svc.MilesBetweenToPoints(latHome, lonHome, latWork, lonWork));
+        Console.WriteLine("Service Client:");
+        Console.WriteLine("Home: {0}, {1}", latHome, lonHome);
+        Console.WriteLine("Work: {0}, {1}", latWork, lonWork);
+        Console.WriteLine("Distance (Rads): {0}", svc.RadiansBetweenToPoints(latHome, lonHome, latWork, lonWork));
+        Console.WriteLine("Distance (NM):   {0}", svc.NauticalMilesBetweenToPoints(latHome, lonHome, latWork, lonWork));
+        Console.WriteLine("Distance (KM):   {0}", svc.KilometersBetweenToPoints(latHome, lonHome, latWork, lonWork));
+        Console.WriteLine("Distance (MI):   {0}", svc.MilesBetweenToPoints(latHome, lonHome, latWork, lonWork));
 
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine("\nThere was a problem contacting the service!\n{0}\n{1}", ex.GetType().Name, ex.Message);
+      }
     }
   }
 }

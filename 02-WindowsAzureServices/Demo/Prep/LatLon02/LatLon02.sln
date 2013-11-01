@@ -12,6 +12,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LatLon.ConsoleServiceHost", "LatLon.ConsoleServiceHost\LatLon.ConsoleServiceHost.csproj", "{CCAE0142-39AC-405B-B4C2-28C51C7A3AD4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LatLon.ConsoleServiceClient", "LatLon.ConsoleServiceClient\LatLon.ConsoleServiceClient.csproj", "{6640D50A-FCCB-4DEC-9EBC-05EE4D47F579}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9A67B282-C397-47CD-A084-B59697469597} = {9A67B282-C397-47CD-A084-B59697469597}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LatLon.WebServiceHost", "LatLon.WebServiceHost\LatLon.WebServiceHost.csproj", "{9A67B282-C397-47CD-A084-B59697469597}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +44,10 @@ Global
 		{6640D50A-FCCB-4DEC-9EBC-05EE4D47F579}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6640D50A-FCCB-4DEC-9EBC-05EE4D47F579}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6640D50A-FCCB-4DEC-9EBC-05EE4D47F579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A67B282-C397-47CD-A084-B59697469597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A67B282-C397-47CD-A084-B59697469597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A67B282-C397-47CD-A084-B59697469597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A67B282-C397-47CD-A084-B59697469597}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

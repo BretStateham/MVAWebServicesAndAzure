@@ -53,14 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\LatLonWcf\LatLon.wsdl" />
-    <None Include="Service References\LatLonWcf\LatLon.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\LatLonWcf\LatLon1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\LatLonWcf\LatLonUtilitiesService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -69,19 +61,27 @@
     <WCFMetadataStorage Include="Service References\LatLonWcf\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\LatLonWcf\LatLon.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\LatLonWcf\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\LatLonWcf\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\LatLonWcf\LatLonUtilitiesService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LatLonWcf\LatLonUtilitiesService1.wsdl" />
+    <None Include="Service References\LatLonWcf\LatLonUtilitiesService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LatLonWcf\LatLonUtilitiesService11.wsdl" />
     <None Include="Service References\LatLonWcf\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LatLonWcf\LatLonUtilitiesService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
