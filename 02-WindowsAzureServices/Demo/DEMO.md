@@ -27,20 +27,57 @@ To be successful running this demo you need:
 <a name="exercises" />
 ## Exercises ##
 
-- [Exercise 1: Review a basic Web Service running locally](#Exercise1)
-- [Exercise 2: Host a Web Service in a Windows Azure Web Site](#Exercise2)
-- [Exercise 3: Host a Web Service in a Windows Azure Web Role](#Exercise3)
-- [Exercise 4: Host a Web Service in a Windows Azure Worker Role](#Exercise4)
+- [Demo 1: Review a basic Web Service running locally](#Demo1)
+- [Demo 2: Host a Web Service in a Windows Azure Web Site](#Demo2)
+- [Demo 3: Host a Web Service in a Windows Azure Web Role](#Demo3)
+- [Demo 4: Host a Web Service in a Windows Azure Worker Role](#Demo4)
+
 
 <!--  
 ========================================
-Exercise 1 
+Demo 1 
 ========================================
 -->
 
-<a name="Exercise1" />
-### Exercise 1: Review a basic Web Service running locally ###
+<a name="Demo1" />
+### Demo 1: Review a basic Web Service running locally ###
 
 In this exercise, you will review an existing webservice that run's locally on the development workstation.  
+
+
+<!--  
+========================================
+Demo 2 
+========================================
+-->
+
+<a name="Demo2" />
+### Demo 2: Host a Web Serivce in a Windows Azure Web Site ###
+
+In this exercise, you will publish the local web site up as an Azure Web Site.  
+
+
+<!--  
+========================================
+Demo 3 
+========================================
+-->
+
+<a name="Demo3" />
+### Demo 3: Host a Web Service in a Windows Azure Web Role ###
+
+In this exercise, you will publish the local web site up as an Azure Web Role.  
+
+
+<!--  
+========================================
+Demo 4 
+========================================
+-->
+
+<a name="Demo4" />
+### Demo 4: Host a Web Service in a Windows Azure Worker Role ###
+
+In this exercise, you will host the Web Service in a Windows Azure Worker Role 
 
 

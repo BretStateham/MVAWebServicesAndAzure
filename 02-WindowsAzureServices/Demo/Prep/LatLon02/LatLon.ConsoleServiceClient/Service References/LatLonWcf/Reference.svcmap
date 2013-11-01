@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f0bec6aa-7b8a-4343-a109-55bc675315ee" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/LatLon" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LatLonUtilitiesService.wsdl" MetadataType="Wsdl" ID="67a62309-a69d-4adb-b28b-33c41d12a10a" SourceId="1" SourceUrl="http://localhost:8000/LatLon?wsdl" />
+    <MetadataFile FileName="LatLon.disco" MetadataType="Disco" ID="6a3ea411-b912-4f2e-bef2-b171216ff8b9" SourceId="1" SourceUrl="http://localhost:8000/LatLon?disco" />
+    <MetadataFile FileName="LatLon.xsd" MetadataType="Schema" ID="b6eb8e7d-89d1-44b0-81b6-650683a77ed3" SourceId="1" SourceUrl="http://localhost:8000/LatLon?xsd=xsd0" />
+    <MetadataFile FileName="LatLon.wsdl" MetadataType="Wsdl" ID="81291963-55f8-447d-84e2-e47024be6b64" SourceId="1" SourceUrl="http://localhost:8000/LatLon?wsdl=wsdl0" />
+    <MetadataFile FileName="LatLon1.xsd" MetadataType="Schema" ID="ff828a57-252f-4a77-9761-b67378652984" SourceId="1" SourceUrl="http://localhost:8000/LatLon?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
