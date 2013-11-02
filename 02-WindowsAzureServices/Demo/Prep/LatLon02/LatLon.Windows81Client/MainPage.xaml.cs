@@ -51,39 +51,59 @@ namespace LatLon.Windows81Client
     #endregion INotifyPropertyChanged Implementation
 
     Location tapLocation;
-    
-    private double startLatitude = 0.0d;
+
+    /*
+     * Start 	47.620553946572, -122.349371687757 //One Microsoft Way
+     * End	47.6396336616716, -122.128283751696 //Space Needle
+     */
+
+    private double startLatitude = 47.620553946572d;
 
     public double StartLatitude
     {
       get { return startLatitude; }
-      set { Set(ref startLatitude,value); }
+      set 
+      { 
+        Set(ref startLatitude,value);
+        SetMapView();
+      }
     }
 
-    private double startLongitude = 0.0d;
+    private double startLongitude = -122.349371687757d;
 
     public double StartLongitude
     {
       get { return startLongitude; }
-      set { Set(ref startLongitude, value); }
+      set 
+      { 
+        Set(ref startLongitude, value);
+        SetMapView();
+      }
     }
 
-    private double endLatitude = 0.0d;
+    private double endLatitude = 47.6396336616716d;
 
     public double EndLatitude
     {
       get { return endLatitude; }
-      set { Set(ref endLatitude, value); }
+      set 
+      { 
+        Set(ref endLatitude, value);
+        SetMapView();
+      }
     }
 
-    private double endLongitude = 0.0d;
+    private double endLongitude = -122.128283751696d;
 
     public double EndLongitude
     {
       get { return endLongitude; }
-      set { Set(ref endLongitude, value); }
+      set 
+      { 
+        Set(ref endLongitude, value);
+        SetMapView();
+      }
     }
-    
 
 
     public MainPage()
@@ -92,47 +112,14 @@ namespace LatLon.Windows81Client
 
       this.DataContext = this;
 
-      //InitializeMapControl();
+      this.Loaded += MainPage_Loaded;
 
     }
 
-    //private void InitializeMapControl()
-    //{
-    //  Map = new Map();
-    //  Map.Credentials = "AtWb8v72G_Qi2C-_TKGuHl8yGwTLU_C7mTM5NRgruXC6amw6QUox1Cpv-A1Az8eh";
-    //  Map.RightTapped += map_RightTapped;
-    //  Map.Margin = new Thickness(10d);
-    //  Grid.SetRow(Map, 4);
-    //  Grid.SetColumn(Map, 1);
-    //  LayoutRoot.Children.Add(Map);
-
-    //  MapLayer pushpins = this.Resources["Pushpins"] as MapLayer;
-    //  if (pushpins != null)
-    //    Map.Children.Add(pushpins);
-
-    //  //pushpins = new MapLayer();
-    //  //map.Children.Add(pushpins);
-
-    //  //startPin = new Pushpin()
-    //  //{
-    //  //  Background = new SolidColorBrush(Colors.Green)
-    //  //};
-
-    //  //endPin = new Pushpin()
-    //  //{
-    //  //  Background = new SolidColorBrush(Colors.Red)
-    //  //};
-
-    //  //MapLayer.SetPosition(startPin, new Location(0, 0));
-    //  //MapLayer.SetPosition(endPin, new Location(0, 0));
-
-    //  //pushpins.Children.Add(startPin);
-    //  //pushpins.Children.Add(endPin);
-
-
-    //  //Get rid of the place holder control at runtime.
-    //  MapPlaceHolder = null;
-    //}
+    void MainPage_Loaded(object sender, RoutedEventArgs e)
+    {
+      SetMapView();
+    }
 
     void Map_RightTapped(object sender, RightTappedRoutedEventArgs e)
     {
@@ -193,7 +180,6 @@ namespace LatLon.Windows81Client
                 MessageDialog dlg = new MessageDialog(message);
                 await dlg.ShowAsync();
               }
-
             }
     }
 
@@ -206,22 +192,14 @@ namespace LatLon.Windows81Client
         switch(tag)
         {
           case "setstart":
-            //StartLatText.Text = tapLocation.Latitude.ToString();
-            //StartLonText.Text = tapLocation.Longitude.ToString();
-            //MapLayer.SetPosition(StartPin, tapLocation);
             StartLatitude = tapLocation.Latitude;
             StartLongitude = tapLocation.Longitude;
-            
             break;
           case "setend":
-            //EndLatText.Text = tapLocation.Latitude.ToString();
-            //EndLonText.Text = tapLocation.Longitude.ToString();
-            //MapLayer.SetPosition(EndPin, tapLocation);
             EndLatitude = tapLocation.Latitude;
             EndLongitude = tapLocation.Longitude;
             break;
         }
-        SetMapView();
       }
       if (SetTargetPopup.IsOpen) SetTargetPopup.IsOpen = false;
     }
@@ -233,12 +211,11 @@ namespace LatLon.Windows81Client
         new Location(EndLatitude,EndLongitude)
       };
       LocationRect rect = new LocationRect(locations);
-      rect.Width += 2;
-      rect.Height += 2;
+      rect.Width *= 1.75;
+      rect.Height *= 1.75;
       Map.SetView(rect);
       //Map.SetZoomLevel(Map.ZoomLevel - 1);
     }
-
 
   }
 }

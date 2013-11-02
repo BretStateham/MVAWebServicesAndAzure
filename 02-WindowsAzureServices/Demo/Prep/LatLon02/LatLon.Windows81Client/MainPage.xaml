@@ -31,16 +31,14 @@
     <TextBlock Grid.Row="1" Grid.Column="1" Text="Latitude" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" />
     <TextBlock Grid.Row="1" Grid.Column="2" Text="Longitude" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
-
     <TextBlock Grid.Row="2" Text="Start" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" />
     <TextBlock Grid.Row="3" Text="End" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" />
 
+    <TextBox x:Name="StartLatText" Grid.Row="2" Grid.Column="1" Margin="10" Text="{Binding StartLatitude, Converter={StaticResource DoubleToStringConverter}, Mode=TwoWay}" FontSize="48" />
+    <TextBox x:Name="StartLonText" Grid.Row="2" Grid.Column="2" Margin="10" Text="{Binding StartLongitude, Converter={StaticResource DoubleToStringConverter}, Mode=TwoWay}" FontSize="48" />
 
-    <TextBox x:Name="StartLatText" Grid.Row="2" Grid.Column="1" Margin="10" Text="{Binding StartLatitude, Converter={StaticResource DoubleToStringConverter}}" FontSize="48" />
-    <TextBox x:Name="StartLonText" Grid.Row="2" Grid.Column="2" Margin="10" Text="{Binding StartLongitude, Converter={StaticResource DoubleToStringConverter}}" FontSize="48" />
-
-    <TextBox x:Name="EndLatText" Grid.Row="3" Grid.Column="1" Margin="10" Text="{Binding EndLatitude, Converter={StaticResource DoubleToStringConverter}}" FontSize="48" />
-    <TextBox x:Name="EndLonText" Grid.Row="3" Grid.Column="2" Margin="10" Text="{Binding EndLongitude, Converter={StaticResource DoubleToStringConverter}}" FontSize="48" />
+    <TextBox x:Name="EndLatText" Grid.Row="3" Grid.Column="1" Margin="10" Text="{Binding EndLatitude, Converter={StaticResource DoubleToStringConverter}, Mode=TwoWay}" FontSize="48" />
+    <TextBox x:Name="EndLonText" Grid.Row="3" Grid.Column="2" Margin="10" Text="{Binding EndLongitude, Converter={StaticResource DoubleToStringConverter}, Mode=TwoWay}" FontSize="48" />
 
     <Button x:Name="GetDistanceButton" Grid.Row="2" Grid.Column="3" Content="Get Distances" Grid.RowSpan="2" Margin="10" VerticalAlignment="Stretch" Width="200" Click="GetDistanceButton_Click" />
 
