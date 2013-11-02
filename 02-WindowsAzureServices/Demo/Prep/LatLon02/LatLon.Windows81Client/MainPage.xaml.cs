@@ -1,9 +1,12 @@
 ﻿using Bing.Maps;
 using LatLon.Windows81Client.LatLonWcf;
+using LatLon.Windows81Client.MVVM;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -24,64 +27,119 @@ namespace LatLon.Windows81Client
   /// <summary>
   /// An empty page that can be used on its own or navigated to within a Frame.
   /// </summary>
-  public sealed partial class MainPage : Page
+  public sealed partial class MainPage : Page, INotifyPropertyChanged
   {
-    Map map;
-    MapLayer pushpins;
-    Pushpin startPin;
-    Pushpin endPin;
+    #region INotifyPropertyChanged Implementation
+    
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected void Set<T>(ref T field, T value, [CallerMemberName] string PropertyName = null)
+    {
+      if (!EqualityComparer<T>.Default.Equals(field, value))
+      {
+        field = value;
+        NotifyPropertyChanged(PropertyName);
+      }
+    }
+
+    protected void NotifyPropertyChanged(string PropertyName)
+    {
+      if (PropertyChanged != null)
+        PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));
+    }
+    
+    #endregion INotifyPropertyChanged Implementation
 
     Location tapLocation;
+    
+    private double startLatitude = 0.0d;
+
+    public double StartLatitude
+    {
+      get { return startLatitude; }
+      set { Set(ref startLatitude,value); }
+    }
+
+    private double startLongitude = 0.0d;
+
+    public double StartLongitude
+    {
+      get { return startLongitude; }
+      set { Set(ref startLongitude, value); }
+    }
+
+    private double endLatitude = 0.0d;
+
+    public double EndLatitude
+    {
+      get { return endLatitude; }
+      set { Set(ref endLatitude, value); }
+    }
+
+    private double endLongitude = 0.0d;
+
+    public double EndLongitude
+    {
+      get { return endLongitude; }
+      set { Set(ref endLongitude, value); }
+    }
+    
+
 
     public MainPage()
     {
       this.InitializeComponent();
 
-      InitializeMapControl();
+      this.DataContext = this;
+
+      //InitializeMapControl();
 
     }
 
-    private void InitializeMapControl()
-    {
-      map = new Map();
-      map.Credentials = "AtWb8v72G_Qi2C-_TKGuHl8yGwTLU_C7mTM5NRgruXC6amw6QUox1Cpv-A1Az8eh";
-      map.RightTapped += map_RightTapped;
-      map.Margin = new Thickness(10d);
-      Grid.SetRow(map, 4);
-      Grid.SetColumn(map, 1);
-      LayoutRoot.Children.Add(map);
+    //private void InitializeMapControl()
+    //{
+    //  Map = new Map();
+    //  Map.Credentials = "AtWb8v72G_Qi2C-_TKGuHl8yGwTLU_C7mTM5NRgruXC6amw6QUox1Cpv-A1Az8eh";
+    //  Map.RightTapped += map_RightTapped;
+    //  Map.Margin = new Thickness(10d);
+    //  Grid.SetRow(Map, 4);
+    //  Grid.SetColumn(Map, 1);
+    //  LayoutRoot.Children.Add(Map);
+
+    //  MapLayer pushpins = this.Resources["Pushpins"] as MapLayer;
+    //  if (pushpins != null)
+    //    Map.Children.Add(pushpins);
+
+    //  //pushpins = new MapLayer();
+    //  //map.Children.Add(pushpins);
+
+    //  //startPin = new Pushpin()
+    //  //{
+    //  //  Background = new SolidColorBrush(Colors.Green)
+    //  //};
+
+    //  //endPin = new Pushpin()
+    //  //{
+    //  //  Background = new SolidColorBrush(Colors.Red)
+    //  //};
+
+    //  //MapLayer.SetPosition(startPin, new Location(0, 0));
+    //  //MapLayer.SetPosition(endPin, new Location(0, 0));
+
+    //  //pushpins.Children.Add(startPin);
+    //  //pushpins.Children.Add(endPin);
 
 
-      pushpins = new MapLayer();
-      map.Children.Add(pushpins);
+    //  //Get rid of the place holder control at runtime.
+    //  MapPlaceHolder = null;
+    //}
 
-      startPin = new Pushpin()
-      {
-        Background = new SolidColorBrush(Colors.Green)
-      };
-
-      endPin = new Pushpin()
-      {
-        Background = new SolidColorBrush(Colors.Red)
-      };
-
-      MapLayer.SetPosition(startPin, new Location(0, 0));
-      MapLayer.SetPosition(endPin, new Location(0, 0));
-
-      pushpins.Children.Add(startPin);
-      pushpins.Children.Add(endPin);
-
-
-      //Get rid of the place holder control at runtime.
-      MapPlaceHolder = null;
-    }
-
-    void map_RightTapped(object sender, RightTappedRoutedEventArgs e)
+    void Map_RightTapped(object sender, RightTappedRoutedEventArgs e)
     {
       Point pagePosition = e.GetPosition(this);
-      Point mapPosition = e.GetPosition(map);
+      Point mapPosition = e.GetPosition(Map);
 
-      bool succeeded = map.TryPixelToLocation(mapPosition, out tapLocation);
+      bool succeeded = Map.TryPixelToLocation(mapPosition, out tapLocation);
       if (succeeded)
       {
 
@@ -148,19 +206,39 @@ namespace LatLon.Windows81Client
         switch(tag)
         {
           case "setstart":
-            StartLatText.Text = tapLocation.Latitude.ToString();
-            StartLonText.Text = tapLocation.Longitude.ToString();
-            MapLayer.SetPosition(startPin, tapLocation);
+            //StartLatText.Text = tapLocation.Latitude.ToString();
+            //StartLonText.Text = tapLocation.Longitude.ToString();
+            //MapLayer.SetPosition(StartPin, tapLocation);
+            StartLatitude = tapLocation.Latitude;
+            StartLongitude = tapLocation.Longitude;
+            
             break;
           case "setend":
-            EndLatText.Text = tapLocation.Latitude.ToString();
-            EndLonText.Text = tapLocation.Longitude.ToString();
-            MapLayer.SetPosition(endPin, tapLocation);
+            //EndLatText.Text = tapLocation.Latitude.ToString();
+            //EndLonText.Text = tapLocation.Longitude.ToString();
+            //MapLayer.SetPosition(EndPin, tapLocation);
+            EndLatitude = tapLocation.Latitude;
+            EndLongitude = tapLocation.Longitude;
             break;
         }
+        SetMapView();
       }
       if (SetTargetPopup.IsOpen) SetTargetPopup.IsOpen = false;
     }
+
+    private void SetMapView()
+    {
+      LocationCollection locations = new LocationCollection{
+        new Location(StartLatitude,StartLongitude),
+        new Location(EndLatitude,EndLongitude)
+      };
+      LocationRect rect = new LocationRect(locations);
+      rect.Width += 2;
+      rect.Height += 2;
+      Map.SetView(rect);
+      //Map.SetZoomLevel(Map.ZoomLevel - 1);
+    }
+
 
   }
 }
