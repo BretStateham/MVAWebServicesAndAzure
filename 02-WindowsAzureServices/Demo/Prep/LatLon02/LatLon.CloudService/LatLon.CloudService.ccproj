@@ -45,12 +45,24 @@
       <RoleName>LatLon.WebRoleServiceHost</RoleName>
       <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
     </ProjectReference>
+    <ProjectReference Include="..\LatLon.WorkerRoleServiceHost\LatLon.WorkerRoleServiceHost.csproj">
+      <Name>LatLon.WorkerRoleServiceHost</Name>
+      <Project>{c0cca5e5-3fe9-4d1b-aef2-52a70f00cefa}</Project>
+      <Private>True</Private>
+      <RoleType>Worker</RoleType>
+      <RoleName>LatLon.WorkerRoleServiceHost</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LatLon.WebRoleServiceHostContent\" />
+    <Folder Include="LatLon.WorkerRoleServiceHostContent\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="LatLon.WebRoleServiceHostContent\diagnostics.wadcfg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LatLon.WorkerRoleServiceHostContent\diagnostics.wadcfg">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>
