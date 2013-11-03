@@ -4,12 +4,12 @@
     <Sites>
       <Site name="Web">
         <Bindings>
-          <Binding name="Endpoint1" endpointName="Endpoint1" />
+          <Binding name="HttpBinding" endpointName="HttpEndpoint" />
         </Bindings>
       </Site>
     </Sites>
     <Endpoints>
-      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+      <InputEndpoint name="HttpEndpoint" protocol="http" port="80" />
     </Endpoints>
     <Imports>
       <Import moduleName="Diagnostics" />
@@ -19,5 +19,9 @@
     <Imports>
       <Import moduleName="Diagnostics" />
     </Imports>
+    <Endpoints>
+      <InputEndpoint name="NetTcpServicePort" protocol="tcp" port="8001" />
+      <InputEndpoint name="NetTcpMexPort" protocol="tcp" port="8002" />
+    </Endpoints>
   </WorkerRole>
 </ServiceDefinition>
