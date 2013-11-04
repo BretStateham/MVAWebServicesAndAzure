@@ -15,13 +15,4 @@
       <Import moduleName="Diagnostics" />
     </Imports>
   </WebRole>
-  <WorkerRole name="LatLon.WorkerRoleServiceHost" vmsize="Small">
-    <Imports>
-      <Import moduleName="Diagnostics" />
-    </Imports>
-    <Endpoints>
-      <InputEndpoint name="NetTcpServicePort" protocol="tcp" port="8001" />
-      <InputEndpoint name="NetTcpMexPort" protocol="tcp" port="8002" />
-    </Endpoints>
-  </WorkerRole>
 </ServiceDefinition>
