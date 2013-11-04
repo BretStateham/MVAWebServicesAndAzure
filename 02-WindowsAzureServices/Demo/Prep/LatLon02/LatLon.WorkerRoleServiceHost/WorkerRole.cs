@@ -59,8 +59,8 @@ namespace LatLon.WorkerRoleServiceHost
       netTcpServiceUrl = string.Format("net.tcp://{0}:{1}/LatLon/LatLonUtilities", ipAddress, netTcpServicePort);
       netTcpMexUrl = string.Format("net.tcp://{0}:{1}/LatLon/mex", ipAddress, netTcpServicePort); //netTcpMexPort
 
-      Trace.TraceInformation("netTcpServiceUrl: {0}", netTcpServiceUrl);
-      Trace.TraceInformation("netTcpMexUrl:     {0}", netTcpMexUrl);
+      Trace.TraceInformation("==========\n\nnetTcpServiceUrl: {0}\n\n==========", netTcpServiceUrl);
+      Trace.TraceInformation("==========\n\nnetTcpMexUrl:     {0}\n\n==========", netTcpMexUrl);
 
       //host = new ServiceHost(typeof(LatLonUtilitiesService), new Uri("net.tcp://localhost/LatLon"));
       host = new ServiceHost(typeof(LatLonUtilitiesService)); //No base address.  Each endpoint will specify their own base addr...
@@ -71,7 +71,9 @@ namespace LatLon.WorkerRoleServiceHost
       //  "LatLonUtilities");
 
       //Create the service endpoint
-      host.AddServiceEndpoint(typeof(ILatLonUtilitiesService), new NetTcpBinding(SecurityMode.None), netTcpServiceUrl);
+      NetTcpBinding tcpBinding = new NetTcpBinding(SecurityMode.None);
+      tcpBinding.HostNameComparisonMode = HostNameComparisonMode.Exact;
+      host.AddServiceEndpoint(typeof(ILatLonUtilitiesService), tcpBinding, netTcpServiceUrl);
 
       //Create the mex endpoint
       ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
@@ -79,11 +81,6 @@ namespace LatLon.WorkerRoleServiceHost
       host.Description.Behaviors.Add(smb);
 
       host.AddServiceEndpoint(ServiceMetadataBehavior.MexContractName, MetadataExchangeBindings.CreateMexTcpBinding(), netTcpMexUrl);
-
-      //host.AddServiceEndpoint(
-      //  ServiceMetadataBehavior.MexContractName,
-      //  MetadataExchangeBindings.CreateMexTcpBinding(),
-      //  "mex");
 
       host.Open();
       Trace.TraceInformation("LatLonUtilitiesService Started");

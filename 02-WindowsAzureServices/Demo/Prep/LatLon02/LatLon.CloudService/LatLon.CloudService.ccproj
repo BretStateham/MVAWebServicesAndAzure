@@ -57,6 +57,7 @@
   <ItemGroup>
     <Folder Include="LatLon.WebRoleServiceHostContent\" />
     <Folder Include="LatLon.WorkerRoleServiceHostContent\" />
+    <Folder Include="Profiles" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="LatLon.WebRoleServiceHostContent\diagnostics.wadcfg">
@@ -65,6 +66,9 @@
     <Content Include="LatLon.WorkerRoleServiceHostContent\diagnostics.wadcfg">
       <SubType>Content</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishProfile Include="Profiles\LatLonCloudServiceProduction.azurePubxml" />
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>

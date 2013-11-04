@@ -3,13 +3,13 @@
   <Role name="LatLon.WebRoleServiceHost">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=appgen;AccountKey=lvl0mcanBHHZfmhO5ZjDXLPWnRjDYFcIAjcky7axSPjDBup2LGHs8ve1s+3EHjsz6on1QM7niiiTZTDHim1zOg==" />
     </ConfigurationSettings>
   </Role>
   <Role name="LatLon.WorkerRoleServiceHost">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=appgen;AccountKey=lvl0mcanBHHZfmhO5ZjDXLPWnRjDYFcIAjcky7axSPjDBup2LGHs8ve1s+3EHjsz6on1QM7niiiTZTDHim1zOg==" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>
