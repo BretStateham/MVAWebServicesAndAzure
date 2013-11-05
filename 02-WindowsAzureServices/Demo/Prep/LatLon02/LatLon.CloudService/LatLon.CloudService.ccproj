@@ -12,6 +12,7 @@
     <AssemblyName>LatLon.CloudService</AssemblyName>
     <StartDevelopmentStorage>True</StartDevelopmentStorage>
     <Name>LatLon.CloudService</Name>
+    <PackageEnableRemoteDebugger>True</PackageEnableRemoteDebugger>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,14 @@
       <Private>True</Private>
       <RoleType>Web</RoleType>
       <RoleName>LatLon.WebRoleServiceHost</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
+    <ProjectReference Include="..\LatLon.WorkerRoleServiceHost\LatLon.WorkerRoleServiceHost.csproj">
+      <Name>LatLon.WorkerRoleServiceHost</Name>
+      <Project>{5755f2a2-e177-472f-8425-ae9f6aa87619}</Project>
+      <Private>True</Private>
+      <RoleType>Worker</RoleType>
+      <RoleName>LatLon.WorkerRoleServiceHost</RoleName>
       <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
     </ProjectReference>
   </ItemGroup>

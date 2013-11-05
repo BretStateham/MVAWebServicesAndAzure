@@ -21,14 +21,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost/LatLonUtilitiesService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="net.tcp://latloncloudservice.cloudapp.net:8001/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="LatLonUtilitiesService.disco" MetadataType="Disco" ID="1ea234cd-e2ff-4d7e-835d-2c48c88fdeea" SourceId="1" SourceUrl="http://localhost/LatLonUtilitiesService.svc?disco" />
-    <MetadataFile FileName="LatLonUtilitiesService.xsd" MetadataType="Schema" ID="1425bab6-807e-4170-9207-338de0f221f7" SourceId="1" SourceUrl="http://localhost/LatLonUtilitiesService.svc?xsd=xsd1" />
-    <MetadataFile FileName="LatLonUtilitiesService1.xsd" MetadataType="Schema" ID="7c6237d9-f308-4282-b82c-90ba02001854" SourceId="1" SourceUrl="http://localhost/LatLonUtilitiesService.svc?xsd=xsd0" />
-    <MetadataFile FileName="LatLonUtilitiesService.wsdl" MetadataType="Wsdl" ID="7c3e841b-1c03-44cb-ac79-d4a2597c0d9b" SourceId="1" SourceUrl="http://localhost/LatLonUtilitiesService.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="LatLonUtilitiesService1.wsdl" MetadataType="Wsdl" ID="c0d491d4-8c7a-4adb-b5d4-beb6e8be2ba5" SourceId="1" SourceUrl="http://localhost/LatLonUtilitiesService.svc?wsdl" />
+    <MetadataFile FileName="LatLon1.wsdl" MetadataType="Wsdl" ID="f9f8580a-1a0d-4e00-8d07-42fb9ef3fd55" SourceId="1" SourceUrl="net.tcp://latloncloudservice.cloudapp.net:8001/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="aad49cf8-12a2-48ca-a6ea-8ccf5236eebc" SourceId="1" SourceUrl="net.tcp://latloncloudservice.cloudapp.net:8001/mex" />
+    <MetadataFile FileName="LatLon1.xsd" MetadataType="Schema" ID="1d2248c9-bc8d-47c2-ba8e-fa443cbc982a" SourceId="1" SourceUrl="net.tcp://latloncloudservice.cloudapp.net:8001/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="b903cdfb-839b-4676-bc10-879b880b3f5f" SourceId="1" SourceUrl="net.tcp://latloncloudservice.cloudapp.net:8001/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

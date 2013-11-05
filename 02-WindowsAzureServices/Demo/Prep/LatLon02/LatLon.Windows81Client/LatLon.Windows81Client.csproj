@@ -126,12 +126,11 @@
     </AppxManifest>
     <None Include="LatLon.Windows81Client_TemporaryKey.pfx" />
     <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
-    <None Include="Service References\LatLonWcf\LatLonUtilitiesService.wsdl" />
-    <None Include="Service References\LatLonWcf\LatLonUtilitiesService.xsd">
+    <None Include="Service References\LatLonWcf\LatLon1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\LatLonWcf\LatLonUtilitiesService1.wsdl" />
-    <None Include="Service References\LatLonWcf\LatLonUtilitiesService1.xsd">
+    <None Include="Service References\LatLonWcf\service1.wsdl" />
+    <None Include="Service References\LatLonWcf\service1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -140,13 +139,13 @@
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <None Include="Service References\LatLonWcf\LatLon1.wsdl" />
     <None Include="Service References\LatLonWcf\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Service References\LatLonWcf\configuration.svcinfo" />
     <None Include="Service References\LatLonWcf\configuration91.svcinfo" />
-    <None Include="Service References\LatLonWcf\LatLonUtilitiesService.disco" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

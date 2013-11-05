@@ -56,7 +56,7 @@ namespace LatLon.Windows81Client.LatLonWcf {
         
         public LatLonUtilitiesServiceClient() : 
                 base(LatLonUtilitiesServiceClient.GetDefaultBinding(), LatLonUtilitiesServiceClient.GetDefaultEndpointAddress()) {
-            this.Endpoint.Name = EndpointConfiguration.BasicHttpBinding_ILatLonUtilitiesService.ToString();
+            this.Endpoint.Name = EndpointConfiguration.NetTcpBinding_ILatLonUtilitiesService.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
         
@@ -107,35 +107,35 @@ namespace LatLon.Windows81Client.LatLonWcf {
         }
         
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration) {
-            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_ILatLonUtilitiesService)) {
-                System.ServiceModel.BasicHttpBinding result = new System.ServiceModel.BasicHttpBinding();
+            if ((endpointConfiguration == EndpointConfiguration.NetTcpBinding_ILatLonUtilitiesService)) {
+                System.ServiceModel.NetTcpBinding result = new System.ServiceModel.NetTcpBinding();
                 result.MaxBufferSize = int.MaxValue;
                 result.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
                 result.MaxReceivedMessageSize = int.MaxValue;
-                result.AllowCookies = true;
+                result.Security.Mode = System.ServiceModel.SecurityMode.None;
                 return result;
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
         
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration) {
-            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_ILatLonUtilitiesService)) {
-                return new System.ServiceModel.EndpointAddress("http://localhost/LatLonUtilitiesService.svc");
+            if ((endpointConfiguration == EndpointConfiguration.NetTcpBinding_ILatLonUtilitiesService)) {
+                return new System.ServiceModel.EndpointAddress("net.tcp://latloncloudservice.cloudapp.net:9001/LatLonUtilities");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
         
         private static System.ServiceModel.Channels.Binding GetDefaultBinding() {
-            return LatLonUtilitiesServiceClient.GetBindingForEndpoint(EndpointConfiguration.BasicHttpBinding_ILatLonUtilitiesService);
+            return LatLonUtilitiesServiceClient.GetBindingForEndpoint(EndpointConfiguration.NetTcpBinding_ILatLonUtilitiesService);
         }
         
         private static System.ServiceModel.EndpointAddress GetDefaultEndpointAddress() {
-            return LatLonUtilitiesServiceClient.GetEndpointAddress(EndpointConfiguration.BasicHttpBinding_ILatLonUtilitiesService);
+            return LatLonUtilitiesServiceClient.GetEndpointAddress(EndpointConfiguration.NetTcpBinding_ILatLonUtilitiesService);
         }
         
         public enum EndpointConfiguration {
             
-            BasicHttpBinding_ILatLonUtilitiesService,
+            NetTcpBinding_ILatLonUtilitiesService,
         }
     }
 }

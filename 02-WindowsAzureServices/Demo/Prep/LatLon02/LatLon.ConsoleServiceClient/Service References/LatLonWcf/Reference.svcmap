@@ -19,14 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost/LatLonUtilitiesService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="net.tcp://localhost:8001/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="LatLonUtilitiesService1.disco" MetadataType="Disco" ID="87743bb6-e700-4627-914b-bfd08065d165" SourceId="1" SourceUrl="http://localhost/LatLonUtilitiesService.svc?disco" />
-    <MetadataFile FileName="LatLonUtilitiesService2.xsd" MetadataType="Schema" ID="b656dd7c-8415-4158-a55d-c81c2a4ff1fd" SourceId="1" SourceUrl="http://localhost/LatLonUtilitiesService.svc?xsd=xsd1" />
-    <MetadataFile FileName="LatLonUtilitiesService21.xsd" MetadataType="Schema" ID="8a1dcf9e-154a-4bfa-aba4-ce411bd934eb" SourceId="1" SourceUrl="http://localhost/LatLonUtilitiesService.svc?xsd=xsd0" />
-    <MetadataFile FileName="LatLonUtilitiesService.wsdl" MetadataType="Wsdl" ID="bbdefb38-66e6-4757-9dbf-046f0bf77c04" SourceId="1" SourceUrl="http://localhost/LatLonUtilitiesService.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="LatLonUtilitiesService1.wsdl" MetadataType="Wsdl" ID="d230c1aa-d064-4ed0-954b-5589638ab835" SourceId="1" SourceUrl="http://localhost/LatLonUtilitiesService.svc?wsdl" />
+    <MetadataFile FileName="LatLon.wsdl" MetadataType="Wsdl" ID="e771f21f-57b0-4e54-a6cb-aa720c9d2996" SourceId="1" SourceUrl="net.tcp://localhost:8001/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="ad7b26e1-feea-4be3-bc5d-37042ae9c1d0" SourceId="1" SourceUrl="net.tcp://localhost:8001/mex" />
+    <MetadataFile FileName="LatLon.xsd" MetadataType="Schema" ID="b6d0ab14-a2ee-454e-9f19-02daf0030dde" SourceId="1" SourceUrl="net.tcp://localhost:8001/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3544464d-ae48-43aa-8ac1-6827eb1a81dc" SourceId="1" SourceUrl="net.tcp://localhost:8001/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

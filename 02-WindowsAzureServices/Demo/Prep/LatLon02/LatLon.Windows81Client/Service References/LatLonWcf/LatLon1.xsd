@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://BretStateham.com/samples/2013/10/LatLon" elementFormDefault="qualified" targetNamespace="http://BretStateham.com/samples/2013/10/LatLon" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="RadiansBetweenToPoints">
     <xs:complexType>

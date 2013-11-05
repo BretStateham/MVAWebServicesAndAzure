@@ -18,5 +18,7 @@
     <AzureStorageAccountLabel>appgen</AzureStorageAccountLabel>
     <AzureStorageAccountName>appgen</AzureStorageAccountName>
     <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
+    <EnableRemoteDebugger>False</EnableRemoteDebugger>
+    <RemoteDebuggerConnectorCertificateThumbprint>E770E17E527D2A861E9E541CBE57D5A0A46E68E3</RemoteDebuggerConnectorCertificateThumbprint>
   </PropertyGroup>
 </Project>
