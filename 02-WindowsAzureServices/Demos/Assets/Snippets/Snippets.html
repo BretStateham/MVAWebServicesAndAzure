@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Markdown Preview</title>
+<style>
+body{font-family:helvetica, arial, freesans, clean, sans-serif;color:#333;line-height:1.6;font-size:14px}.markdown-body{line-height:1.6;font-size:14px}.markdown-body > *:first-child{margin-top:0 !important}.markdown-body > *:last-child{margin-bottom:0 !important}.markdown-body a.absent{color:#c00}.markdown-body h1{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:28px;margin:20px 0 10px;padding:0}.markdown-body h2{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:24px;border-bottom-color:#ccc;border-bottom-width:1px;border-bottom-style:solid;margin:20px 0 10px;padding:0}.markdown-body h3{font-weight:700;-webkit-font-smoothing:antialiased;font-size:18px;margin:20px 0 10px;padding:0}.markdown-body h4{font-weight:700;-webkit-font-smoothing:antialiased;font-size:16px;margin:20px 0 10px;padding:0}.markdown-body h5{font-weight:700;-webkit-font-smoothing:antialiased;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body h6{font-weight:700;-webkit-font-smoothing:antialiased;color:#777;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body blockquote{color:#777;border-left-color:#ddd;border-left-width:4px;border-left-style:solid;margin:15px 0;padding:0 15px}.markdown-body dl{margin:15px 0;padding:0}.markdown-body table{border-collapse:collapse;margin:15px 0;padding:0}.markdown-body pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;margin:15px 0;padding:6px 10px}.markdown-body li p.first{display:inline-block}.markdown-body dl dt{font-size:14px;font-style:italic;font-weight:700;margin:15px 0 5px;padding:0}.markdown-body dl dt:first-child{padding:0}.markdown-body dl dd{margin:0 0 15px;padding:0 15px}.markdown-body table tr{border-top-color:#ccc;border-top-width:1px;border-top-style:solid;background-color:#fff;margin:0;padding:0}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%}.markdown-body span.frame{overflow:hidden;display:block}.markdown-body span.frame > span{border:1px solid #ddd;width:auto;overflow:hidden;float:left;display:block;margin:13px 0 0;padding:7px}.markdown-body span.frame span img{float:left;display:block}.markdown-body span.frame span span{color:#333;clear:both;display:block;padding:5px 0 0}.markdown-body span.align-center > span{text-align:center;overflow:hidden;display:block;margin:13px auto 0}.markdown-body span.align-center span img{text-align:center;margin:0 auto}.markdown-body span.align-right > span{text-align:right;overflow:hidden;display:block;margin:13px 0 0}.markdown-body span.align-right span img{text-align:right;margin:0}.markdown-body span.float-left{overflow:hidden;margin-right:13px;float:left;display:block}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{overflow:hidden;margin-left:13px;float:right;display:block}.markdown-body span.float-right > span{text-align:right;overflow:hidden;display:block;margin:13px auto 0}.markdown-body pre > code{border:currentColor;white-space:pre;margin:0;padding:0}.markdown-body .highlight pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;padding:6px 10px}.markdown-body p,.markdown-body li{margin:15px 0}.markdown-body ul,.markdown-body ol{padding-left:30px;margin:15px 0}.markdown-body > h2:first-child,.markdown-body > h1:first-child,.markdown-body > h1:first-child + h2{border:0 currentColor;padding-top:0;margin-top:0}.markdown-body > h3:first-child,.markdown-body > h4:first-child,.markdown-body > h5:first-child,.markdown-body > h6:first-child{padding-top:0;margin-top:0}.markdown-body h1 + p,.markdown-body h2 + p,.markdown-body h3 + p,.markdown-body h4 + p,.markdown-body h5 + p,.markdown-body h6 + p,.markdown-body ul li > :first-child,.markdown-body ol li > :first-child,.markdown-body dl dt > :first-child,.markdown-body dl dd > :first-child,.markdown-body blockquote > :first-child,.markdown-body table tr th > :first-child,.markdown-body table tr td > :first-child{margin-top:0}.markdown-body ul li > :last-child,.markdown-body ol li > :last-child,.markdown-body dl dt > :last-child,.markdown-body dl dd > :last-child,.markdown-body blockquote > :last-child,.markdown-body table tr th > :last-child,.markdown-body table tr td > :last-child{margin-bottom:0}.markdown-body table tr th,.markdown-body table tr td{border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px}.markdown-body span.align-center,.markdown-body span.align-right{overflow:hidden;clear:both;display:block}.markdown-body code,.markdown-body tt{border-radius:3px;border:1px solid #eaeaea;white-space:nowrap;background-color:#f8f8f8;margin:0 2px;padding:0 5px}.markdown-body pre code,.markdown-body pre tt{border:currentColor;background-color:transparent}span.codelanguage{display:none}
+</style>
+</head>
+<body>
+<div class="markdown-body">
+<p><a name="Title"></a></p>
+
+<h1 id="Web_Services_in_Windows_Azure_Demo_Snippets">Web Services in Windows Azure Demo Snippets</h1>
+
+<hr>
+
+<h2 id="FOR_ALL_DEMOS_MAKE_SURE_YOU_ARE_RUNNING_ON_WINDOWS_81_AND_VISUAL_STUDIO_2013_WITH_THE_WINDOWS_AZURE_SDK_22_OR_LATER__YOU_MUST_ALSO_RUN_VISUAL_STUDIO_2013_AS_ADMINISTRATOR">FOR ALL DEMOS, MAKE SURE YOU ARE RUNNING ON WINDOWS 8.1, AND VISUAL STUDIO 2013 WITH THE WINDOWS AZURE SDK 2.2 OR LATER.  YOU MUST ALSO RUN VISUAL STUDIO 2013 AS ADMINISTRATOR</h2>
+
+<h4 id="Review_the_demo_project">Review the demo project:</h4>
+
+<ul>
+<li><a href="#ReviewContracts">Review LatLon.Core.Contracts</a></li>
+<li><a href="#ReviewServices">Review LatLon.Core.Services</a></li>
+<li><a href="#ReviewConsoleHost">Review LatLon.Hosts.Console</a></li>
+<li><a href="#ReviewWin81Client">Review the Windows 8.1 Client</a></li>
+<li><a href="#RunTheConsoleHost">Run the Console Host</a></li>
+<li><a href="#UpdateServiceReferenceConsoleHost">Update Win 8.1 Client Service Reference to Console Host</a></li>
+</ul>
+
+<h4 id="Host_the_Service_in_an_Azure_Web_Site">Host the Service in an Azure Web Site:</h4>
+
+<ul>
+<li><a href="#AddWebHostProject">Add a Web Host Project</a></li>
+<li><a href="#CreateSiteInPortal">Create a Web Site in the Azure Management Portal</a></li>
+<li><a href="#PublishWindowsAzureWebSite">Publish to a Windows Azure Web Site</a></li>
+</ul>
+
+<h4 id="Host_the_Service_in_an_Azure_Web_Role">Host the Service in an Azure Web Role:</h4>
+
+<ul>
+<li><a href="#CreateCloudServiceAndWebRole">Create the Cloud Service and Web Role Projects</a></li>
+<li><a href="#AddWcfServceToWebRole">Add a WCF Service to the Web Role</a></li>
+<li><a href="#PublishTheCloudService">Publish the Cloud Service to Windows Azure</a></li>
+</ul>
+
+<h4 id="Host_the_Service_in_an_Azure_Worker_Role">Host the Service in an Azure Worker Role:</h4>
+
+<ul>
+<li><a href="#AddAWorkerRole">Add a Worker Role to the Cloud Service</a></li>
+<li><a href="#ImplementWorkerRolehost">Implement the Worker Role Host</a></li>
+<li><a href="#RunWorkerRoleInEmulator">Run the Worker Role in the Emulator</a></li>
+<li><a href="#RePublishCloudService">Re-Publish the Cloud Service to Azure</a></li>
+</ul>
+
+<hr>
+
+<h2 id="Review_the_Demo_Project">Review the Demo Project</h2>
+
+<!-- ======================================================================= -->
+
+<p><a name="ReviewContracts"></a></p>
+
+<h3 id="Review_LatLonCoreContracts">Review LatLon.Core.Contracts</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Open the initial demo solution, and review the contents of the LatLon.Core.Contracts project</p>
+
+<ul>
+<li><p>Open the <strong>/Demos/Begin/01LatLonBaseProject/LatLon.sln</strong> solution</p></li>
+<li><p>Expand the LatLon.Core.Contracts project</p></li>
+<li><p>Expand <strong>&quot;References&quot;</strong> and note the <strong>System.ServiceModel</strong> reference</p></li>
+<li><p>Open the <strong>&quot;ILatLonUtilitiesService.cs&quot;</strong> file, and review the code for the <strong>ILatLonUtilitiesService</strong> interface</p></li>
+<li><p>Note the following:</p>
+
+<ul>
+<li>The <strong>[ServiceContract]</strong> attribute</li>
+<li>The four methods 
+
+<ul>
+<li><strong>RadiansBetweenTwoPoints</strong>, </li>
+<li><strong>NauticalMilesBetweenTwoPoints</strong>, </li>
+<li><strong>KilometersBetweenTwoPoints</strong>, </li>
+<li><strong>MilesBetweenTwoPoints</strong></li>
+</ul></li>
+<li>Each method is decorated with the <strong>[OperationContract]</strong> attribute</li>
+</ul></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">[ServiceContract(Namespace = <span style="color:#8B0000">&quot;http://BretStateham.com/samples/2013/10/LatLon&quot;</span>)]
+<span style="color:#0000FF">public</span> <span style="color:#0000FF">interface</span> ILatLonUtilitiesService
+{
+
+  [OperationContract]
+  <span style="color:#0000FF">double</span> RadiansBetweenTwoPoints(<span style="color:#0000FF">double</span> Latitude1, <span style="color:#0000FF">double</span> Longitude1, <span style="color:#0000FF">double</span> Latitude2, <span style="color:#0000FF">double</span> Longitude2);
+
+  [OperationContract]
+  <span style="color:#0000FF">double</span> NauticalMilesBetweenTwoPoints(<span style="color:#0000FF">double</span> Latitude1, <span style="color:#0000FF">double</span> Longitude1, <span style="color:#0000FF">double</span> Latitude2, <span style="color:#0000FF">double</span> Longitude2);
+
+  [OperationContract]
+  <span style="color:#0000FF">double</span> KilometersBetweenTwoPoints(<span style="color:#0000FF">double</span> Latitude1, <span style="color:#0000FF">double</span> Longitude1, <span style="color:#0000FF">double</span> Latitude2, <span style="color:#0000FF">double</span> Longitude2);
+
+  [OperationContract]
+  <span style="color:#0000FF">double</span> MilesBetweenTwoPoints(<span style="color:#0000FF">double</span> Latitude1, <span style="color:#0000FF">double</span> Longitude1, <span style="color:#0000FF">double</span> Latitude2, <span style="color:#0000FF">double</span> Longitude2);
+
+}
+</code></pre>
+
+<!-- ======================================================================= -->
+
+<p><a name="ReviewServices"></a></p>
+
+<h3 id="Review_LatLonCoreServices">Review LatLon.Core.Services</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Show the default implementation of the LatLonUtilitiesService</p>
+
+<ul>
+<li>In the <strong>Solution Explorer</strong>,expand the <strong>LatLon.Core.Services</strong> project.</li>
+<li>Expand the <strong>References</strong>,  and note the <strong>LatLon.Core.Contracts</strong> reference.</li>
+<li><p>Open the <strong>LatLonUtilitiesService.cs</strong> code file</p></li>
+<li><p>Review the code for each of the <strong>&lt;Units&gt;BetweenTwoPoints</strong> methods</p></li>
+<li><p>The code assumes an elliptical, not flat, world and calculates the distances between to points, where each point has a latitude and a longitude.  It can then return that distances as Radians, Nautical Miles, Kilometers, or Miles.  </p></li>
+<li><p>Web references:</p>
+
+<ul>
+<li>Haversine Forumula: <a href="http://en.wikipedia.org/wiki/Haversine_formula">http://en.wikipedia.org/wiki/Haversine_formula</a> </li>
+<li>Reference Implementation: <a href="http://www.movable-type.co.uk/scripts/latlong.html">http://www.movable-type.co.uk/scripts/latlong.html</a></li>
+</ul></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">class</span> LatLonUtilitiesService : ILatLonUtilitiesService
+{
+  <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span> RadiansBetweenTwoPoints(<span style="color:#0000FF">double</span> Latitude1, <span style="color:#0000FF">double</span> Longitude1, <span style="color:#0000FF">double</span> Latitude2, <span style="color:#0000FF">double</span> Longitude2)
+  {
+    <span style="color:#008000">//Using Haversine Forumla: http://en.wikipedia.org/wiki/Haversine_formula </span>
+    <span style="color:#008000">//Reference Implementation: http://www.movable-type.co.uk/scripts/latlong.html</span>
+
+    <span style="color:#0000FF">double</span> deg2rad = (Math.PI / 180.0);
+
+    <span style="color:#0000FF">double</span> dLat = (Latitude2 - Latitude1) * deg2rad;
+    <span style="color:#0000FF">double</span> dLon = (Longitude2 - Longitude1) * deg2rad;
+    <span style="color:#0000FF">double</span> lat1 = Latitude1 * deg2rad;
+    <span style="color:#0000FF">double</span> lat2 = Latitude2 * deg2rad;
+
+    <span style="color:#0000FF">double</span> a = Math.Pow(Math.Sin(dLat / 2), 2) + Math.Pow(Math.Sin(dLon / 2), 2) * Math.Cos(lat1) * Math.Cos(lat2);
+
+    <span style="color:#0000FF">double</span> c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+
+    <span style="color:#0000FF">return</span> c;
+  }
+
+  <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span> NauticalMilesBetweenTwoPoints(<span style="color:#0000FF">double</span> Latitude1, <span style="color:#0000FF">double</span> Longitude1, <span style="color:#0000FF">double</span> Latitude2, <span style="color:#0000FF">double</span> Longitude2)
+  {
+    <span style="color:#008000">//Convert to Nautical miles by first converting back to degrees, then multiplying by 60NM (Nautical Miles) / Degree</span>
+    <span style="color:#008000">//distance = (distance * 180 / PI) * 60;</span>
+    <span style="color:#0000FF">return</span> RadiansBetweenTwoPoints(Latitude1, Longitude1, Latitude2, Longitude2) * (180 / Math.PI) * 60;
+  }
+
+  <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span> KilometersBetweenTwoPoints(<span style="color:#0000FF">double</span> Latitude1, <span style="color:#0000FF">double</span> Longitude1, <span style="color:#0000FF">double</span> Latitude2, <span style="color:#0000FF">double</span> Longitude2)
+  {
+    <span style="color:#008000">//Convert to Kilometers by multiplying the distance in radians by the earth&#39;s radius in kilometers, 6371 (see http://en.wikipedia.org/wiki/Earth_radius) </span>
+    <span style="color:#008000">//distance *= 6371;</span>
+    <span style="color:#0000FF">return</span> RadiansBetweenTwoPoints(Latitude1, Longitude1, Latitude2, Longitude2) * 6371;
+  }
+
+  <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span> MilesBetweenTwoPoints(<span style="color:#0000FF">double</span> Latitude1, <span style="color:#0000FF">double</span> Longitude1, <span style="color:#0000FF">double</span> Latitude2, <span style="color:#0000FF">double</span> Longitude2)
+  {
+    <span style="color:#008000">//Convert to Miles by multiplying the distance in radians by the earth&#39;s radius in miles, 3959 (see http://en.wikipedia.org/wiki/Earth_radius) </span>
+    <span style="color:#008000">//distance *= 3959;</span>
+    <span style="color:#0000FF">return</span> RadiansBetweenTwoPoints(Latitude1, Longitude1, Latitude2, Longitude2) * 3959;
+  }
+}
+</code></pre>
+
+<!-- ======================================================================= -->
+
+<p><a name="ReviewConsoleHost"></a></p>
+
+<h3 id="Review_LatLonHostsConsole">Review LatLon.Hosts.Console</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Review the Console Host implementation.  Remember that most any manageded program can be a service host.  This could be an ASP.NET web application, a Windows Service, a Windows Forms or WPF Desktop app, or even a console application, as this sample project demonstrates.</p>
+
+<ul>
+<li>In the <strong>Solution Explorer</strong>, expand the <strong>LatLon.Hosts.Console</strong> project</li>
+<li><p>Expand <strong>References</strong> and note the following references: </p>
+
+<ul>
+<li><strong>LatLon.Core.Contracts</strong></li>
+<li><strong>LatLon.Core.Services</strong></li>
+<li><strong>System.ServiceModel</strong></li>
+</ul></li>
+<li><p>Open the Program.cs file and review the code inside.  The comments in the code should explain it's function:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">class</span> Program
+{
+  <span style="color:#0000FF">static</span> <span style="color:#0000FF">void</span> Main(<span style="color:#0000FF">string</span>[] args)
+  {
+
+    <span style="color:#008000">//Create a new ServiceHost intance with a &quot;using&quot; statement.  </span>
+    <span style="color:#008000">//The using statement makes sure that the host is &quot;Dispose&quot;d even if there</span>
+    <span style="color:#008000">//is an exception. </span>
+    <span style="color:#008000">//The host will offer the LatLonUtilitiesService methods up to it&#39;s clients</span>
+    <span style="color:#008000">//and listen on the http://localhost:8000/LatLon URL for service call as well </span>
+    <span style="color:#008000">//as metadata requests. This base address will be the root URL for all endpoints.</span>
+    <span style="color:#0000FF">using</span> (ServiceHost host = 
+            <span style="color:#0000FF">new</span> ServiceHost(
+              <span style="color:#0000FF">typeof</span>(LatLonUtilitiesService), 
+              <span style="color:#0000FF">new</span> Uri(<span style="color:#8B0000">&quot;http://localhost:8000/LatLon&quot;</span>)))
+    {
+
+      <span style="color:#008000">//A single service can be exposed through any number of &quot;Endpoints&quot;. </span>
+      <span style="color:#008000">//An endpoint has an Address, a Binding, and a Contract that it supports.  </span>
+      <span style="color:#008000">//For this example, we&#39;ll add a single endpoint that has the following </span>
+      <span style="color:#008000">//Contract: And ILatLonUtilitiesService implementation</span>
+      <span style="color:#008000">//Binding:  BasicHttpBinding - using basic http calls (no, WS*, WSE, Security, etc)</span>
+      <span style="color:#008000">//Address:  http://localhost:8000/LatLon/LatLonUtilities (host base address + endpoint address)</span>
+      host.AddServiceEndpoint(
+        <span style="color:#0000FF">typeof</span>(ILatLonUtilitiesService),
+        <span style="color:#0000FF">new</span> BasicHttpBinding(),
+        <span style="color:#8B0000">&quot;LatLonUtilities&quot;</span>);
+
+      <span style="color:#008000">//Allow our service to expose metadata to clients.  This metadata </span>
+      <span style="color:#008000">//allows client applications on any platform to build their own </span>
+      <span style="color:#008000">//proxy classes without having to have access to the original contracts. </span>
+      ServiceMetadataBehavior smb = <span style="color:#0000FF">new</span> ServiceMetadataBehavior();
+      smb.HttpGetEnabled = <span style="color:#0000FF">true</span>;
+      smb.MetadataExporter.PolicyVersion = PolicyVersion.Policy15;
+      host.Description.Behaviors.Add(smb);
+
+
+      <span style="color:#008000">//Listen for metadata requests using an endpoint with:</span>
+      <span style="color:#008000">//Contract:  ServiceMetadataBehavior.MexContractName (IMetadataExchange)</span>
+      <span style="color:#008000">//Binding:   MetadataExchangeBindings.CreateMexHttpBinding() (A WSHttpBinding with no security)</span>
+      <span style="color:#008000">//Address:   http://localhost:8000/LatLon/mex (host base address + endpoint address)</span>
+      host.AddServiceEndpoint(
+        ServiceMetadataBehavior.MexContractName,
+        MetadataExchangeBindings.CreateMexHttpBinding(),
+        <span style="color:#8B0000">&quot;mex&quot;</span>);
+
+      <span style="color:#008000">//Start the service, and begin listening for requests</span>
+      host.Open();
+
+      <span style="color:#008000">//Show the addresses that the host is listening on...</span>
+      StringBuilder sb = <span style="color:#0000FF">new</span> StringBuilder(
+        <span style="color:#8B0000">&quot;======================================================================\n&quot;</span> + 
+        <span style="color:#8B0000">&quot;Listening On:\n&quot;</span> +
+        <span style="color:#8B0000">&quot;======================================================================\n\n&quot;</span>);
+      <span style="color:#0000FF">foreach</span>(<span style="color:#0000FF">var</span> cd <span style="color:#0000FF">in</span> host.ChannelDispatchers)
+      {
+        sb.AppendFormat(<span style="color:#8B0000">&quot;  {0} ({1})\n&quot;</span>, cd.Listener.Uri.ToString(),cd.State.ToString());
+      }
+      sb.Append(
+        <span style="color:#8B0000">&quot;\n======================================================================&quot;</span>);
+      Console.WriteLine(sb.ToString());
+
+      <span style="color:#008000">//Keep the service running until the user presses the &lt;Enter&gt; key</span>
+      Console.WriteLine(<span style="color:#8B0000">&quot;Service Started...&quot;</span>);
+      Console.WriteLine(<span style="color:#8B0000">&quot;Press &lt;ENTER&gt; to terminate:&quot;</span>);
+      Console.ReadLine();
+
+      <span style="color:#008000">//Stop the service</span>
+      Console.WriteLine(<span style="color:#8B0000">&quot;Shutting Down...&quot;</span>);
+      host.Close();
+      Console.WriteLine(<span style="color:#8B0000">&quot;Done...&quot;</span>);
+
+    }
+  }
+}
+</code></pre>
+
+<!-- ======================================================================= -->
+
+<p><a name="ReviewWin81Client"></a></p>
+
+<h3 id="Review_the_Windows_81_Client">Review the Windows 8.1 Client</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>The last project we'll review right now is a Windows 8.1 Client app to calls into the LotLonUtilitiesService to retrieve the distances between two points on a map.  </p>
+
+<ul>
+<li>In the <strong>Solution Explorer</strong>, expand <strong>LatLon.Clients.Win81Client</strong>.</li>
+<li>Expand <strong>&quot;Service References&quot;</strong> and make not of the <strong>LatLonWcf</strong> service reference.<br></li>
+<li>The Windows 8.1 Client uses the Bing Maps SDK to display a map that the user can use to select starting lat/lon and ending lat/lon.  There are sometimes display issues that prevent the Bing Maps control from displaying.<br></li>
+<li>Open the MainPage.xaml document and review the markup.  Key elements include:
+
+<ul>
+<li>TextBox controls for the StartLatText, StartLonText, EndLatText, EndLonText</li>
+<li>GetDistanceButton Button control to get the distances between the two points</li>
+<li>Map control to display the start and end locations</li>
+<li>Popup control to allow the user to right click the map to set start or end locations.</li>
+</ul></li>
+</ul>
+
+<span class="codelanguage">XML</span><pre><code class="XML"><span style="color:#0000FF">&lt;</span><span style="color:#800000">Page</span>
+    <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Class</span>=<span style="color:#0000FF">&quot;LatLon.Clients.Win81Client.MainPage&quot;</span>
+    <span style="color:#FF0000">xmlns</span>=<span style="color:#0000FF">&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</span>
+    <span style="color:#FF0000">xmlns</span>:<span style="color:#FF0000">x</span>=<span style="color:#0000FF">&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</span>
+    <span style="color:#FF0000">xmlns</span>:<span style="color:#FF0000">local</span>=<span style="color:#0000FF">&quot;using:LatLon.Clients.Win81Client&quot;</span>
+    <span style="color:#FF0000">xmlns</span>:<span style="color:#FF0000">d</span>=<span style="color:#0000FF">&quot;http://schemas.microsoft.com/expression/blend/2008&quot;</span>
+    <span style="color:#FF0000">xmlns</span>:<span style="color:#FF0000">mc</span>=<span style="color:#0000FF">&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;</span>
+    <span style="color:#FF0000">xmlns</span>:<span style="color:#FF0000">cnv</span>=<span style="color:#0000FF">&quot;using:LatLon.Clients.Win81Client.Converters&quot;</span>
+    <span style="color:#FF0000">xmlns</span>:<span style="color:#FF0000">maps</span>=<span style="color:#0000FF">&quot;using:Bing.Maps&quot;</span>
+    <span style="color:#FF0000">mc</span>:<span style="color:#FF0000">Ignorable</span>=<span style="color:#0000FF">&quot;d&quot;</span><span style="color:#0000FF">&gt;</span>
+
+  <span style="color:#0000FF">&lt;</span><span style="color:#800000">Page.Resources</span><span style="color:#0000FF">&gt;</span>
+    <span style="color:#0000FF">&lt;</span><span style="color:#C71585">cnv</span>:<span style="color:#800000">DoubleToStringConverter</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Key</span>=<span style="color:#0000FF">&quot;DoubleToStringConverter&quot;</span> <span style="color:#0000FF">/&gt;</span>
+  <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Page.Resources</span><span style="color:#0000FF">&gt;</span>
+
+  <span style="color:#0000FF">&lt;</span><span style="color:#800000">Grid</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;LayoutRoot&quot;</span> <span style="color:#FF0000">Background</span>=<span style="color:#0000FF">&quot;{ThemeResource ApplicationPageBackgroundThemeBrush}&quot;</span><span style="color:#0000FF">&gt;</span>
+
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">Grid.ColumnDefinitions</span><span style="color:#0000FF">&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#800000">ColumnDefinition</span><span style="color:#0000FF">/&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#800000">ColumnDefinition</span> <span style="color:#FF0000">Width</span>=<span style="color:#0000FF">&quot;2*&quot;</span><span style="color:#0000FF">/&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#800000">ColumnDefinition</span> <span style="color:#FF0000">Width</span>=<span style="color:#0000FF">&quot;2*&quot;</span><span style="color:#0000FF">/&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#800000">ColumnDefinition</span><span style="color:#0000FF">/&gt;</span>
+    <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Grid.ColumnDefinitions</span><span style="color:#0000FF">&gt;</span>
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">Grid.RowDefinitions</span><span style="color:#0000FF">&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#800000">RowDefinition</span> <span style="color:#FF0000">Height</span>=<span style="color:#0000FF">&quot;16*&quot;</span><span style="color:#0000FF">/&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#800000">RowDefinition</span> <span style="color:#FF0000">Height</span>=<span style="color:#0000FF">&quot;91*&quot;</span><span style="color:#0000FF">/&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#800000">RowDefinition</span> <span style="color:#FF0000">Height</span>=<span style="color:#0000FF">&quot;103*&quot;</span><span style="color:#0000FF">/&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#800000">RowDefinition</span> <span style="color:#FF0000">Height</span>=<span style="color:#0000FF">&quot;90*&quot;</span><span style="color:#0000FF">/&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#800000">RowDefinition</span> <span style="color:#FF0000">Height</span>=<span style="color:#0000FF">&quot;468*&quot;</span><span style="color:#0000FF">/&gt;</span>
+    <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Grid.RowDefinitions</span><span style="color:#0000FF">&gt;</span>
+
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">TextBlock</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;1&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Column</span>=<span style="color:#0000FF">&quot;1&quot;</span> <span style="color:#FF0000">Text</span>=<span style="color:#0000FF">&quot;Latitude&quot;</span> <span style="color:#FF0000">Style</span>=<span style="color:#0000FF">&quot;{StaticResource HeaderTextBlockStyle}&quot;</span> <span style="color:#FF0000">HorizontalAlignment</span>=<span style="color:#0000FF">&quot;Center&quot;</span> <span style="color:#FF0000">VerticalAlignment</span>=<span style="color:#0000FF">&quot;Center&quot;</span> <span style="color:#0000FF">/&gt;</span>
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">TextBlock</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;1&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Column</span>=<span style="color:#0000FF">&quot;2&quot;</span> <span style="color:#FF0000">Text</span>=<span style="color:#0000FF">&quot;Longitude&quot;</span> <span style="color:#FF0000">Style</span>=<span style="color:#0000FF">&quot;{StaticResource HeaderTextBlockStyle}&quot;</span> <span style="color:#FF0000">HorizontalAlignment</span>=<span style="color:#0000FF">&quot;Center&quot;</span> <span style="color:#FF0000">VerticalAlignment</span>=<span style="color:#0000FF">&quot;Center&quot;</span> <span style="color:#0000FF">/&gt;</span>
+
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">TextBlock</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;2&quot;</span> <span style="color:#FF0000">Text</span>=<span style="color:#0000FF">&quot;Start&quot;</span> <span style="color:#FF0000">Style</span>=<span style="color:#0000FF">&quot;{StaticResource HeaderTextBlockStyle}&quot;</span> <span style="color:#FF0000">HorizontalAlignment</span>=<span style="color:#0000FF">&quot;Left&quot;</span> <span style="color:#FF0000">VerticalAlignment</span>=<span style="color:#0000FF">&quot;Center&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#0000FF">/&gt;</span>
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">TextBlock</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;3&quot;</span> <span style="color:#FF0000">Text</span>=<span style="color:#0000FF">&quot;End&quot;</span> <span style="color:#FF0000">Style</span>=<span style="color:#0000FF">&quot;{StaticResource HeaderTextBlockStyle}&quot;</span> <span style="color:#FF0000">HorizontalAlignment</span>=<span style="color:#0000FF">&quot;Left&quot;</span> <span style="color:#FF0000">VerticalAlignment</span>=<span style="color:#0000FF">&quot;Center&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#0000FF">/&gt;</span>
+
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">TextBox</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;StartLatText&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;2&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Column</span>=<span style="color:#0000FF">&quot;1&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#FF0000">Text</span>=<span style="color:#0000FF">&quot;{Binding StartLatitude, Converter={StaticResource DoubleToStringConverter}, Mode=TwoWay}&quot;</span> <span style="color:#FF0000">FontSize</span>=<span style="color:#0000FF">&quot;48&quot;</span> <span style="color:#0000FF">/&gt;</span>
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">TextBox</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;StartLonText&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;2&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Column</span>=<span style="color:#0000FF">&quot;2&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#FF0000">Text</span>=<span style="color:#0000FF">&quot;{Binding StartLongitude, Converter={StaticResource DoubleToStringConverter}, Mode=TwoWay}&quot;</span> <span style="color:#FF0000">FontSize</span>=<span style="color:#0000FF">&quot;48&quot;</span> <span style="color:#0000FF">/&gt;</span>
+
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">TextBox</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;EndLatText&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;3&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Column</span>=<span style="color:#0000FF">&quot;1&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#FF0000">Text</span>=<span style="color:#0000FF">&quot;{Binding EndLatitude, Converter={StaticResource DoubleToStringConverter}, Mode=TwoWay}&quot;</span> <span style="color:#FF0000">FontSize</span>=<span style="color:#0000FF">&quot;48&quot;</span> <span style="color:#0000FF">/&gt;</span>
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">TextBox</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;EndLonText&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;3&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Column</span>=<span style="color:#0000FF">&quot;2&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#FF0000">Text</span>=<span style="color:#0000FF">&quot;{Binding EndLongitude, Converter={StaticResource DoubleToStringConverter}, Mode=TwoWay}&quot;</span> <span style="color:#FF0000">FontSize</span>=<span style="color:#0000FF">&quot;48&quot;</span> <span style="color:#0000FF">/&gt;</span>
+
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">Button</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;GetDistanceButton&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;2&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Column</span>=<span style="color:#0000FF">&quot;3&quot;</span> <span style="color:#FF0000">Content</span>=<span style="color:#0000FF">&quot;Get Distances&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">RowSpan</span>=<span style="color:#0000FF">&quot;2&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#FF0000">VerticalAlignment</span>=<span style="color:#0000FF">&quot;Stretch&quot;</span> <span style="color:#FF0000">Width</span>=<span style="color:#0000FF">&quot;200&quot;</span> <span style="color:#FF0000">Click</span>=<span style="color:#0000FF">&quot;GetDistanceButton_Click&quot;</span> <span style="color:#0000FF">/&gt;</span>
+
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">TextBlock</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;4&quot;</span> <span style="color:#FF0000">TextWrapping</span>=<span style="color:#0000FF">&quot;Wrap&quot;</span> <span style="color:#FF0000">Text</span>=<span style="color:#0000FF">&quot;Right click map to set start or end position:&quot;</span> <span style="color:#FF0000">VerticalAlignment</span>=<span style="color:#0000FF">&quot;Center&quot;</span> <span style="color:#FF0000">HorizontalAlignment</span>=<span style="color:#0000FF">&quot;Left&quot;</span> <span style="color:#FF0000">FontSize</span>=<span style="color:#0000FF">&quot;24&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span><span style="color:#0000FF">/&gt;</span>
+
+
+    <span style="color:#0000FF">&lt;</span><span style="color:#C71585">maps</span>:<span style="color:#800000">Map</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;Map&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;4&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Column</span>=<span style="color:#0000FF">&quot;1&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#FF0000">Credentials</span>=<span style="color:#0000FF">&quot;{StaticResource BingMapsCredentials}&quot;</span> <span style="color:#FF0000">RightTapped</span>=<span style="color:#0000FF">&quot;Map_RightTapped&quot;</span><span style="color:#0000FF">&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#C71585">maps</span>:<span style="color:#800000">MapLayer</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;Pushpins&quot;</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#C71585">maps</span>:<span style="color:#800000">Pushpin</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;StartPin&quot;</span> <span style="color:#FF0000">Background</span>=<span style="color:#0000FF">&quot;Green&quot;</span><span style="color:#0000FF">&gt;</span>
+          <span style="color:#0000FF">&lt;</span><span style="color:#C71585">maps</span>:<span style="color:#800000">MapLayer.Position</span><span style="color:#0000FF">&gt;</span>
+            <span style="color:#0000FF">&lt;</span><span style="color:#C71585">maps</span>:<span style="color:#800000">Location</span> <span style="color:#FF0000">Latitude</span>=<span style="color:#0000FF">&quot;{Binding StartLatitude}&quot;</span> <span style="color:#FF0000">Longitude</span>=<span style="color:#0000FF">&quot;{Binding StartLongitude}&quot;</span> <span style="color:#0000FF">/&gt;</span>
+          <span style="color:#0000FF">&lt;/</span><span style="color:#C71585">maps</span>:<span style="color:#800000">MapLayer.Position</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;/</span><span style="color:#C71585">maps</span>:<span style="color:#800000">Pushpin</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#C71585">maps</span>:<span style="color:#800000">Pushpin</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;EndPin&quot;</span> <span style="color:#FF0000">Background</span>=<span style="color:#0000FF">&quot;Red&quot;</span><span style="color:#0000FF">&gt;</span>
+          <span style="color:#0000FF">&lt;</span><span style="color:#C71585">maps</span>:<span style="color:#800000">MapLayer.Position</span><span style="color:#0000FF">&gt;</span>
+            <span style="color:#0000FF">&lt;</span><span style="color:#C71585">maps</span>:<span style="color:#800000">Location</span> <span style="color:#FF0000">Latitude</span>=<span style="color:#0000FF">&quot;{Binding EndLatitude}&quot;</span> <span style="color:#FF0000">Longitude</span>=<span style="color:#0000FF">&quot;{Binding EndLongitude}&quot;</span> <span style="color:#0000FF">/&gt;</span>
+          <span style="color:#0000FF">&lt;/</span><span style="color:#C71585">maps</span>:<span style="color:#800000">MapLayer.Position</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;/</span><span style="color:#C71585">maps</span>:<span style="color:#800000">Pushpin</span><span style="color:#0000FF">&gt;</span>
+      <span style="color:#0000FF">&lt;/</span><span style="color:#C71585">maps</span>:<span style="color:#800000">MapLayer</span><span style="color:#0000FF">&gt;</span>
+    <span style="color:#0000FF">&lt;/</span><span style="color:#C71585">maps</span>:<span style="color:#800000">Map</span><span style="color:#0000FF">&gt;</span>
+
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">Popup</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;SetTargetPopup&quot;</span> <span style="color:#FF0000">HorizontalOffset</span>=<span style="color:#0000FF">&quot;200&quot;</span> <span style="color:#FF0000">VerticalOffset</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#FF0000">IsLightDismissEnabled</span>=<span style="color:#0000FF">&quot;True&quot;</span><span style="color:#0000FF">&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#800000">Popup.ChildTransitions</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">TransitionCollection</span><span style="color:#0000FF">&gt;</span>
+          <span style="color:#0000FF">&lt;</span><span style="color:#800000">PopupThemeTransition</span> <span style="color:#0000FF">/&gt;</span>
+        <span style="color:#0000FF">&lt;/</span><span style="color:#800000">TransitionCollection</span><span style="color:#0000FF">&gt;</span>
+      <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Popup.ChildTransitions</span><span style="color:#0000FF">&gt;</span>
+      <span style="color:#0000FF">&lt;</span><span style="color:#800000">Border</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;SetTargetPopupBorder&quot;</span> <span style="color:#FF0000">BorderBrush</span>=<span style="color:#0000FF">&quot;{StaticResource ApplicationForegroundThemeBrush}&quot;</span> <span style="color:#FF0000">BorderThickness</span>=<span style="color:#0000FF">&quot;2&quot;</span> <span style="color:#FF0000">Background</span>=<span style="color:#0000FF">&quot;{StaticResource ApplicationPageBackgroundThemeBrush}&quot;</span> <span style="color:#FF0000">Width</span>=<span style="color:#0000FF">&quot;200&quot;</span> <span style="color:#FF0000">Height</span>=<span style="color:#0000FF">&quot;200&quot;</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">StackPanel</span> <span style="color:#FF0000">HorizontalAlignment</span>=<span style="color:#0000FF">&quot;Center&quot;</span> <span style="color:#FF0000">VerticalAlignment</span>=<span style="color:#0000FF">&quot;Center&quot;</span><span style="color:#0000FF">&gt;</span>
+          <span style="color:#0000FF">&lt;</span><span style="color:#800000">Button</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;SetStartPosition&quot;</span> <span style="color:#FF0000">Content</span>=<span style="color:#0000FF">&quot;Set Start Position&quot;</span>  <span style="color:#FF0000">HorizontalAlignment</span>=<span style="color:#0000FF">&quot;Center&quot;</span> <span style="color:#FF0000">Tag</span>=<span style="color:#0000FF">&quot;SetStart&quot;</span> <span style="color:#FF0000">Click</span>=<span style="color:#0000FF">&quot;SetTargetPosition_Click&quot;</span> <span style="color:#FF0000">Width</span>=<span style="color:#0000FF">&quot;175&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#0000FF">/&gt;</span>
+          <span style="color:#0000FF">&lt;</span><span style="color:#800000">Button</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;SetEndPosition&quot;</span> <span style="color:#FF0000">Content</span>=<span style="color:#0000FF">&quot;Set End Position&quot;</span>  <span style="color:#FF0000">HorizontalAlignment</span>=<span style="color:#0000FF">&quot;Center&quot;</span> <span style="color:#FF0000">Tag</span>=<span style="color:#0000FF">&quot;SetEnd&quot;</span> <span style="color:#FF0000">Click</span>=<span style="color:#0000FF">&quot;SetTargetPosition_Click&quot;</span> <span style="color:#FF0000">Width</span>=<span style="color:#0000FF">&quot;175&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span><span style="color:#0000FF">/&gt;</span>
+        <span style="color:#0000FF">&lt;/</span><span style="color:#800000">StackPanel</span><span style="color:#0000FF">&gt;</span>
+      <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Border</span><span style="color:#0000FF">&gt;</span>
+    <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Popup</span><span style="color:#0000FF">&gt;</span>
+
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">ListView</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;DistanceList&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;4&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Column</span>=<span style="color:#0000FF">&quot;2&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#0000FF">/&gt;</span>
+
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">ProgressRing</span> <span style="color:#FF0000">x</span>:<span style="color:#FF0000">Name</span>=<span style="color:#0000FF">&quot;LoadingRing&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Row</span>=<span style="color:#0000FF">&quot;4&quot;</span> <span style="color:#FF0000">Grid</span>.<span style="color:#FF0000">Column</span>=<span style="color:#0000FF">&quot;2&quot;</span> <span style="color:#FF0000">Margin</span>=<span style="color:#0000FF">&quot;10&quot;</span> <span style="color:#FF0000">Width</span>=<span style="color:#0000FF">&quot;200&quot;</span> <span style="color:#FF0000">Height</span>=<span style="color:#0000FF">&quot;200&quot;</span> <span style="color:#0000FF">/&gt;</span>
+
+  <span style="color:#0000FF">&lt;/</span><span style="color:#800000">Grid</span><span style="color:#0000FF">&gt;</span>
+<span style="color:#0000FF">&lt;/</span><span style="color:#800000">Page</span><span style="color:#0000FF">&gt;</span>
+</code></pre>
+
+<ul>
+<li>Open the MainPage.xaml.cs code file to review the code.  The most important method is the <strong>GetDistanceButton_Click</strong> event handler.  This is where the call to the Wcf service is made, and the results displayed:</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Bing.Maps;
+<span style="color:#0000FF">using</span> LatLon.Clients.Win81Client.LatLonWcf;
+<span style="color:#0000FF">using</span> System;
+<span style="color:#0000FF">using</span> System.Collections.Generic;
+<span style="color:#0000FF">using</span> System.ComponentModel;
+<span style="color:#0000FF">using</span> System.IO;
+<span style="color:#0000FF">using</span> System.Linq;
+<span style="color:#0000FF">using</span> System.Runtime.CompilerServices;
+<span style="color:#0000FF">using</span> System.Runtime.InteropServices.WindowsRuntime;
+<span style="color:#0000FF">using</span> Windows.Foundation;
+<span style="color:#0000FF">using</span> Windows.Foundation.Collections;
+<span style="color:#0000FF">using</span> Windows.UI.Popups;
+<span style="color:#0000FF">using</span> Windows.UI.Xaml;
+<span style="color:#0000FF">using</span> Windows.UI.Xaml.Controls;
+<span style="color:#0000FF">using</span> Windows.UI.Xaml.Controls.Primitives;
+<span style="color:#0000FF">using</span> Windows.UI.Xaml.Data;
+<span style="color:#0000FF">using</span> Windows.UI.Xaml.Input;
+<span style="color:#0000FF">using</span> Windows.UI.Xaml.Media;
+<span style="color:#0000FF">using</span> Windows.UI.Xaml.Navigation;
+
+<span style="color:#008000">// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238</span>
+
+<span style="color:#0000FF">namespace</span> LatLon.Clients.Win81Client
+{
+  <span style="color:#808080">/// &lt;summary&gt;</span>
+  <span style="color:#808080">/// An empty page that can be used on its own or navigated to within a Frame.</span>
+  <span style="color:#808080">/// &lt;/summary&gt;</span>
+  <span style="color:#0000FF">public</span> <span style="color:#0000FF">sealed</span> <span style="color:#0000FF">partial</span> <span style="color:#0000FF">class</span> MainPage : Page, INotifyPropertyChanged
+  {
+    #region INotifyPropertyChanged Implementation
+
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">event</span> PropertyChangedEventHandler PropertyChanged;
+
+    <span style="color:#0000FF">protected</span> <span style="color:#0000FF">void</span> Set&lt;T&gt;(<span style="color:#0000FF">ref</span> T field, T <span style="color:#0000FF">value</span>, [CallerMemberName] <span style="color:#0000FF">string</span> PropertyName = <span style="color:#0000FF">null</span>)
+    {
+      <span style="color:#0000FF">if</span> (!EqualityComparer&lt;T&gt;.Default.Equals(field, <span style="color:#0000FF">value</span>))
+      {
+        field = <span style="color:#0000FF">value</span>;
+        NotifyPropertyChanged(PropertyName);
+      }
+    }
+
+    <span style="color:#0000FF">protected</span> <span style="color:#0000FF">void</span> NotifyPropertyChanged(<span style="color:#0000FF">string</span> PropertyName)
+    {
+      <span style="color:#0000FF">if</span> (PropertyChanged != <span style="color:#0000FF">null</span>)
+        PropertyChanged(<span style="color:#0000FF">this</span>, <span style="color:#0000FF">new</span> PropertyChangedEventArgs(PropertyName));
+    }
+
+    #endregion INotifyPropertyChanged Implementation
+
+    Location tapLocation;
+
+    <span style="color:#008000">/*
+     * Start:   47.620553946572,  -122.349371687757 //One Microsoft Way
+     * End:     47.6396336616716, -122.128283751696 //Space Needle
+     */</span>
+
+    <span style="color:#0000FF">private</span> <span style="color:#0000FF">double</span> startLatitude = 47.620553946572d;
+
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span> StartLatitude
+    {
+      <span style="color:#0000FF">get</span> { <span style="color:#0000FF">return</span> startLatitude; }
+      <span style="color:#0000FF">set</span>
+      {
+        Set(<span style="color:#0000FF">ref</span> startLatitude, <span style="color:#0000FF">value</span>);
+        SetMapView();
+      }
+    }
+
+    <span style="color:#0000FF">private</span> <span style="color:#0000FF">double</span> startLongitude = -122.349371687757d;
+
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span> StartLongitude
+    {
+      <span style="color:#0000FF">get</span> { <span style="color:#0000FF">return</span> startLongitude; }
+      <span style="color:#0000FF">set</span>
+      {
+        Set(<span style="color:#0000FF">ref</span> startLongitude, <span style="color:#0000FF">value</span>);
+        SetMapView();
+      }
+    }
+
+    <span style="color:#0000FF">private</span> <span style="color:#0000FF">double</span> endLatitude = 47.6396336616716d;
+
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span> EndLatitude
+    {
+      <span style="color:#0000FF">get</span> { <span style="color:#0000FF">return</span> endLatitude; }
+      <span style="color:#0000FF">set</span>
+      {
+        Set(<span style="color:#0000FF">ref</span> endLatitude, <span style="color:#0000FF">value</span>);
+        SetMapView();
+      }
+    }
+
+    <span style="color:#0000FF">private</span> <span style="color:#0000FF">double</span> endLongitude = -122.128283751696d;
+
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span> EndLongitude
+    {
+      <span style="color:#0000FF">get</span> { <span style="color:#0000FF">return</span> endLongitude; }
+      <span style="color:#0000FF">set</span>
+      {
+        Set(<span style="color:#0000FF">ref</span> endLongitude, <span style="color:#0000FF">value</span>);
+        SetMapView();
+      }
+    }
+
+    <span style="color:#0000FF">public</span> MainPage()
+    {
+      <span style="color:#0000FF">this</span>.InitializeComponent();
+
+      <span style="color:#0000FF">this</span>.DataContext = <span style="color:#0000FF">this</span>;
+
+      <span style="color:#0000FF">this</span>.Loaded += MainPage_Loaded;
+
+    }
+
+    <span style="color:#0000FF">void</span> MainPage_Loaded(<span style="color:#0000FF">object</span> sender, RoutedEventArgs e)
+    {
+      <span style="color:#008000">//Set the map view to include the starting and ending points.</span>
+      SetMapView();
+    }
+
+    <span style="color:#808080">/// &lt;summary&gt;</span>
+    <span style="color:#808080">/// Map RightTapped event handler.  Allows the user to set the start or end position based on the location of the map they right-tapped on. </span>
+    <span style="color:#808080">/// &lt;/summary&gt;</span>
+    <span style="color:#808080">/// &lt;param name=&quot;sender&quot;&gt;The map control that was tapped&lt;/param&gt;</span>
+    <span style="color:#808080">/// &lt;param name=&quot;e&quot;&gt;The RightTappedRoutedEventArgs including the position of the tap&lt;/param&gt;</span>
+    <span style="color:#0000FF">void</span> Map_RightTapped(<span style="color:#0000FF">object</span> sender, RightTappedRoutedEventArgs e)
+    {
+      Point pagePosition = e.GetPosition(<span style="color:#0000FF">this</span>);
+      Point mapPosition = e.GetPosition(Map);
+
+      <span style="color:#008000">//Turn the x/y position that was tapped on the map to a lat/lon location...</span>
+      <span style="color:#0000FF">bool</span> succeeded = Map.TryPixelToLocation(mapPosition, <span style="color:#0000FF">out</span> tapLocation);
+      <span style="color:#008000">//if that worked</span>
+      <span style="color:#0000FF">if</span> (succeeded)
+      {
+        <span style="color:#008000">//Make sure the pop-up menu will be on the screen</span>
+        SetTargetPopup.HorizontalOffset = Math.Max(Math.Min(pagePosition.X + 10, <span style="color:#0000FF">this</span>.ActualWidth - SetTargetPopupBorder.Width), 0);
+        SetTargetPopup.VerticalOffset = Math.Max(Math.Min(pagePosition.Y + 10, <span style="color:#0000FF">this</span>.ActualHeight - SetTargetPopupBorder.Height), 0);
+        <span style="color:#008000">//and show it.  </span>
+        <span style="color:#0000FF">if</span> (!SetTargetPopup.IsOpen) { SetTargetPopup.IsOpen = <span style="color:#0000FF">true</span>; }
+      }
+    }
+
+    <span style="color:#0000FF">private</span> <span style="color:#0000FF">async</span> <span style="color:#0000FF">void</span> GetDistanceButton_Click(<span style="color:#0000FF">object</span> sender, RoutedEventArgs e)
+    {
+      <span style="color:#0000FF">double</span> latStart;
+      <span style="color:#0000FF">double</span> lonStart;
+      <span style="color:#0000FF">double</span> latEnd;
+      <span style="color:#0000FF">double</span> lonEnd;
+      <span style="color:#0000FF">string</span> message = <span style="color:#0000FF">string</span>.Empty;
+
+      <span style="color:#0000FF">if</span> (<span style="color:#0000FF">double</span>.TryParse(StartLatText.Text, <span style="color:#0000FF">out</span> latStart))
+        <span style="color:#0000FF">if</span> (<span style="color:#0000FF">double</span>.TryParse(StartLonText.Text, <span style="color:#0000FF">out</span> lonStart))
+          <span style="color:#0000FF">if</span> (<span style="color:#0000FF">double</span>.TryParse(EndLatText.Text, <span style="color:#0000FF">out</span> latEnd))
+            <span style="color:#0000FF">if</span> (<span style="color:#0000FF">double</span>.TryParse(EndLonText.Text, <span style="color:#0000FF">out</span> lonEnd))
+            {
+              <span style="color:#008000">//Show the progress ring...</span>
+              LoadingRing.IsActive = <span style="color:#0000FF">true</span>;
+
+              <span style="color:#0000FF">try</span>
+              {
+                <span style="color:#008000">//Use the LatLonWcf Service Reference to create a LatLonUtiltiesSerivce client proxy...</span>
+                LatLonUtilitiesServiceClient svc = <span style="color:#0000FF">new</span> LatLonUtilitiesServiceClient();
+
+                <span style="color:#008000">//Then call the various methods on the service to determine the distance </span>
+                <span style="color:#008000">//Between the start and end points. </span>
+                DistanceList.Items.Clear();
+                DistanceList.Items.Add(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Retrieving Distances From: {0}&quot;</span>, svc.Endpoint.Address.Uri.ToString()));
+                DistanceList.Items.Add(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Distance (Rads): {0}&quot;</span>, <span style="color:#0000FF">await</span> svc.RadiansBetweenTwoPointsAsync(latStart, lonStart, latEnd, lonEnd)));
+                DistanceList.Items.Add(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Distance (NM):   {0}&quot;</span>, <span style="color:#0000FF">await</span> svc.NauticalMilesBetweenTwoPointsAsync(latStart, lonStart, latEnd, lonEnd)));
+                DistanceList.Items.Add(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Distance (KM):   {0}&quot;</span>, <span style="color:#0000FF">await</span> svc.KilometersBetweenTwoPointsAsync(latStart, lonStart, latEnd, lonEnd)));
+                DistanceList.Items.Add(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Distance (MI):   {0}&quot;</span>, <span style="color:#0000FF">await</span> svc.MilesBetweenTwoPointsAsync(latStart, lonStart, latEnd, lonEnd)));
+
+              }
+              <span style="color:#0000FF">catch</span> (Exception ex)
+              {
+                <span style="color:#008000">//Build an error message</span>
+                message = <span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;An error occurred while retrieving distances from the service: {0} - {1}&quot;</span>, ex.GetType().Name, ex.Message);
+              }
+
+              <span style="color:#008000">//Hide the progress ring</span>
+              LoadingRing.IsActive = <span style="color:#0000FF">false</span>;
+
+              <span style="color:#008000">//If there is an error message, show it in a MessageDialog</span>
+              <span style="color:#0000FF">if</span> (!<span style="color:#0000FF">string</span>.IsNullOrWhiteSpace(message))
+              {
+                MessageDialog dlg = <span style="color:#0000FF">new</span> MessageDialog(message);
+                <span style="color:#0000FF">await</span> dlg.ShowAsync();
+              }
+            }
+    }
+
+    <span style="color:#808080">/// &lt;summary&gt;</span>
+    <span style="color:#808080">/// Set the start or end position based on which PopUp button was clicked...</span>
+    <span style="color:#808080">/// &lt;/summary&gt;</span>
+    <span style="color:#808080">/// &lt;param name=&quot;sender&quot;&gt;The button that was clicked&lt;/param&gt;</span>
+    <span style="color:#808080">/// &lt;param name=&quot;e&quot;&gt;The RoutedEventArgs for the click event&lt;/param&gt;</span>
+    <span style="color:#0000FF">private</span> <span style="color:#0000FF">void</span> SetTargetPosition_Click(<span style="color:#0000FF">object</span> sender, RoutedEventArgs e)
+    {
+      Button button = sender <span style="color:#0000FF">as</span> Button;
+      <span style="color:#0000FF">if</span> (button != <span style="color:#0000FF">null</span>)
+      {
+        <span style="color:#0000FF">string</span> tag = button.Tag.ToString().ToLower();
+        <span style="color:#0000FF">switch</span> (tag)
+        {
+          <span style="color:#008000">//If the setstart button was clicked, set the start position...</span>
+          <span style="color:#0000FF">case</span> <span style="color:#8B0000">&quot;setstart&quot;</span>:
+            StartLatitude = tapLocation.Latitude;
+            StartLongitude = tapLocation.Longitude;
+            <span style="color:#0000FF">break</span>;
+          <span style="color:#008000">//if the setend button was clicked, set the end position...</span>
+          <span style="color:#0000FF">case</span> <span style="color:#8B0000">&quot;setend&quot;</span>:
+            EndLatitude = tapLocation.Latitude;
+            EndLongitude = tapLocation.Longitude;
+            <span style="color:#0000FF">break</span>;
+        }
+      }
+      <span style="color:#0000FF">if</span> (SetTargetPopup.IsOpen) SetTargetPopup.IsOpen = <span style="color:#0000FF">false</span>;
+    }
+
+    <span style="color:#0000FF">private</span> <span style="color:#0000FF">void</span> SetMapView()
+    {
+      <span style="color:#008000">//Build a location collection that includes the start and end positions</span>
+      LocationCollection locations = <span style="color:#0000FF">new</span> LocationCollection{
+        <span style="color:#0000FF">new</span> Location(StartLatitude,StartLongitude),
+        <span style="color:#0000FF">new</span> Location(EndLatitude,EndLongitude)
+      };
+      <span style="color:#008000">//Build a LocationRectangle using that surrounds all locations in the collection</span>
+      LocationRect rect = <span style="color:#0000FF">new</span> LocationRect(locations);
+
+      <span style="color:#008000">//Increase the size of the rectangle to make sure no locations are on the border of the rectangle</span>
+      rect.Width *= 1.75;
+      rect.Height *= 1.75;
+
+      <span style="color:#008000">//Set the map view to zoom in on the LocationRect...</span>
+      Map.SetView(rect);
+    }
+  }
+}
+</code></pre>
+
+<!-- ======================================================================= -->
+
+<p><a name="RunTheConsoleHost"></a></p>
+
+<h3 id="Run_the_Console_Host">Run the Console Host</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Run the Console Host (without debugging).  </p>
+
+<ul>
+<li>Right-click the <strong>LatLon</strong> Solution in the <strong>Solution Explorer</strong> window, and select <strong>&quot;Properties&quot;</strong></li>
+<li><p>Switch to the <strong>&quot;Common Properties&quot;</strong> | <strong>&quot;Startup Project&quot;</strong> page, and ensure that <strong>&quot;Current selection&quot;</strong> is selected, then click <strong>OK</strong>.  This tells Visual Studio to run what ever project is current selected.  </p>
+
+<p><img src="images/01debug-current-selection.png?raw=true" alt="Debug Current Selection">
+</p></li>
+<li><p>In the <strong>Solution Explorer</strong> window, select the <strong>LatLon.Hosts.ConsoleHost</strong> project.  </p></li>
+<li><p>From the menu bar select <strong>&quot;Debug&quot;</strong> | <strong>&quot;Start Without Debugging&quot;</strong> or press <strong>Ctrl+F5</strong>. A console window should appear and display the status of the service host: </p>
+
+<p><img src="images/02console-hosted-service.png?raw=true" alt="Console Hosted Service">
+</p></li>
+<li><p>Note the URLs that are being listened on by the serivce, and copy the last one (should be <strong>http://locahost:8000/LatLon</strong>) to the clipboard.</p></li>
+<li><p>Leave the console app running and return to <strong>Visual Studio</strong></p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"> <span style="color:#008000">//here is some code</span>
+</code></pre>
+
+<!-- ======================================================================= -->
+
+<p><a name="UpdateServiceReferenceConsoleHost"></a></p>
+
+<h3 id="Update_Win_81_Client_Service_Reference_to_Console_Host">Update Win 8.1 Client Service Reference to Console Host</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Ensure that the Windows 8.1 Client application's LatLonWcf service reference is pointing at the correct URL for the ClientHost service endpoint</p>
+
+<ul>
+<li>In the <strong>&quot;Solution Explorer&quot;</strong> window, expand <strong>&quot;LatLon.Clients.Win81Client&quot;</strong> | <strong>&quot;Service References&quot;</strong></li>
+<li>Right-click the <strong>LatLonWcf</strong> service reference and select <strong>&quot;Configure Service Reference...&quot;</strong></li>
+<li><p>In the <strong>&quot;Service Referece Settings&quot;</strong> window, in the <strong>&quot;Address&quot;</strong> field, paste (or type) in the endpoint URL copied from the ConsoleHost console window previously (should be <strong>http://localhost:8000/LatLon</strong> unless you changed the code).  Click <strong>&quot;OK&quot;</strong> to update the service reference. </p>
+
+<p><img src="images/03configure-service-reference.png?raw=true" alt="Configure Service Reference">
+ </p></li>
+<li><p>In the <strong>Solution Explorer</strong>, select the <strong>&quot;LatLon.Clients.Win81Client&quot;</strong> project.</p></li>
+<li><p>From the menu bar select <strong>&quot;Debug&quot;</strong> | <strong>&quot;Start Without Debugging&quot;</strong> or press <strong>Ctrl+F5</strong>.</p></li>
+<li><p>The Windows 8.1 Client application should start.  Click the &quot;Get Distances&quot; button to verify that the service call functioned correctly. </p>
+<blockquote>
+<p><strong>Note:</strong> If there are build errors, Right click the &quot;LatLon&quot; solution and select &quot;Clean Solution&quot;, then right-click the solution and select &quot;Rebuild Solution&quot;. If needed, stop the console host before rebuilding and re-start it afterwards.  </p>
+</blockquote>
+<p><img src="images/04win81clientrunning.png?raw=true" alt="Win81ClientRunning">
+</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"> <span style="color:#008000">//here is some code</span>
+</code></pre>
+
+<h2 id="Host_the_Service_in_an_Azure_Web_Site">Host the Service in an Azure Web Site</h2>
+
+<!-- ======================================================================= -->
+
+<p><a name="AddWebHostProject"></a></p>
+
+<h3 id="Add_a_Web_Host_Project">Add a Web Host Project</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Add a web project to act as a service host.  </p>
+
+<ul>
+<li>In the Visual Studio <strong>Solution Explorer</strong>, right click the <strong>&quot;LatLon&quot;</strong> solution and select <strong>&quot;Add&quot;</strong> | <strong>&quot;New Project...&quot;</strong></li>
+<li><p>In the <strong>&quot;Add New Project&quot;</strong> window, from the <strong>&quot;Installed&quot;</strong> templates, select <strong>&quot;Visual C#&quot;</strong> | <strong>&quot;Web&quot;</strong> | <strong>&quot;ASP.NET Web Application&quot;</strong>.  Name the project <strong>LatLon.Hosts.WebHost</strong> and click <strong>&quot;OK&quot;</strong> to add the new project. </p>
+
+<p><img src="images/05add-web-host-project.png?raw=true" alt="Add Web Host Project">
+</p></li>
+<li><p>In the <strong>&quot;New ASP.NET Project&quot;</strong> window, select <strong>&quot;Empty&quot;</strong> and click <strong>&quot;OK&quot;</strong></p>
+
+<p><img src="images/06empty-web-project.png?raw=true" alt="Empty Web Project">
+</p></li>
+<li><p>In the <strong>Solution Explorer</strong>, expand the <strong>&quot;LatLon.Hosts.WebHost&quot;</strong>.  Right click <strong>References</strong> and select <strong>&quot;Add Reference...&quot;</strong>.  Expand &quot;Solution&quot; | &quot;Projects&quot; and turn on the checkmarks for the LatLon.Core.Contracts and LatLon.Core.Services projects</p>
+
+<p><img src="images/09solution-project-references.png?raw=true" alt="Solution Project References">
+</p></li>
+<li><p>In the <strong>Solution Explorer</strong>, right click the <strong>LatLon.Hosts.WebHost</strong> project and select <strong>&quot;Add&quot;</strong> | <strong>&quot;New Item...&quot;</strong>.  Select &quot;WCF Service&quot;, name the new service <strong>&quot;LatLonUtilities.svc&quot;</strong> and click <strong>&quot;Add&quot;</strong> </p>
+
+<p><img src="images/07add-wcf-service.png?raw=true" alt="Add Wcf Service">
+</p></li>
+<li><p>Along with the LatLonUtilities.svc file, we got a few files that we don't actually need because we already have them in the LatLon.Core.Contracts.ILatLonUtilitiesService.cs and LatLon.core.Services.LatLonUtilitiesService.cs files.  </p></li>
+<li><p>First, open and <strong>review</strong> the <strong>ILatLonUtilites.cs</strong> and <strong>LatLonUtilites.svc.cs</strong> files.  Explain that these file implement a basic LatLonUtilities service.  However, we already have the ILatLonUtilities contract, and the LatLonUtilitiesService implementation so we don't need them.  Once you have reviewed the files, <strong>delete them</strong>. </p>
+
+<p><img src="images/08remote-default-service-files.png?raw=true" alt="Remote Default Service Files">
+</p></li>
+<li><p>Next, open the LatLonUtilities.svc file, and modify the markup to match:</p></li>
+</ul>
+
+<span class="codelanguage">XML</span><pre><code class="XML"><span style="color:#0000FF">&lt;</span>%@ ServiceHost Service=&quot;LatLon.Core.Services.LatLonUtilitiesService&quot;  %<span style="color:#0000FF">&gt;</span>
+</code></pre>
+
+<ul>
+<li><p>Explain that the <strong>&quot;.svc&quot;</strong> file extension and <strong>&lt;%@ ServiceHost ...%&gt;</strong> tag instruct ASP.NET to generate the Service host.  It will be hosted on an endpoint that has</p>
+
+<ul>
+<li><strong>Address</strong> - Web site url plus .svc file name (<a href="http://lanlon.azurewebsites.net/LatLonUtilities.svc">http://lanlon.azurewebsites.net/LatLonUtilities.svc</a>) </li>
+<li><strong>Binding</strong> - BasicHttpBinding by default, although you change that in the configuration files</li>
+<li><strong>Contract</strong> - The ILatLonUtilitiesService implemented in the LatLonUtilitiesService class. </li>
+</ul></li>
+<li><p>Right click the LatLonUtilities.svc file and select &quot;View in Browser (Internet Explorer)&quot;.  This should launch the service details page.  You can click either of the links at the top to view the WSDL documents for the service.  </p></li>
+<li><p>Copy the URL for the service out of the browser address window. For me, its: <a href="http://localhost:9271/LatLonUtilities.svc">http://localhost:9271/LatLonUtilities.svc</a> </p></li>
+<li><p>As before, update the Win81Client LatLonWcf service reference to point the service now hosted in a local website.  </p></li>
+<li><p>In the <strong>Solution Explorer</strong> window, select the  <strong>LatLon.Clients.Win81Client</strong> project, and from the menu bar select <strong>&quot;Debug&quot;</strong> | <strong>&quot;Start Without Debugging&quot;</strong> or press <strong>Ctrl+F5</strong> to run the Windows 8.1 client app.  Click the <strong>Get Distances</strong> button, and verify that the distances are returned.  </p></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="CreateSiteInPortal"></a></p>
+
+<h3 id="Create_a_Web_Site_in_the_Azure_Management_Portal">Create a Web Site in the Azure Management Portal</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>You can either create a site ahead of time in the Azure Management Portal, or you can create the site on the fly using the Azure Tools in Visual Studio.  In this quick demo, we'll create a Web Site using the Azure management Portal.</p>
+
+<ul>
+<li>Open the <a href="https://manage.windowsazure.com">Azure Management Portal</a> (<a href="https://manage.windowsazure.com">https://manage.windowsazure.com</a>) in the browser. </li>
+<li>Quickly review the menu of services along the left hand side</li>
+<li>Click <strong>&quot;WEB SITES&quot;</strong> to see the current web sites for the account</li>
+<li>Click the <strong>&quot;+ NEW&quot;</strong> button and select <strong>&quot;COMPUTE&quot;</strong> | <strong>&quot;WEB SITE&quot;</strong> </li>
+<li><p>Review the three options:</p>
+
+<ul>
+<li><strong>QUICK CREATE</strong> - Create an empty web site very quickly.  Just a name and region are needed</li>
+<li><strong>CUSTOM CREATE</strong> - Create a new site with a name, region, database, and source control integration</li>
+<li><strong>FROM GALLERY</strong> - Create a new site using one of the many templates.<br></li>
+</ul></li>
+<li><p>Choose <strong>QUICK CREATE</strong> and create new site with a name like &quot;LatLonDemo&quot; (your name will have to be unique), and in an appropriate region.  </p></li>
+<li><p>Wait for the new site to be created and show it in the portal.   </p>
+
+<p><img src="images/9.5web-site-in-portal.png?raw=true" alt="Web Site in Portal">
+</p></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="PublishWindowsAzureWebSite"></a></p>
+
+<h3 id="Publish_to_a_Windows_Azure_Web_Site">Publish to a Windows Azure Web Site</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Next, we'll take the Web Site we just created and publish it to an Azure Web Site.  </p>
+
+<ul>
+<li>Right click the &quot;LatLon.Hosts.WebHost&quot; project, and select &quot;Publish...&quot;.<br></li>
+<li>From the <strong>&quot;Publish Web&quot;</strong> window, click the <strong>&quot;Import&quot;</strong> button and either sign into Windows Azure using your Microsoft Account, or use the &quot;Import subscriptions&quot; link to import a publish profile.</li>
+<li><p>Once signed in, in the <strong>&quot;Import Publish Settings&quot;</strong> window, click the drop down and show that the Web Site we created in the portal previously appears in the list:</p>
+
+<p><img src="images/9.75web-site-in-list.png?raw=true" alt="Web Site in List">
+</p></li>
+<li><p><strong>DON'T PUBLISH TO THE SITE WE ALREADY CREATED!!</strong>.  We'll create a new one instead to show that a site can be created in Visual Studio as well.  </p></li>
+<li><p>Click the <strong>&quot;New&quot;</strong> button and complete the details in the <strong>&quot;Create site on Windows Azure&quot;</strong> dialog to create a new site. (Select <strong>&quot;No Database&quot;</strong> for the database server) and click <strong>&quot;Create&quot;</strong>:</p>
+
+<p><img src="images/10create-azure-web-site.png?raw=true" alt="Create Azure Web Site">
+</p></li>
+<li><p>Back in the <strong>&quot;Import Publish Settings&quot;</strong> click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/11import-publish-settings.png?raw=true" alt="Import Publish Settings">
+</p></li>
+<li><p>Complete the <strong>&quot;Publish Web&quot;</strong> wizard using the defaults. </p></li>
+<li><p><strong><em>It should only take a minute or two to publish to Azure</em></strong>.  Once complete, add &quot;LatLonUtilities.svc&quot; to the URL for the web site URL (e.g.: <a href="http://lanlon.azurewebsites.net/LatLonUtilities.svc">http://lanlon.azurewebsites.net/LatLonUtilities.svc</a>), and verify that the Service details page is shown.</p>
+
+<p><img src="images/11.5service-running-in-web-site.png?raw=true" alt="Service Running in Web Site">
+</p></li>
+<li><p>Copy the URL for the web service, and again, in Visual Studio, configure the LatLonWcf service reference to point to the URL of the hosted service:</p>
+
+<p><img src="images/12configure-81-client-to-reference-web-host.png?raw=true" alt="Configure 8.1 Client To Reference Web Host">
+</p></li>
+<li><p>In the <strong>Solution Explorer</strong>, select the <strong>LatLon.Clients.Win81Client</strong> project, and from the menu bar select <strong>&quot;Debug&quot;</strong> | <strong>&quot;Start Without Debugging&quot;</strong> or press <strong>Ctrl+F5</strong></p></li>
+<li><p>Click the <strong>&quot;Get Distances&quot;</strong> button and verify that the data is loaded from the web service successfully</p></li>
+<li><p>Cool!  You now have a Web Service hosted in an Azure Web Site, and a Windows 8.1 Client that is using it!  Notice how easy it was to move it into a website.  We didn't have to write any code.  We just leveraged the existing <strong>Contract</strong> (<strong>LonLon.Core.Contracts.ILatLonUtilitiesService</strong>) and <strong>Service</strong> (<strong>LonLon.Core.Services.LatLonUtilitiesService</strong>), and the ASP.NET <strong>&quot;.svc&quot;</strong> file type and <strong>&lt;%@ ServiceHost ...%&gt;</strong> tag to host the service.  </p></li>
+</ul>
+
+<h2 id="Host_the_Service_in_an_Azure_Web_Role">Host the Service in an Azure Web Role</h2>
+
+<!-- ======================================================================= -->
+
+<p><a name="CreateCloudServiceAndWebRole"></a></p>
+
+<h3 id="Create_the_Cloud_Service_and_Web_Role_Projects">Create the Cloud Service and Web Role Projects</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Next, we'll create a Cloud Service project that has a single ASP.NET Web Role.  And show that we can host the service in the Web Role much in the same way we did in the Azure Web Site. </p>
+
+<ul>
+<li><p>In the <strong>Solution Explorer</strong>, right click the <strong>&quot;LatLon&quot;</strong> solution and select <strong>&quot;Add&quot;</strong> | <strong>&quot;New Project...&quot;</strong>.   Select <strong>Cloud</strong> along the left, then select <strong>&quot;Windows Azure Cloud Service&quot;</strong>.  Name the new project <strong>&quot;LatLon.Hosts.CloudService&quot;</strong> and click <strong>&quot;OK&quot;</strong>.</p>
+
+<p><img src="images/13create-cloud-service.png?raw=true" alt="Create Cloud Service">
+</p></li>
+<li><p>In the <strong>&quot;New Windows Azure Cloud Service&quot;</strong> window, add an <strong>&quot;ASP.NET Web Role&quot;</strong> and name it <strong>&quot;LatLon.Hosts.WebRoleHost&quot;</strong>.  Click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/14add-web-role.png?raw=true" alt="Add Web Role">
+</p></li>
+<li><p>In the <strong>&quot;New ASP.NET Project&quot;</strong> window, select <strong>&quot;Empty&quot;</strong> and click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/15emtpy-web-role.png?raw=true" alt="Emtpy Web Role">
+</p></li>
+<li><p><strong>TWO</strong> new projects will be added to the solution in Visual Studio.  The CloudService, and the WebRoleHost.  When you add the Cloud Service to the project, it changes the solution &quot;StartUp Project&quot; to be the cloud service.  Go back into the Solution properties and change it back to <strong>&quot;Current selection&quot;</strong></p></li>
+<li><p>Expand the <strong>CloudService</strong> project, and show the various <strong>configuration</strong> and <strong>definition</strong> files, as well as the Roles node and settings.  </p></li>
+<li><p>Highlight the http endpoint listening on Port 80.  Explain that it is that endpoint that allows http traffic on port 80 to come into the cloud service and will be load-balanced against all the Web Role instances.  </p></li>
+<li><p>Expand the <strong>WebRole</strong> project, and it's <strong>References</strong>.  Show the various <strong>Microsoft.WindowsAzure</strong>.* references.</p></li>
+<li><p>Open the <strong>WebRole.cs</strong> class file, show that it inherits from <strong>RoleEntryPoint</strong> and review the <strong>OnStart</strong> and possible <strong>Run</strong> and <strong>OnStop</strong> overrides.  Explain that <strong>Run</strong> isn't needed because <strong>IIS</strong> will be hosting our <strong>ASP.NET Application</strong> for us.     </p></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="AddWcfServceToWebRole"></a></p>
+
+<h3 id="Add_a_WCF_Service_to_the_Web_Role">Add a WCF Service to the Web Role</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>We'll add a WCF Service to our Web Role JUST like we did for the web site previously. This process is identitical.</p>
+
+<ul>
+<li><p>In the <strong>Solution Explorer&quot;, expand the &quot;LatLon.Hosts.WebRoleHost&quot; project, and right click on **References</strong>.  Add references to the LatLon.Core.Contracts and LatLon.Core.Services projects in the solution.  </p></li>
+<li><p>Add a <strong>LatLonUtilities.svc</strong> <strong>WCF Service</strong> to the <strong>LatLon.Hosts.WebRoleHost</strong> project, then <strong>delete</strong> the un-needed <strong>ILatLonUtilities.cs</strong> and <strong>LatLonUtilities.svc.cs</strong> files <strong>JUST</strong> like we did for the web site previously.  </p></li>
+<li><p>Also, just like the web site, modify the <strong>LatLonUtilities.svc</strong> to match the following: </p></li>
+</ul>
+
+<span class="codelanguage">XML</span><pre><code class="XML"><span style="color:#0000FF">&lt;</span>%@ ServiceHost Service=&quot;LatLon.Core.Services.LatLonUtilitiesService&quot;  %<span style="color:#0000FF">&gt;</span>
+</code></pre>
+
+<ul>
+<li><p>In the <strong>Solution Explorer</strong>, select the <strong>LatLon.Hosts.CloudService</strong> Project. From the menu bar select <strong>&quot;DEBUG&quot;</strong> | <strong>&quot;Start Without Debugging&quot;</strong> or press <strong>Ctrl+F5</strong>.  You should see the Azure Compute and Storage emulators start, and the browser windows should appear, and say that it can't load a page.  That is because our WebRoleHost project doesn't have a default document.  </p></li>
+<li><p>Add <strong>LatLonUtilities.svc</strong> to the end of the URL in the browser, and verify that the service page loads (eg: http://localhost/LatLonUtilities.svc).  Change any loopback address to <strong>&quot;localhost&quot;</strong> :</p>
+
+<p><img src="images/16service-in-web-role-emulator.png?raw=true" alt="Service In Web Role Emulator">
+</p></li>
+<li><p>Copy the URL from the browser, and back in Visual Studio, re-configure the LatLon.Clients.Win81Client's LatLonWcf service reference to point to the URL of the service running in the compute emulator.</p></li>
+<li><p>Run the LatLon.Clients.Win81Client, click the &quot;Get Distances&quot; button and verify that it works.</p></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="PublishTheCloudService"></a></p>
+
+<h3 id="Publish_the_Cloud_Service_to_Windows_Azure">Publish the Cloud Service to Windows Azure</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>We've built a Cloud Service with a Web Role, and tested it locally in the Compute Emulator. Now, let's publish it into Azure.  The process is very similar to how we publised a Web Site, but there some different choices to make with cloud Services</p>
+
+<ul>
+<li><p>Open the <strong>Windows Azure Management Portal</strong> (<a href="https://manage.windowsazure.com">https://manage.windowsazure.com</a>) in the browser, and review the current list of Cloud Services.  </p></li>
+<li><p>Mention that you could create a cloud service manually here, but we will create one on the fly as part of the publishing process in Visual Studio.</p></li>
+<li><p>In the <strong>Solultion Explorer</strong>, right-click the <strong>&quot;LatLon.Hosts.CloudService&quot;</strong> project and select <strong>&quot;Publish...&quot;</strong>.  Sign in as needed.  </p></li>
+<li><p>In the <strong>&quot;Publish Windows Azure Application&quot;</strong> window,</p>
+
+<ul>
+<li><strong>&quot;Sign In&quot;</strong>: sign in and select the subscription you want to publish to </li>
+<li><strong>&quot;Settings&quot;</strong>: Create a new cloud service named LatLonDemo (ish) in your region.  Leave all the other options at default.  (You can enable Remote Desktop if you like, and demo it if time allows.  I enabled it for LatLon.cloudapp.app.  devuser/P@ssw1rd).</li>
+<li>Show, but don't change the advanced settings.</li>
+<li><strong>&quot;Summary&quot;</strong>: click <strong>&quot;Publish&quot;</strong></li>
+</ul></li>
+<li><p><strong><em>The publish process will take some time (5-10minutes)</em></strong>.  You can review the process in the <strong>&quot;Windows Azure Activity Log&quot;</strong> window in Visual Studio.</p></li>
+<li><p>Once the publish process is complete (or better yet, if you have one pre-published), <strong>navigate to the cloud service url, and to the LatLonUtilities.svc</strong> service (<a href="http://latlon.cloudapp.net/LatLonUtilities.svc">http://latlon.cloudapp.net/LatLonUtilities.svc</a>), and verify that the service page comes up. </p></li>
+<li><p>In the Solution Explorer, reconfigure the LatLonWcf service reference to point to the service running in the Web Role and verify that it works. </p></li>
+</ul>
+
+<h2 id="Host_the_Service_in_an_Azure_Worker_Role">Host the Service in an Azure Worker Role</h2>
+
+<!-- ======================================================================= -->
+
+<p><a name="AddAWorkerRole"></a></p>
+
+<h3 id="Add_a_Worker_Role_to_the_Cloud_Service">Add a Worker Role to the Cloud Service</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>We started this demo with our service being hosted by a console application.  Again, recall most any managed application (.NET app) can be a service host.  In this demo, we'll create a Worker Role, which is really a .NET Class library.  We'll write code in the Worker Role's RoleEntryPoint.Run() method to startup a WCF service and keep it running.  </p>
+
+<ul>
+<li><p>In the <strong>Solution Explorer</strong>, expand the <strong>&quot;LatLon.Hosts.CloudService&quot;</strong> project, then <strong>right-click</strong> on the <strong>&quot;Roles&quot;</strong> node, and select <strong>&quot;Add&quot;</strong> | <strong>&quot;New Worker Role Project...&quot;</strong>.  </p></li>
+<li><p>In the <strong>&quot;Add new .NET Framework 4.5 Role Project&quot;</strong> window, select the <strong>&quot;Worker Role&quot;</strong> project template, and name the new project <strong>&quot;LatLon.Hosts.WorkerRoleHost&quot;</strong> and click <strong>&quot;Add&quot;</strong></p>
+
+<p><img src="images/17add-worker-role.png?raw=true" alt="Add Worker Role">
+</p></li>
+<li><p>Review the contents of the Worker Role project.  Specifically the <strong>References</strong> to the <strong>Microsoft.WindowsAzure</strong>.* assemblies, and the <strong>WorkerRole.cs</strong> class definition and it's <strong>Run</strong> and <strong>OnStart</strong> overrides.</p></li>
+<li><p><strong>Add references</strong> to the <strong>LatLon.Core.Contracts</strong> and <strong>LatLon.Core.Services</strong> projects as well as to the <strong>System.ServiceModel</strong> assembly</p></li>
+<li><p>We need to add a setting and a couple of endpoints to our Worker role's configuration.  </p></li>
+<li><p>In the <strong>&quot;Solution Explorer&quot;</strong>, expand <strong>&quot;LatLon.Hosts.CloudService&quot;</strong> | <strong>&quot;Roles&quot;</strong> and double click on <strong>&quot;LatLon.Hosts.WorkerRoleHost&quot;</strong> to open it's configuration.   </p>
+
+<ul>
+<li>Switch to the <strong>&quot;Settings&quot;</strong> page, ensure that the <strong>&quot;Service Configuration&quot;</strong> drop down is set to <strong>&quot;All Configurations&quot;</strong> and click the <strong>&quot;Add Setting&quot;</strong> button.  Name the new setting <strong>&quot;Domain&quot;</strong> and give it a value of <strong>&quot;localhost&quot;</strong>:</li>
+</ul>
+
+<p><img src="images/18add-domain-setting.png?raw=true" alt="Add Domain Setting">
+</p></li>
+<li><p>Next, change the <strong>&quot;Service Configuration&quot;</strong> to <strong>&quot;Cloud&quot;</strong> and change the <strong>&quot;Domain&quot;</strong> setting's value to the fully qualified domain name of the cloud service you published previously (eg: <strong>latlon.cloudapp.net</strong>):</p>
+
+<p><img src="images/19cloud-domain-name.png?raw=true" alt="Cloud Domain Name">
+</p></li>
+<li><p>If you have time, show the changes made to the <strong>ServiceDefinition.csdef</strong> and <strong>ServiceConfiguration.*.cscfg</strong> files for the setting</p></li>
+<li><p>Our Web role came with an http endpoint that listened on port 80.  Worker role's don't get that though.  We need to add an endpoint to allow traffic from outside the Azure Data Center to be forwarded into our Cloud Service and to our WorkerRoleHost instances.  Also, because the Web Role is already listening on port 80, we'll need to have our worker role endpoint on a different port.  </p></li>
+<li><p>Once again, open the settings for the <strong>WorkerRoleHost</strong> by clicking on it's role node in the <strong>Solution Explorer</strong></p></li>
+<li><p>Switch to the <strong>&quot;Endpoints&quot;</strong>, ensure the <strong>&quot;Service Configuration&quot;</strong> drop down is set to <strong>&quot;All Configurations&quot;</strong> (endpoints are part of the Service Definition, and there is only one version of that), click the <strong>&quot;Add Endpoint&quot;</strong> button and create a new endpoint with the following values:</p>
+
+<ul>
+<li><strong>Name:</strong> WcfTcpPort </li>
+<li><strong>Type:</strong> Input</li>
+<li><strong>Protocol:</strong> tcp</li>
+<li><strong>Public Port:</strong> 8081</li>
+</ul>
+
+<p><img src="images/20worker-role-endpoint.png?raw=true" alt="Worker Role Endpoint">
+</p></li>
+<li><p>If you change any of the values from those descrbed above make sure the remember the differences so you can modify the code later.  It is recommended that you don't make any changes though to eliminate confusion.  </p></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="ImplementWorkerRolehost"></a></p>
+
+<h3 id="Implement_the_Worker_Role_Host">Implement the Worker Role Host</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>We have the configuration updated to meet our needs, now let's write some code.  We'll modify the WorkerRole.Run() method to start a ServiceHost and listen on the domain name and port we just specified in configuraiton files. </p>
+
+<ul>
+<li>In the <strong>&quot;Solution Explorer</strong>, expand the <strong>&quot;LatLon.Hosts.WorkerRoleHost&quot;</strong> project and double click the <strong>&quot;WorkerRole.cs&quot;</strong> code file to open it. All of our changes will take place inside the <strong>Run()</strong> method</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#008000">//The initial Run() method code:</span>
+<span style="color:#0000FF">public</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">void</span> Run()
+{
+  <span style="color:#008000">// This is a sample worker implementation. Replace with your logic.</span>
+  Trace.TraceInformation(<span style="color:#8B0000">&quot;LatLon.Hosts.WorkerRoleHost entry point called&quot;</span>, <span style="color:#8B0000">&quot;Information&quot;</span>);
+
+  <span style="color:#0000FF">while</span> (<span style="color:#0000FF">true</span>)
+  {
+    Thread.Sleep(10000);
+    Trace.TraceInformation(<span style="color:#8B0000">&quot;Working&quot;</span>, <span style="color:#8B0000">&quot;Information&quot;</span>);
+  }
+}
+</code></pre>
+
+<ul>
+<li><strong>Replace</strong> the <strong>Trace.TraceInformation</strong> call at the top of the method: </li>
+</ul>
+
+<!-- strike:1-3 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span class="strikeLine" style="text-decoration:line-through;"><span style="color:#008000">// This is a sample worker implementation. Replace with your logic.</span></span>
+<span class="strikeLine" style="text-decoration:line-through;">Trace.TraceInformation(<span style="color:#8B0000">&quot;LatLon.Hosts.WorkerRoleHost entry point called&quot;</span>, <span style="color:#8B0000">&quot;Information&quot;</span>);</span>
+</code></pre>
+
+<ul>
+<li><strong>with</strong>:</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#008000">//Report that the Run method has started...</span>
+Trace.TraceInformation(<span style="color:#8B0000">&quot;LatLon.WorkerRoleServiceHost entry point called&quot;</span>);
+</code></pre>
+
+<ul>
+<li><strong>Replace</strong> the <strong>infinite loop</strong> in the <strong>Run()</strong> method with code to create a <strong>ServiceHost</strong> for the <strong>LatLonUtilitiesService</strong>:</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#008000">//Create a service host for the LatLon.Core.Services.LatLonUtilitiesService </span>
+<span style="color:#0000FF">using</span> (ServiceHost host = <span style="color:#0000FF">new</span> ServiceHost(<span style="color:#0000FF">typeof</span>(LatLonUtilitiesService)))
+{
+
+  <span style="color:#008000">//Loop, sleep, report, repeat</span>
+  <span style="color:#0000FF">while</span> (<span style="color:#0000FF">true</span>)
+  {
+    Thread.Sleep(30000); <span style="color:#008000">//Sleep for 30 seconds....</span>
+    Trace.TraceInformation(<span style="color:#8B0000">&quot;Listening...&quot;</span>);
+  }
+}
+</code></pre>
+
+<ul>
+<li>Just <strong>below the open curly brace of the using</strong> statement, add the following code to <strong>retrieve the domain name from the configuration file</strong>, and to <strong>pre-define the fixed port</strong> that is used externally for the endpoint. </li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#008000">//From the configuration files. Domain should be &quot;localhost&quot; when running locally </span>
+<span style="color:#008000">//and should be the fqdn of the cloud service when running in the cloud</span>
+<span style="color:#0000FF">string</span> domainNameFixed = RoleEnvironment.GetConfigurationSettingValue(<span style="color:#8B0000">&quot;Domain&quot;</span>);
+
+<span style="color:#008000">//This is the &quot;Public Port&quot; of the &quot;WcfTcpPort&quot; input endpoint , and it is exposed </span>
+<span style="color:#008000">//by the loadbalancer on the cloud service.  Make sure the value here matches what </span>
+<span style="color:#008000">//was given the &quot;WcfTcpPort&quot; &quot;Public Port&quot; in the ServiceDefinition.csdef file. </span>
+<span style="color:#0000FF">int</span> wcfTcpPortFixed = 8081;
+</code></pre>
+
+<ul>
+<li>Next, add code to retrieve the <strong>dynamic ip address</strong> and <strong>port</strong> for the <strong>&quot;WcfTcpPort&quot;</strong> on the current WorkerRoleHost instance:</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#008000">//Each role instance will have a dynamic ip address, and a dynamic tcp port that the wcf service needs to listen on.  </span>
+<span style="color:#0000FF">string</span> ipAddressDynamic = RoleEnvironment.CurrentRoleInstance.InstanceEndpoints[<span style="color:#8B0000">&quot;WcfTcpPort&quot;</span>].IPEndpoint.Address.ToString();
+<span style="color:#0000FF">int</span> wcfTcpPortDynamic = RoleEnvironment.CurrentRoleInstance.InstanceEndpoints[<span style="color:#8B0000">&quot;WcfTcpPort&quot;</span>].IPEndpoint.Port;
+</code></pre>
+
+<ul>
+<li>Next, add code to define and add a Service Endpoint.  Explain the code:</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#008000">//Define the fixed URL that client&#39;s will use to communicate with the service.  </span>
+<span style="color:#0000FF">string</span> serviceEndpointUrl = <span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;net.tcp://{0}:{1}/LatLonUtilities&quot;</span>, domainNameFixed, wcfTcpPortFixed);
+
+<span style="color:#008000">//Create a unique url for the service endpoint given this role instance&#39;s dynamic ip address and port:</span>
+<span style="color:#0000FF">string</span> serviceListenUrl = <span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;net.tcp://{0}:{1}/LatLonUtilities&quot;</span>, ipAddressDynamic, wcfTcpPortDynamic);
+
+<span style="color:#008000">//Create a Tcp binding that will be used to communicate directly over tcp with no security required (we&#39;ll talk about security later).</span>
+NetTcpBinding tcpBinding = <span style="color:#0000FF">new</span> NetTcpBinding(SecurityMode.None);
+
+<span style="color:#008000">//finally, create an endpoint that uses the ILatLonUtilitiesService Contract, over the tcp Binding using the URLs we just built</span>
+host.AddServiceEndpoint(<span style="color:#0000FF">typeof</span>(ILatLonUtilitiesService), tcpBinding, serviceEndpointUrl, <span style="color:#0000FF">new</span> Uri(serviceListenUrl));
+</code></pre>
+
+<ul>
+<li>Add code to create a <strong>ServiceMetadataBehavior</strong> and <strong>endpoint</strong> for metadata exchange:</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#008000">// Add a metadatabehavior for client proxy generation and add it to he host&#39;s behaviors...</span>
+ServiceMetadataBehavior metadatabehavior = <span style="color:#0000FF">new</span> ServiceMetadataBehavior();
+host.Description.Behaviors.Add(metadatabehavior);
+
+<span style="color:#008000">//Create the fixed endpoint for the metadata exchange (&quot;mex&quot;) that client&#39;s will use</span>
+<span style="color:#0000FF">string</span> mexEndpointUrl = <span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;net.tcp://{0}:{1}/mex&quot;</span>, domainNameFixed, wcfTcpPortFixed);
+
+<span style="color:#008000">//Create the URL that this rol instance actually listens on give it&#39;s dynamic ip address and port</span>
+<span style="color:#0000FF">string</span> mexListenUrl = <span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;net.tcp://{0}:{1}/mex&quot;</span>, ipAddressDynamic, wcfTcpPortDynamic);
+
+<span style="color:#008000">//Create a MexTcpBinding to allow metadata to be exchanged over tcp</span>
+Binding mexBinding = MetadataExchangeBindings.CreateMexTcpBinding();
+
+<span style="color:#008000">//And create the mex endpoint, exposing the IMetadataExchange contract over the mex tcp binding, on the urls we just built. </span>
+host.AddServiceEndpoint(<span style="color:#0000FF">typeof</span>(IMetadataExchange), mexBinding, mexEndpointUrl, <span style="color:#0000FF">new</span> Uri(mexListenUrl));
+</code></pre>
+
+<ul>
+<li>Finally, <strong>open the ServiceHost</strong> and <strong>report the URLs being used</strong> to the the trace listeners:</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#008000">//Open the host and start listening!  W00t!</span>
+host.Open();
+
+<span style="color:#008000">//Report what URLs we are listening on...</span>
+Trace.TraceInformation(<span style="color:#8B0000">&quot;==========\nListening On:\n==========\n\n{0}\n{1}\n{2}\n{3}\n\n==========&quot;</span>,
+                        serviceEndpointUrl, serviceListenUrl, mexEndpointUrl, mexListenUrl);
+</code></pre>
+
+<ul>
+<li>Just in case, here is the <strong>complete code for the Run() method</strong>:</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">void</span> Run()
+{
+  <span style="color:#008000">//Report that the Run method has started...</span>
+  Trace.TraceInformation(<span style="color:#8B0000">&quot;LatLon.WorkerRoleServiceHost entry point called&quot;</span>);
+
+  <span style="color:#008000">//Create a service host for the LatLon.Core.Services.LatLonUtilitiesService </span>
+  <span style="color:#0000FF">using</span> (ServiceHost host = <span style="color:#0000FF">new</span> ServiceHost(<span style="color:#0000FF">typeof</span>(LatLonUtilitiesService)))
+  {
+    <span style="color:#008000">//From the configuration files. Domain should be &quot;localhost&quot; when running locally </span>
+    <span style="color:#008000">//and should be the fqdn of the cloud service when running in the cloud</span>
+    <span style="color:#0000FF">string</span> domainNameFixed = RoleEnvironment.GetConfigurationSettingValue(<span style="color:#8B0000">&quot;Domain&quot;</span>);
+
+    <span style="color:#008000">//This is the &quot;Public Port&quot; of the &quot;WcfTcpPort&quot; input endpoint , and it is exposed </span>
+    <span style="color:#008000">//by the loadbalancer on the cloud service.  Make sure the value here matches what </span>
+    <span style="color:#008000">//was given the &quot;WcfTcpPort&quot; &quot;Public Port&quot; in the ServiceDefinition.csdef file. </span>
+    <span style="color:#0000FF">int</span> wcfTcpPortFixed = 8081;
+
+    <span style="color:#008000">//Each role instance will have a dynamic ip address, and a dynamic tcp port that the wcf service needs to listen on.  </span>
+    <span style="color:#0000FF">string</span> ipAddressDynamic = RoleEnvironment.CurrentRoleInstance.InstanceEndpoints[<span style="color:#8B0000">&quot;WcfTcpPort&quot;</span>].IPEndpoint.Address.ToString();
+    <span style="color:#0000FF">int</span> wcfTcpPortDynamic = RoleEnvironment.CurrentRoleInstance.InstanceEndpoints[<span style="color:#8B0000">&quot;WcfTcpPort&quot;</span>].IPEndpoint.Port;
+
+    <span style="color:#008000">//Define the fixed URL that client&#39;s will use to communicate with the service.  </span>
+    <span style="color:#0000FF">string</span> serviceEndpointUrl = <span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;net.tcp://{0}:{1}/LatLonUtilities&quot;</span>, domainNameFixed, wcfTcpPortFixed);
+
+    <span style="color:#008000">//Create a unique url for the service endpoint given this role instance&#39;s dynamic ip address and port:</span>
+    <span style="color:#0000FF">string</span> serviceListenUrl = <span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;net.tcp://{0}:{1}/LatLonUtilities&quot;</span>, ipAddressDynamic, wcfTcpPortDynamic);
+
+    <span style="color:#008000">//Create a Tcp binding that will be used to communicate directly over tcp with no security required (we&#39;ll talk about security later).</span>
+    NetTcpBinding tcpBinding = <span style="color:#0000FF">new</span> NetTcpBinding(SecurityMode.None);
+
+    <span style="color:#008000">//finally, create an endpoint that uses the ILatLonUtilitiesService Contract, over the tcp Binding using the URLs we just built</span>
+    host.AddServiceEndpoint(<span style="color:#0000FF">typeof</span>(ILatLonUtilitiesService), tcpBinding, serviceEndpointUrl, <span style="color:#0000FF">new</span> Uri(serviceListenUrl));
+
+    <span style="color:#008000">// Add a metadatabehavior for client proxy generation and add it to he host&#39;s behaviors...</span>
+    ServiceMetadataBehavior metadatabehavior = <span style="color:#0000FF">new</span> ServiceMetadataBehavior();
+    host.Description.Behaviors.Add(metadatabehavior);
+
+    <span style="color:#008000">//Create the fixed endpoint for the metadata exchange (&quot;mex&quot;) that client&#39;s will use</span>
+    <span style="color:#0000FF">string</span> mexEndpointUrl = <span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;net.tcp://{0}:{1}/mex&quot;</span>, domainNameFixed, wcfTcpPortFixed);
+
+    <span style="color:#008000">//Create the URL that this rol instance actually listens on give it&#39;s dynamic ip address and port</span>
+    <span style="color:#0000FF">string</span> mexListenUrl = <span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;net.tcp://{0}:{1}/mex&quot;</span>, ipAddressDynamic, wcfTcpPortDynamic);
+
+    <span style="color:#008000">//Create a MexTcpBinding to allow metadata to be exchanged over tcp</span>
+    Binding mexBinding = MetadataExchangeBindings.CreateMexTcpBinding();
+
+    <span style="color:#008000">//And create the mex endpoint, exposing the IMetadataExchange contract over the mex tcp binding, on the urls we just built. </span>
+    host.AddServiceEndpoint(<span style="color:#0000FF">typeof</span>(IMetadataExchange), mexBinding, mexEndpointUrl, <span style="color:#0000FF">new</span> Uri(mexListenUrl));
+
+    <span style="color:#008000">//Open the host and start listening!  W00t!</span>
+    host.Open();
+
+    <span style="color:#008000">//Report what URLs we are listening on...</span>
+    Trace.TraceInformation(<span style="color:#8B0000">&quot;==========\nListening On:\n==========\n\n{0}\n{1}\n{2}\n{3}\n\n==========&quot;</span>,
+                            serviceEndpointUrl, serviceListenUrl, mexEndpointUrl, mexListenUrl);
+
+    <span style="color:#008000">//Loop, sleep, report, repeat</span>
+    <span style="color:#0000FF">while</span> (<span style="color:#0000FF">true</span>)
+    {
+      Thread.Sleep(30000); <span style="color:#008000">//Sleep for 30 seconds....</span>
+      Trace.TraceInformation(<span style="color:#8B0000">&quot;Listening...&quot;</span>);
+    }
+  }
+}
+</code></pre>
+
+<!-- ======================================================================= -->
+
+<p><a name="RunWorkerRoleInEmulator"></a></p>
+
+<h3 id="Run_the_Worker_Role_in_the_Emulator">Run the Worker Role in the Emulator</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Now, let's test the Worker Role locally in the emulator. </p>
+
+<ul>
+<li><p>In the <strong>&quot;Solution Explorer&quot;</strong>, select the <strong>&quot;LatLon.Hosts.CloudService&quot;</strong> project, then from the menu bar select <strong>&quot;DEBUG&quot;</strong> | <strong>&quot;Start Without Debugging&quot;</strong> or press <strong>Ctrl+F5</strong></p></li>
+<li><p>Once the cloud service is running, from the <strong>System tray</strong>, <strong>right-click</strong> on the <strong>emulator</strong> icon (looks like a Windows logo), and select <strong>&quot;Show Compute Emulator UI&quot;</strong>:</p>
+
+<p><img src="images/21show-emulator-ui.png?raw=true" alt="Show Emulator UI">
+</p></li>
+<li><p>In the <strong>&quot;Windows Azure Compute Emulator (Full)&quot;</strong> window, expand the <strong>LatLon.hosts.WorkerRoleHost</strong> and select it's single instance <strong>0</strong>.  </p></li>
+<li><p>Scroll in the trace output window as needed to find the list of URLs that are being listened on, and copy the URL for the <strong>net.tcp://localhost:8081/mex</strong> endpoint</p>
+
+<p><img src="images/22worker-role-in-emulator.png?raw=true" alt="Worker Role in Emulator">
+</p></li>
+<li><p>Keep the compute emulator running, and update the <strong>Win81Client</strong>'s <strong>LatLonWcf</strong> service reference to point to the URL you just copied.  Then run the Win81Client app and ensure that it can successfully call the service hosted in the Worker Role. </p></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="RePublishCloudService"></a></p>
+
+<h3 id="Re-Publish_the_Cloud_Service_to_Azure">Re-Publish the Cloud Service to Azure</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Once we have the worker role successfully running locally, we can publish it up into Azure.  Since we have already published the Cloud Service before, we can choose to either publish OVER the existing deployment, or we could publish to the &quot;Staging&quot; slot,and do a VIP swap.  To keep things simple, we will publish OVER the existing deployment and replace it with the new one.</p>
+
+<ul>
+<li><p>In the <strong>&quot;Solution Explorer&quot;</strong>, <strong>right click</strong> the <strong>&quot;LatLon.Hosts.CloudService&quot;</strong> project and select <strong>&quot;Publish...&quot;</strong></p></li>
+<li><p>In the <strong>&quot;Publish Windows Azure Application&quot;</strong> window, accept the defaults (these are the same settings we used when we published previously, so everything should be fine) and click the <strong>&quot;Publish&quot;</strong> button.</p></li>
+<li><p>In the <strong>&quot;Deployment Environment In Use&quot;</strong> window, click the <strong>&quot;Replace&quot;</strong> button to verify the overwriting of the existing deployment.  </p>
+
+<p><img src="images/23replace-confirmation.png?raw=true" alt="Replace Confirmation">
+</p></li>
+<li><p>Watch the status of the deployment in the Visual Studio <strong>&quot;Windows Azure Activity Log&quot;</strong> window until it is complete (5-10mins), or if you already have one published you can move on.  </p></li>
+<li><p><strong>Update</strong> the <strong>Win81Client</strong> project's <strong>LatLonWcf</strong> service reference with the URL to the *.cloudapp.net (eg: latlon.cloudapp.net) domain, port 8081, mex endpoint.  (eg: <strong>net.tcp://latlon.cloudapp.net:8081/mex</strong>) </p></li>
+<li><p><strong>Run the Win81Client</strong> and verify it works!  </p></li>
+<li><p><strong>WHEW!  DONE!</strong>  </p></li>
+</ul>
+
+</div>
+</body>
+</html>

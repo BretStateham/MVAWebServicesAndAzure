@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="db2da233-9596-4f13-85b8-f0852611cbff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/LatLon" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LatLonUtilitiesService.wsdl" MetadataType="Wsdl" ID="526faf05-991b-42f5-a40b-5846e9feb904" SourceId="1" SourceUrl="http://localhost:8000/LatLon?wsdl" />
+    <MetadataFile FileName="LatLon.disco" MetadataType="Disco" ID="83bb11f0-098a-4a82-baab-f9970460a451" SourceId="1" SourceUrl="http://localhost:8000/LatLon?disco" />
+    <MetadataFile FileName="LatLon.xsd" MetadataType="Schema" ID="78f8ced8-aec4-431b-bc4f-16efd69f8c80" SourceId="1" SourceUrl="http://localhost:8000/LatLon?xsd=xsd0" />
+    <MetadataFile FileName="LatLon.wsdl" MetadataType="Wsdl" ID="b223ad37-8ae7-452a-9508-375e20feb1c3" SourceId="1" SourceUrl="http://localhost:8000/LatLon?wsdl=wsdl0" />
+    <MetadataFile FileName="LatLon1.xsd" MetadataType="Schema" ID="4860ccbc-81ca-45ea-809e-d31fa6646894" SourceId="1" SourceUrl="http://localhost:8000/LatLon?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

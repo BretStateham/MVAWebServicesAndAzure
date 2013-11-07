@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="LatLon.Hosts.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2013-10.2.2">
+  <Role name="LatLon.Hosts.WebRoleHost">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=appgen;AccountKey=lvl0mcanBHHZfmhO5ZjDXLPWnRjDYFcIAjcky7axSPjDBup2LGHs8ve1s+3EHjsz6on1QM7niiiTZTDHim1zOg==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="devuser" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEHoPhWpprCCnQSWJqgj5b24wDQYJKoZIhvcNAQEBBQAEggEAmkgRtx77yFHr7kUvJBrWBsXsVXFBnEhsG45lj4mdDQtakKv/BSttzWp58OKzjbL1o067onU2eJYK49liEcEvyewAkUa+3SJxuMucju4V+H+xgjKsQZCqD5wShwU9lcMhZIcWlVvZpl7dRsj+COxT+t8AfgJGn+0CqHIdEMmQKU4R3UyR213yQYiawqJYogQLULjXLf1f1p6A5HjNRJwFQ3PqItCX3Gf0B5Abv5PTJUaLCmfIzCM0Re7GwTgZnWwGyz5vWRy+5xplYZw70ve5aFo+3PGmCduX25oVvSLD+BcwP4EEd3uWkgc/mcl0r5mPF7XAmMVLFXzYdkFs1a5njTAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECNMRxGFWlcVrgBA3frFVeCLXPUHEUDEsEGZZ" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-11-06T23:59:59.0000000-08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="C5B5F57CC94F3172DE1069BFE439478601138F12" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

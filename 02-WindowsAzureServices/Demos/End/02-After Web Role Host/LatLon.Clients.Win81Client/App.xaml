@@ -1,0 +1,11 @@
+﻿<Application
+    x:Class="LatLon.Clients.Win81Client.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LatLon.Clients.Win81Client">
+
+  <Application.Resources>
+    <x:String x:Key="BingMapsCredentials">AtWb8v72G_Qi2C-_TKGuHl8yGwTLU_C7mTM5NRgruXC6amw6QUox1Cpv-A1Az8eh</x:String>
+  </Application.Resources>
+
+</Application>
