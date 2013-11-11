@@ -7,14 +7,13 @@
     <title></title>
 </head>
 <body>
-    <h1>Positions:</h1>
+    <h1><asp:Label ID="TitleLabel" runat="server" Text="Positions:" /></h1>
     <form id="form1" runat="server">
     <div>
       <asp:GridView ID="PositionsGrid" runat="server" AutoGenerateColumns="True" CellPadding="4" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-
-          <asp:HyperLinkField DataNavigateUrlFields="Latitude,Longitude" DataNavigateUrlFormatString="http://maps.bing.com/?q={0},{1}" HeaderText="Map Link" Text="Map Link" />
+          <asp:HyperLinkField HeaderText="Map Link" Text="map" DataNavigateUrlFields="Latitude,Longitude" DataNavigateUrlFormatString="http://maps.bing.com/?q={0},{1}" Target="_blank" />
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
