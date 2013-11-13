@@ -11,39 +11,505 @@ body{font-family:helvetica, arial, freesans, clean, sans-serif;color:#333;line-h
 <div class="markdown-body">
 <p><a name="Title"></a></p>
 
-<h1 id="MODULE_TITLE_Demo_Snippets">!!MODULE TITLE!! Demo Snippets</h1>
+<h1 id="Data_Access_Demo_Snippets">Data Access Demo Snippets</h1>
 
 <hr>
 
 <h2 id="FOR_ALL_DEMOS_MAKE_SURE_YOU_ARE_RUNNING_ON_WINDOWS_81_AND_VISUAL_STUDIO_2013_WITH_THE_WINDOWS_AZURE_SDK_22_OR_LATER__YOU_MUST_ALSO_RUN_VISUAL_STUDIO_2013_AS_ADMINISTRATOR">FOR ALL DEMOS, MAKE SURE YOU ARE RUNNING ON WINDOWS 8.1, AND VISUAL STUDIO 2013 WITH THE WINDOWS AZURE SDK 2.2 OR LATER.  YOU MUST ALSO RUN VISUAL STUDIO 2013 AS ADMINISTRATOR</h2>
 
-<h4 id="Demo_Name">Demo Name:</h4>
+<h4 id="Querying_Data_with_ADONET">Querying Data with ADO.NET:</h4>
 
 <ul>
-<li><a href="#TaskTitle">Task Title</a></li>
+<li><a href="#CreatePositionsDatabase">Create Positions Database</a></li>
+<li><a href="#SqlDataReaderDemo">SqlDataReader Demo</a></li>
+</ul>
+
+<h4 id="LINQ_to_Objects_Demo">LINQ to Objects Demo:</h4>
+
+<ul>
+<li><a href="#SortArraysWithLinq">Sort Arrays with LINQ</a></li>
+<li><a href="#FilterArraysWithLinq">Filter Arrays With LINQ</a></li>
+<li><a href="#LinqAndExtensionMethods">LINQ and Extension Methods</a></li>
+</ul>
+
+<h4 id="Process_XML_with_the_DOM">Process XML with the DOM:</h4>
+
+<ul>
+<li><a href="#WalkTheDOM">Walk the DOM</a></li>
+<li><a href="#GetXMLFromSQLServer">Get XML From SQL Server</a></li>
+</ul>
+
+<h4 id="Process_XML_with_the_LINQ_to_XML">Process XML with the LINQ to XML:</h4>
+
+<ul>
+<li><a href="#ProcessXMLWithLINQ">Process XML with LINQ</a></li>
+<li><a href="#LINQtoXMLProjections">LINQ to XML Projections</a></li>
 </ul>
 
 <hr>
 
-<h2 id="Demo_Name">Demo Name</h2>
+<h2 id="Querying_Data_with_ADONET">Querying Data with ADO.NET</h2>
 
 <!-- ======================================================================= -->
 
-<p><a name="TaskTitle"></a></p>
+<p><a name="CreatePositionsDatabase"></a></p>
 
-<h3 id="Task_Title">Task Title</h3>
+<h3 id="Create_Positions_Database">Create Positions Database</h3>
 
 <!-- ======================================================================= -->
 
 <hr>
 
-<p>Simple Description</p>
+<p>You need to create the Positions database.  You can do this either on a non-Azure SQL instance of SQL Server or in an Azure SQL Database.  The Assets folder contains appropriate scripts depending on which environment you wish to use.  The demo assumes an Azure SQL Database.  </p>
 
 <ul>
-<li><p>Step 1</p></li>
-<li><p>Step 2</p></li>
-<li><p>Step 3</p></li>
+<li><p>Login to the <strong>Azure Management Portal</strong> and <strong>create a new Azure SQL Database</strong> named <strong>&quot;Positions&quot;</strong>.  You can create the database on an existing server or create a new one, whichever you choose.  </p></li>
+<li><p>If you create a new SQL Server instance, <strong>add a firewall rule to allow connections from your workstation</strong>. </p></li>
+<li><p>Connect to the Azure SQL Database using <strong>SSMS</strong> from your <strong>development workstation</strong> and run the appropriate <strong>database creation script</strong> from the <strong>&quot;\Assets\Database&quot;</strong> folder:</p>
+
+<ul>
+<li><strong>&quot;Create Position Tables Only (Azure).sql&quot;</strong> if using Azure SQL Database</li>
+<li><strong>&quot;Create Position Tables and Database (local).sql&quot;</strong> if using a non-Azure db</li>
+</ul></li>
+<li><p>In <strong>SSMS's &quot;Object Explorer&quot;</strong> window, inspect the structure of the new database.  </p>
+
+<ul>
+<li><strong>Tables</strong>:
+
+<ul>
+<li>dbo.Cruises</li>
+<li>dbo.Places</li>
+<li>dbo.Positions</li>
+<li>dbo.TimeZones</li>
+</ul></li>
+<li><strong>Views</strong>:
+
+<ul>
+<li>dbo.PositionDetails</li>
+</ul></li>
+<li><strong>Stored Procedures</strong>:
+
+<ul>
+<li>dbo.GetCruiseDetailsProc</li>
+</ul></li>
+</ul></li>
 </ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="SqlDataReaderDemo"></a></p>
+
+<h3 id="SqlDataReader_Demo">SqlDataReader Demo</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>In this demo, we'll create a quick Console Application, then a Web applicaiton demo to show how ADO.NET can be used to retrieve data...</p>
+
+<ul>
+<li><p>Open Visual Studio 2013</p></li>
+<li><p>Create a new <strong>Windows Console App</strong> project named <strong>&quot;DataAccessDemos&quot;</strong>, put it in the <strong>&quot;\Demos\Begin&quot;</strong> folder for this demo. </p></li>
+<li><p>In the <strong>Solution Explorer</strong>, expand <strong>DataAccessDemos</strong> | <strong>References</strong> and show the exsting <strong>System.Data</strong> reference. </p></li>
+<li><p>Open Program.cs</p></li>
+<li><p>Add a class member named connectionString.  </p></li>
+<li><p>Open the database in the Azure Management portal, and on the Quick Start page (the cloud with the lightning bolt), copy the ADO.NET connection string.</p></li>
+<li><p>Initialize the connectionString variable to the string copied from the portal.  Set the password.  </p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">static</span> <span style="color:#0000FF">string</span> connectionString = <span style="color:#8B0000">&quot;&lt;paste connection string here&gt;&quot;</span>;
+</code></pre>
+
+<ul>
+<li><p>Create a new method named SqlDataReaderDemo() and call it from Main();</p></li>
+<li><p>Add code to wait for the user to press enter at the end of Main();</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">  Console.WriteLine(<span style="color:#8B0000">&quot;Press ENTER to continue...&quot;</span>);
+  Console.ReadLine();
+</code></pre>
+
+<ul>
+<li>Add the following code for SqlDataReaderDemo() fixing the <servername>, <login> and <password> place holders in the connection string as required:</password></login></servername></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">
+<span style="color:#0000FF">using</span> System;
+<span style="color:#0000FF">using</span> System.Collections.Generic;
+<span style="color:#0000FF">using</span> System.Data.SqlClient;
+<span style="color:#0000FF">using</span> System.Linq;
+<span style="color:#0000FF">using</span> System.Text;
+<span style="color:#0000FF">using</span> System.Threading.Tasks;
+
+<span style="color:#0000FF">namespace</span> DataAccessDemos
+{
+  <span style="color:#0000FF">class</span> Program
+  {
+
+    <span style="color:#0000FF">static</span> <span style="color:#0000FF">string</span> connectionString = <span style="color:#8B0000">&quot;Server=tcp:&lt;SERVERNAME&gt;.database.windows.net,1433;Database=Positions;User ID=&lt;LOGIN&gt;@&lt;SERVERNAME&gt;;Password=&lt;PASSWORD&gt;;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;&quot;</span>;
+
+    <span style="color:#0000FF">static</span> <span style="color:#0000FF">void</span> Main(<span style="color:#0000FF">string</span>[] args)
+    {
+      SqlDataReaderDemo();
+
+      Console.WriteLine(<span style="color:#8B0000">&quot;\nPress ENTER to continue...&quot;</span>);
+      Console.ReadLine();
+    }
+
+    <span style="color:#0000FF">private</span> <span style="color:#0000FF">static</span> <span style="color:#0000FF">void</span> SqlDataReaderDemo()
+    {
+      <span style="color:#0000FF">using</span> (SqlConnection connection = <span style="color:#0000FF">new</span> SqlConnection(connectionString))
+      {
+        <span style="color:#0000FF">using</span> (SqlCommand command = <span style="color:#0000FF">new</span> SqlCommand(<span style="color:#8B0000">&quot;SELECT TOP 10 PositionID, ReportedAt, Latitude, Longitude FROM dbo.Positions;&quot;</span>, connection))
+        {
+          connection.Open();
+          <span style="color:#0000FF">using</span> (SqlDataReader reader = command.ExecuteReader())
+          {
+            <span style="color:#0000FF">while</span> (reader.Read())
+            {
+              Console.WriteLine(<span style="color:#8B0000">&quot;{0}\t{1}\t{2:N9}\t{3:N9}&quot;</span>, reader[0], reader[1], reader[2], reader[3]);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+</code></pre>
+
+<h2 id="LINQ_to_Objects_Demo">LINQ to Objects Demo</h2>
+
+<!-- ======================================================================= -->
+
+<p><a name="SortArraysWithLinq"></a></p>
+
+<h3 id="Sort_Arrays_with_LINQ">Sort Arrays with LINQ</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Demonstrate how LINQ can be used to process data in memory.  You will conitnue working with the DataAccessDemos project started in the previous demo. </p>
+
+<ul>
+<li><p>In Main, comment out the call to SqlDataReaderDemo, and make a call to a new method named LINQToObjectsDemo() and let VS generate the method stub</p></li>
+<li><p>Add the following code to process an array of names in LINQ:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">private</span> <span style="color:#0000FF">static</span> <span style="color:#0000FF">void</span> LINQToObjectsDemo()
+{
+  <span style="color:#0000FF">string</span>[] names = { <span style="color:#8B0000">&quot;Jeremy&quot;</span>,<span style="color:#8B0000">&quot;Michael&quot;</span>,<span style="color:#8B0000">&quot;Adam&quot;</span>,<span style="color:#8B0000">&quot;Jerry&quot;</span>,<span style="color:#8B0000">&quot;Bruno&quot;</span>,<span style="color:#8B0000">&quot;Bret&quot;</span> };
+}
+</code></pre>
+
+<ul>
+<li><p>Comment out the &quot;using System.Linq&quot; namespace import at the top, and inspect which methods are avialable on the names array variable. </p></li>
+<li><p>Uncomment the &quot;using System.Linq&quot; namespace import, and again inspect the list of methods available on the names array variable. </p></li>
+<li><p>Modify the LINQToObjectsDemo() to match:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">private</span> <span style="color:#0000FF">static</span> <span style="color:#0000FF">void</span> LINQToObjectsDemo()
+{
+  <span style="color:#0000FF">string</span>[] names = { <span style="color:#8B0000">&quot;Jeremy&quot;</span>,<span style="color:#8B0000">&quot;Michael&quot;</span>,<span style="color:#8B0000">&quot;Adam&quot;</span>,<span style="color:#8B0000">&quot;Jerry&quot;</span>,<span style="color:#8B0000">&quot;Bruno&quot;</span>,<span style="color:#8B0000">&quot;Bret&quot;</span> };
+
+  <span style="color:#0000FF">var</span> results = from name <span style="color:#0000FF">in</span> names
+                orderby name
+                select name;
+
+  <span style="color:#0000FF">foreach</span>(<span style="color:#0000FF">string</span> name <span style="color:#0000FF">in</span> results)
+    Console.WriteLine(name);
+
+}
+</code></pre>
+
+<!-- ======================================================================= -->
+
+<p><a name="FilterArraysWithLinq"></a></p>
+
+<h3 id="Filter_Arrays_With_LINQ">Filter Arrays With LINQ</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Continue working with the LINQToObjectsDemo method from above. </p>
+
+<ul>
+<li><p>Add a where clause to include only names with an B in them:</p>
+
+<!-- mark:2 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">var</span> results = from name <span style="color:#0000FF">in</span> names
+<strong class="markLine">          where name.Contains(&#39;B&#39;)</strong>
+          orderby name
+          select name;
+</code></pre></li>
+<li><p>First, run the method, and verify that only Bret and Bruno are returned</p></li>
+<li><p>Place a breakpoint on the foreach statement.  Run the app, and step through the execution.  Show that the code steps back up into the LINQ query to evaluate each member</p></li>
+<li><p>Modify the query to first have a query, then re-filter the query with a where extension method. </p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">      <span style="color:#0000FF">var</span> results = from name <span style="color:#0000FF">in</span> names
+                    select name;
+
+      results = results.Where(n =&gt; n.Contains(&#39;B&#39;)).OrderBy(n =&gt; n);
+</code></pre>
+
+<ul>
+<li><p>Again, you can step through the execution to see the compsable query and deferred execution</p></li>
+<li><p>Make a final edit to get rid of the &quot;Comprehension Syntax&quot; query and use purely extension methods:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">var</span> results = names.Where(n =&gt; n.Contains(&#39;B&#39;)).OrderBy(n =&gt; n).Select(n =&gt; n);
+</code></pre>
+
+<!-- ======================================================================= -->
+
+<p><a name="LinqAndExtensionMethods"></a></p>
+
+<h3 id="LINQ_and_Extension_Methods">LINQ and Extension Methods</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Show how Extension methods can be used to create your own custom operators on types</p>
+
+<ul>
+<li>Put the LINQ query back to the original:</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">var</span> results = from name <span style="color:#0000FF">in</span> names
+              orderby name
+              select name;
+</code></pre>
+
+<ul>
+<li><p>Then, modify it to return names that have even lengths...</p>
+
+<!-- mark:2 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">var</span> results = from name <span style="color:#0000FF">in</span> names
+<strong class="markLine">          where name.Length % 2 == 0</strong>
+          orderby name
+          select name;
+</code></pre></li>
+<li><p>The problem with the query above is that it isn't obvious what is being asked. </p></li>
+<li><p>We can clarify that with extension methods. </p></li>
+<li><p>Add a new class file to the project named <strong>StringExtensions.cs</strong> and add the following code for the class:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">
+<span style="color:#0000FF">namespace</span> DataAccessDemos
+{
+  <span style="color:#0000FF">public</span> <span style="color:#0000FF">static</span> <span style="color:#0000FF">class</span> StringExtensions
+  {
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">static</span> <span style="color:#0000FF">bool</span> HasEvenLength(<span style="color:#0000FF">this</span> <span style="color:#0000FF">string</span> Source)
+    {
+      <span style="color:#0000FF">return</span> Source.Length % 2 == 0;
+    }
+  }
+}
+
+</code></pre>
+
+<ul>
+<li>Then modify the query to match:
+&lt;!-- mark:2 --&gt;
+<code>C#
+var results = from name in names
+          where name.HasEvenLength()
+          orderby name
+          select name;
+</code></li>
+</ul>
+
+<h2 id="Process_XML_with_the_DOM">Process XML with the DOM</h2>
+
+<!-- ======================================================================= -->
+
+<p><a name="GetXMLFromSQLServer"></a></p>
+
+<h3 id="Get_XML_From_SQL_Server">Get XML From SQL Server</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>In order to demo processing XML, we need to get some XML.  One cool way to get XML data is from relational data in SQL Server.  </p>
+
+<ul>
+<li><p>In SSMS, connect to the Positions database we created earlier. </p></li>
+<li><p>Open the <strong>&quot;\Assets\Database\Return Positions as XML.sql&quot;</strong> script, and ensure that you are connected to the database. </p></li>
+<li><p>Show the queries in the script file.  Run each, and show that the first one returns ALL positions (1183 of them) as XML elements.  The second one returns just a sample (100 at most).  </p></li>
+<li><p>There are pre-made XML files in the <strong>&quot;\Assets\Database&quot;</strong> directory.  They correspond to those two result sets.   </p></li>
+<li><p>In Visual Studio Solution Explorer, right click the &quot;DataAccessDemos&quot; project and select <strong>&quot;Add&quot;</strong> | <strong>&quot;Existing item...&quot;</strong>, then browse to and add the <strong>&quot;Assets\Database\Positions Sample.xml&quot;</strong> file (need to set file filter to include *.xml)</p></li>
+<li><p>With the XML file selected in the Solution Explorer, go to the <strong>&quot;Properties&quot;</strong> window and set the <strong>&quot;Copy to Output Directory&quot;</strong> property to <strong>&quot;Copy if newer&quot;</strong></p></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="WalkTheDOM"></a></p>
+
+<h3 id="Walk_the_DOM">Walk the DOM</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>We'll write some code to process XML by &quot;Walking the DOM&quot;.  </p>
+
+<ul>
+<li>Comment out the LINQToObjectsDemo() method call in Main()</li>
+<li><p>Add, and stub out, a new method call to WalkTheDOMDemo()</p></li>
+<li><p>Add the following code (build up to it if possible, to walk the DOM)</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">private</span> <span style="color:#0000FF">static</span> <span style="color:#0000FF">void</span> WalkTheDOMDemo()
+{
+  XmlDocument doc = <span style="color:#0000FF">new</span> XmlDocument();
+  doc.Load(<span style="color:#8B0000">&quot;Positions Sample.xml&quot;</span>);
+
+  <span style="color:#0000FF">var</span> root = doc.DocumentElement;
+
+  RecurseNode(root,0);
+
+}
+
+<span style="color:#0000FF">private</span> <span style="color:#0000FF">static</span> <span style="color:#0000FF">void</span> RecurseNode(XmlNode Node, <span style="color:#0000FF">int</span> Level)
+{
+  Console.WriteLine(<span style="color:#8B0000">&quot;{0}{1}&quot;</span>,<span style="color:#0000FF">new</span> <span style="color:#0000FF">string</span>(&#39; &#39;,Level),Node.Name);
+
+  <span style="color:#0000FF">if</span>(Node.Attributes != <span style="color:#0000FF">null</span>)
+    <span style="color:#0000FF">foreach</span>(XmlAttribute attr <span style="color:#0000FF">in</span> Node.Attributes)
+      Console.WriteLine(<span style="color:#8B0000">&quot;{0}{1}&quot;</span>, <span style="color:#0000FF">new</span> <span style="color:#0000FF">string</span>(&#39; &#39;, Level), attr.Name);
+
+  <span style="color:#0000FF">foreach</span> (XmlNode child <span style="color:#0000FF">in</span> Node.ChildNodes)
+    RecurseNode(child, Level+1);
+}
+</code></pre>
+
+<ul>
+<li>Blech! Right?!?</li>
+</ul>
+
+<h2 id="Process_XML_with_the_LINQ_to_XML">Process XML with the LINQ to XML</h2>
+
+<!-- ======================================================================= -->
+
+<p><a name="ProcessXMLWithLINQ"></a></p>
+
+<h3 id="Process_XML_with_LINQ">Process XML with LINQ</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Ok, now, let's take a look at LINQ to XML.  So cool.  Wish we had more time to talk about it!  </p>
+
+<ul>
+<li>Comment out the WalkTheDOMDemo() method call in Main()</li>
+<li><p>Make, and stub out, a call to LINQtoXmlDemo();</p></li>
+<li><p>Add the following code for the LINQtoXmlDemo() method:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">private</span> <span style="color:#0000FF">static</span> <span style="color:#0000FF">void</span> LINQtoXMLDemo()
+{
+  XDocument doc = XDocument.Load(<span style="color:#8B0000">&quot;Positions Sample.xml&quot;</span>);
+
+  <span style="color:#0000FF">var</span> cruise2 = from p <span style="color:#0000FF">in</span> doc.Root.Elements(<span style="color:#8B0000">&quot;Position&quot;</span>)
+                where (<span style="color:#0000FF">int</span>?)p.Attribute(<span style="color:#8B0000">&quot;CruiseID&quot;</span>) == 2
+                select p;
+
+}
+</code></pre>
+
+<ul>
+<li><p>Step through the code execution and show the value of cruise2 after it executes.  </p></li>
+<li><p>Tell me that's not cool! Come on!</p></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="LINQtoXMLProjections"></a></p>
+
+<h3 id="LINQ_to_XML_Projections">LINQ to XML Projections</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Show how easy it is to use LINQ Projections to turn the XML result from above into a collection of ANONYMOUS objects...</p>
+
+<ul>
+<li><p>Modify the query above to project positions into anonymous types</p></li>
+<li><p>Add a foreach loop to display to the positions in the console:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">
+<span style="color:#0000FF">var</span> cruise2 = from p <span style="color:#0000FF">in</span> doc.Root.Elements(<span style="color:#8B0000">&quot;Position&quot;</span>)
+              where (<span style="color:#0000FF">int</span>?)p.Attribute(<span style="color:#8B0000">&quot;CruiseID&quot;</span>) == 2
+              select <span style="color:#0000FF">new</span>
+              {
+                PositionID = (<span style="color:#0000FF">int</span>?)p.Attribute(<span style="color:#8B0000">&quot;PositionID&quot;</span>),
+                CruiseID = (<span style="color:#0000FF">int</span>?)p.Attribute(<span style="color:#8B0000">&quot;CruiseID&quot;</span>),
+                ReportedAt = (DateTime?)p.Element(<span style="color:#8B0000">&quot;ReportedAt&quot;</span>),
+                Latitude = (<span style="color:#0000FF">double</span>?)p.Element(<span style="color:#8B0000">&quot;Latitude&quot;</span>),
+                Longitude = (<span style="color:#0000FF">double</span>?)p.Element(<span style="color:#8B0000">&quot;Longitude&quot;</span>)
+              };
+
+<span style="color:#0000FF">foreach</span>(<span style="color:#0000FF">var</span> p <span style="color:#0000FF">in</span> cruise2)
+  Console.WriteLine(<span style="color:#8B0000">&quot;{0}\t{1}\t{2}\t{3:N9}\t{4:N9}&quot;</span>, p.PositionID, p.CruiseID, p.ReportedAt, p.Latitude, p.Longitude);
+
+</code></pre>
+
+<ul>
+<li>Time permitting, add a new class to the project name Position.cs.  Here is the code for it:</li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">
+<span style="color:#0000FF">using</span> System;
+
+<span style="color:#0000FF">namespace</span> DataAccessDemos
+{
+  <span style="color:#0000FF">public</span> <span style="color:#0000FF">class</span> Position
+  {
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">int</span>? PositionID { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">int</span>? CruiseID { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }
+    <span style="color:#0000FF">public</span> DateTime? ReportedAt { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span>? Latitude { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span>? Longitude { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }
+
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">string</span> ToString()
+    {
+      <span style="color:#0000FF">return</span> <span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;{0}\t{1}\t{2}\t{3:N9}\t{4:N9}&quot;</span>, PositionID, CruiseID, ReportedAt, Latitude, Longitude);
+    }
+  }
+}
+
+</code></pre>
+
+<ul>
+<li>Modify the query and projection above to project to the new Position class. </li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">
+<span style="color:#0000FF">var</span> cruise2 = from p <span style="color:#0000FF">in</span> doc.Root.Elements(<span style="color:#8B0000">&quot;Position&quot;</span>)
+              where (<span style="color:#0000FF">int</span>?)p.Attribute(<span style="color:#8B0000">&quot;CruiseID&quot;</span>) == 2
+              select <span style="color:#0000FF">new</span> Position
+              {
+                PositionID = (<span style="color:#0000FF">int</span>?)p.Attribute(<span style="color:#8B0000">&quot;PositionID&quot;</span>),
+                CruiseID = (<span style="color:#0000FF">int</span>?)p.Attribute(<span style="color:#8B0000">&quot;CruiseID&quot;</span>),
+                ReportedAt = (DateTime?)p.Element(<span style="color:#8B0000">&quot;ReportedAt&quot;</span>),
+                Latitude = (<span style="color:#0000FF">double</span>?)p.Element(<span style="color:#8B0000">&quot;Latitude&quot;</span>),
+                Longitude = (<span style="color:#0000FF">double</span>?)p.Element(<span style="color:#8B0000">&quot;Longitude&quot;</span>)
+              };
+
+<span style="color:#0000FF">foreach</span>(<span style="color:#0000FF">var</span> p <span style="color:#0000FF">in</span> cruise2)
+  Console.WriteLine(p);
+
+</code></pre>
 
 </div>
 </body>
