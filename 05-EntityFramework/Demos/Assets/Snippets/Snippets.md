@@ -1,1588 +1,397 @@
 ﻿<a name="Title" />
-# !!MODULE TITLE!! Demo Snippets #
+# Entity Framework Demo Snippets #
 ---
 
 ##FOR ALL DEMOS, MAKE SURE YOU ARE RUNNING ON WINDOWS 8.1, AND VISUAL STUDIO 2013 WITH THE WINDOWS AZURE SDK 2.2 OR LATER.  YOU MUST ALSO RUN VISUAL STUDIO 2013 AS ADMINISTRATOR##
 
-#### Demo Name: ####
+#### Database First Demo: ####
 
- - [Task Title](#TaskTitle)
+ - [Open the Demo Project](#OpenDemoProject)
+ - [Add Entity Model Using Designer](#AddModelInDesigner)
+ - [Consume from WPF](#ConsumeFromWPF)
 
+#### Code First Demo: ####
 
----
-
-
-
-
-
-
-
-
-
-
-
-## Demo Name ##
-
-
-
-
-
-
-
-
-
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
+ - [Add a Position Class to EFDemos.CodeFirst](#AddPositionClass)
+ - [Add Entity Framwork from NuGet](#AddEntityFrameworkFromNuGet)
+ - [Add the PositionsContenxt DbContext Class](#AddPositionsContextClass)
+ - [Consume the Code First Model from WPF](#ConsumeCodeFirstModelFromWPF)
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
-
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
+#### WCF Data Services Demo: ####
 
- - Step 1
+ - [Create Model In Designer Again](#CreateModelInDesignerAgain)
+ - [Add the Microsoft.OData.EntityFrameworkProvider Pre-Release NuGet Package](#AddMicrosoftODataEntityFrameworkProviderPackage)
+ - [Consume the WCF Data Service in the Browser](#ConsumeWcfDataServiceInBrowser)
+ - [Consume the WCF Data Service in the WPF Client](#ConsumeWcfDataServiceInWPFClient)
 
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
 ---
 
-Simple Description
 
- - Step 1
 
- - Step 2
 
- - Step 3
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
 
- - Step 1
-
- - Step 2
-
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
 
-Simple Description
 
- - Step 1
 
- - Step 2
 
- - Step 3
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+## Database First Demo ##
 
-Simple Description
 
- - Step 1
 
- - Step 2
 
- - Step 3
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
 
-Simple Description
 
- - Step 1
 
- - Step 2
 
- - Step 3
 
 <!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
+<a name="OpenDemoProject" />
+### Open the Demo Project ###
 <!-- ======================================================================= -->
 ---
 
-Simple Description
+For this demo, there is a pre-written demo project.  
 
- - Step 1
+ - Open the "\Demos\Begin\EFDemos\EFDemos.sln" solution in Visual Studio 2013
 
- - Step 2
+ - Review the contents of the solution
 
- - Step 3
+  - EFDemos.DatabaseFirst
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+  - EFDemos.CodeFirst
 
-Simple Description
+  - EFDemos.WcfDataSvc
 
- - Step 1
+  - EFDemos.WcfDataClient
 
- - Step 2
+ - Open the EFDemos.DatabaseFirst project and review it's contents:
 
- - Step 3
+  - MainPage.xaml has the basic UI.   A Button and a List View.
+ 
+  - MainPage.xaml.cs has no code other than an empty event handler. 
 
 <!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
+<a name="AddModelInDesigner" />
+### Add Entity Model Using Designer ###
 <!-- ======================================================================= -->
 ---
 
-Simple Description
+Add an Entity Data Model to the project using the designer.
 
- - Step 1
+ - Right-click the EFDemos.DatabaseFirst Project, and select "Add" | "New Item..."
 
- - Step 2
+ - Pick "Data" | "ADO.NET Entity Data Model".  Name the model PositionsEntityModel.edmx
+  - Generate from Database
+  - Connect to your Azure SQL Positions Database (re-create using the method from the previous lab if needed) 
+  - Let it save the password in the conneciton string. 
+  - Name the connection string "PositionsContext".  This also becomes the name of the DbContext.
+  - Choose Entity Framwork 6.0
+  - Include all the tables, and leave the pluralize, etc. at defaults.
 
- - Step 3
+ - Rename "Cruis" to "Cruise", reposition entities and do a build.  
+ - Review the generated code, etc. 
 
 <!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
+<a name="ConsumeFromWPF" />
+### Consume from WPF ###
 <!-- ======================================================================= -->
 ---
-
-Simple Description
 
- - Step 1
+Write code to use the Entity Framework
 
- - Step 2
+ - In the EFDemos.DatabaseFirst project, open MainPage.xaml.cs.  
 
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+ - Modify the GetPositionsButton_Click event handler to match:
 
-Simple Description
+````C#
 
- - Step 1
+private void GetPositionsButton_Click(object sender, RoutedEventArgs e)
+{
+  PositionsContext ctx = new PositionsContext();
 
- - Step 2
+  var positions = (from p in ctx.Positions
+                    where p.CruiseID == 1
+                    orderby p.ReportedAt
+                    select p).Take(5);
 
- - Step 3
+  PositionsList.ItemsSource = positions.ToList();
+}
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+````
 
-Simple Description
 
- - Step 1
 
- - Step 2
+ - Run the EFDemos.DatabaseFirst project and ensure the data displays.  
 
- - Step 3
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
 
-Simple Description
 
- - Step 1
 
- - Step 2
 
- - Step 3
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
 
-Simple Description
 
- - Step 1
 
- - Step 2
 
- - Step 3
+## Code First Demo ##
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
 
-Simple Description
 
- - Step 1
 
- - Step 2
 
- - Step 3
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
 
-Simple Description
 
- - Step 1
 
- - Step 2
 
- - Step 3
 
 <!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
+<a name="AddPositionClass" />
+### Add a Position Class to EFDemos.CodeFirst ###
 <!-- ======================================================================= -->
 ---
 
-Simple Description
+First, well add a "Plain Old CLR Class" (POCO) class to the CodeFirst demo project
 
- - Step 1
+ - Open the EFDemos.CodeFirst project in Solution Explorer
 
- - Step 2
+ - Add a new class file named Position.cs
 
- - Step 3
+ - Add the following code to the class definition:
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+````C#
 
-Simple Description
+namespace EFDemos.CodeFirst
+{
+  public class Position
+  {
+    public int PositionID { get; set; }
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+  }
+}
 
- - Step 1
+````
 
- - Step 2
 
- - Step 3
+ - Do a Build to make sure everything is working
 
 <!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
+<a name="AddEntityFrameworkFromNuGet" />
+### Add Entity Framwork from NuGet ###
 <!-- ======================================================================= -->
 ---
 
-Simple Description
+Add the Entity Framework package from NuGet
 
- - Step 1
+ - Right-click the EFDemos.CodeFirst project in the Solution Explorer, and select "Manage NuGet Packages..."
 
- - Step 2
+ - Search for Online for "EntityFramework" and click "Install"
 
- - Step 3
-
 <!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
+<a name="AddPositionsContextClass" />
+### Add the PositionsContenxt DbContext Class ###
 <!-- ======================================================================= -->
 ---
-
-Simple Description
 
- - Step 1
+Add a PositionsContext class that derives from the DbContext base class
 
- - Step 2
+ - Add a new class to the project named PositionsContext.cs
 
- - Step 3
+ - Add the following code to the class.  
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+````C#
 
-Simple Description
+using System.Data.Entity;
 
- - Step 1
+namespace EFDemos.CodeFirst
+{
+  public class PositionsContext : DbContext
+  {
+    public DbSet<Position> Positions { get; set; }
+  }
+}
 
- - Step 2
+````
 
- - Step 3
 
 <!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
+<a name="ConsumeCodeFirstModelFromWPF" />
+### Consume the Code First Model from WPF ###
 <!-- ======================================================================= -->
 ---
-
-Simple Description
 
- - Step 1
+Add code to MainPage.xaml.cs to consume the model...
 
- - Step 2
+ - Open MainPage.xaml.cs 
 
- - Step 3
+ - Modify the AddPosition_Click event handler to match:
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
-
-Simple Description
+````C#
 
- - Step 1
+private void AddPosition_Click(object sender, RoutedEventArgs e)
+{
+  using (PositionsContext ctx = new PositionsContext())
+  {
+    double latitude = double.TryParse(LatitudeText.Text, out latitude) ? latitude : 0;
+    double longitude = double.TryParse(LongitudeText.Text, out longitude) ? longitude : 0;
+    Position position = new Position
+    {
+      Latitude = latitude,
+      Longitude = longitude
+    };
+    ctx.Positions.Add(position);
+    ctx.SaveChanges();
 
- - Step 2
+    PositionsList.ItemsSource = ctx.Positions.ToList();
 
- - Step 3
-
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+  }
+}
 
-Simple Description
+````
 
- - Step 1
+ - Set EFDemos.CodeFirst as the startup project, and debug to confirm it works. 
 
- - Step 2
 
- - Step 3
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
 
-Simple Description
 
- - Step 1
 
- - Step 2
 
- - Step 3
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
 
-Simple Description
 
- - Step 1
 
- - Step 2
+## WCF Data Services Demo ##
 
- - Step 3
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
 
-Simple Description
 
- - Step 1
 
- - Step 2
 
- - Step 3
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
 
-Simple Description
 
- - Step 1
 
- - Step 2
 
- - Step 3
 
 <!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
+<a name="CreateModelInDesignerAgain" />
+### Create Model In Designer Again ###
 <!-- ======================================================================= -->
 ---
 
-Simple Description
+In the EFDemos.WcfDataSvc project, create an ADO.NET Entity Data Model using the designer EXACTLY like we did in the Database First demo.  
 
- - Step 1
+ - Make sure to fix up "Cruise"
+ - Make sure to name the connection string "PositionsContext"
 
- - Step 2
-
- - Step 3
-
 <!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
+<a name="AddMicrosoftODataEntityFrameworkProviderPackage" />
+### Add the Microsoft.OData.EntityFrameworkProvider Pre-Release NuGet Package ###
 <!-- ======================================================================= -->
 ---
-
-Simple Description
-
- - Step 1
 
- - Step 2
+WCF Data Service 5.6 needs some help to create a DataService on a DbContext rather than an ObjectContext.  Currently (as of 11/13/2013) this is done by installing the icrosoft.OData.EntityFrameworkProvider Pre-Release NuGet Package.
 
- - Step 3
+ - Right-click the EFDemos.WcfDataSvc project and select "Manage NuGet Packages"
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+ - Make sure to select "Include Prerelease" (not "Stable") from the drop down at the top of the window
 
-Simple Description
+ - Search Online for Microsoft.OData.EntityFrameworkProvider
 
- - Step 1
+ - Select the "WCF Data Services Entity Framework Provider" and click Install.
 
- - Step 2
+ - Add a new "WCF Data Service 5.6" file to the project named PositionsService.svc
 
- - Step 3
+ - Modify the code to match:
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+````C#
 
-Simple Description
+using System.Data.Services;
+using System.Data.Services.Common;
+using System.Data.Services.Providers;
 
- - Step 1
+namespace EFDemos.WcfDataSvc
+{
+    public class PositionsService : EntityFrameworkDataService< PositionsContext >
+    {
+        // This method is called only once to initialize service-wide policies.
+        public static void InitializeService(DataServiceConfiguration config)
+        {
+            // TODO: set rules to indicate which entity sets and service operations are visible, updatable, etc.
+            // Examples:
+             config.SetEntitySetAccessRule("*", EntitySetRights.All); //Don't do this!  Be more restrictive!
+            // config.SetServiceOperationAccessRule("MyServiceOperation", ServiceOperationRights.All);
+            config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V3;
+        }
+    }
+}
 
- - Step 2
+````
 
- - Step 3
+ - Do a build, and fix any errors. 
 
 <!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
+<a name="ConsumeWcfDataServiceInBrowser" />
+### Consume the WCF Data Service in the Browser ###
 <!-- ======================================================================= -->
 ---
-
-Simple Description
-
- - Step 1
 
- - Step 2
+Test the service out in the browser...
 
- - Step 3
+ - Set the EFDemos.WcfDataSvc project to be startup project
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+ - Set the PositionsService.svc to be the startup page
 
-Simple Description
+ - Debug the service.  
 
- - Step 1
+ - The browser should open, and a default service result should display
 
- - Step 2
+ - Try some OData queries (Fix the port):
 
- - Step 3
+  - http://localhost:<PORT>/PositionsService.svc/Cruises
+  - http://localhost:<PORT>/PositionsService.svc/Positions(1)
+  - http://localhost:<PORT>/PositionsService.svc/Positions(1)?$expand=Place
+  - http://localhost:<PORT>/PositionsService.svc/Positions?$expand=Place&$filter=Place/AdminName eq 'Bimini'
 
 <!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
+<a name="ConsumeWcfDataServiceInWPFClient" />
+### Consume the WCF Data Service in the WPF Client ###
 <!-- ======================================================================= -->
 ---
 
-Simple Description
+Consume the WCF Data Service from the WPF Client.
 
- - Step 1
+ - Stop debuggin any existing sessions.
 
- - Step 2
+ - Open the EFDemos.WcfDataClient Project
 
- - Step 3
+ - Right-click "References" and select "Add Service Reference..."
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+ - Click the dropdown arrow next to "Discove" and select "Services in Solution"
 
-Simple Description
+ - The PositionService.svc service should be found.  Copy the URL for it to the clipboard and save it somewhere.  You'll need it in a bit. 
 
- - Step 1
+ - Name the service reference PositionsService and click "OK"
 
- - Step 2
+ - Update the MainPage.xaml.cs GetPositionsButton_Click event handler to match the following.  Make sure though to update the service URI with the one you copied for the service just a couple of steps back.:
 
- - Step 3
+````C#
 
-<!-- ======================================================================= -->
-<a name="TaskTitle" />
-### Task Title ###
-<!-- ======================================================================= -->
----
+      PositionsContext ctx = new PositionsContext(new Uri("<PASTE SERVICE URI FROM ABOVE"));
 
-Simple Description
+      var positions = (from p in ctx.Positions
+                       where p.CruiseID == 1
+                       orderby p.ReportedAt descending
+                       select p).Take(5);
 
- - Step 1
+      PositionsList.ItemsSource = positions.ToList();
 
- - Step 2
+````
 
- - Step 3
+ - Start a debug session in Visual Studio to re-start the WcfDataSvc project.  Then in the solution explorer, right click the WcfDataClient project and choose "Debug" | "Start new instance"
 

@@ -1,0 +1,21 @@
+﻿<Window x:Class="EFDemos.DesignFirst.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Orientation="Vertical">
+    <Button x:Name="GetPositionsButton" Content="Get Positions" Margin="10" Click="GetPositionsButton_Click" />
+    <ListView x:Name="PositionsList" Margin="10">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextBlock>
+            <TextBlock.Inlines>
+              <Run Text="{Binding PositionID}" /> (
+              <Run Text="{Binding Latitude}" /> ,
+              <Run Text="{Binding Longitude}" /> )
+            </TextBlock.Inlines>
+          </TextBlock>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackPanel>
+</Window>

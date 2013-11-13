@@ -1,0 +1,87 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="PositionsModel" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Cruise">
+        <Key>
+          <PropertyRef Name="CruiseID" />
+        </Key>
+        <Property Name="CruiseID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="StartDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="EndDate" Type="Edm.DateTime" />
+        <Property Name="CurrentTrip" Type="Edm.Boolean" Nullable="false" />
+        <NavigationProperty Name="Positions" Relationship="PositionsModel.Cruise_Positions_Position_Cruise" ToRole="Position_Cruise" FromRole="Cruise_Positions" />
+      </EntityType>
+      <EntityType Name="Place">
+        <Key>
+          <PropertyRef Name="PlaceID" />
+        </Key>
+        <Property Name="PlaceID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CountryCode" Type="Edm.String" />
+        <Property Name="CountryName" Type="Edm.String" />
+        <Property Name="AdminCode" Type="Edm.String" />
+        <Property Name="AdminName" Type="Edm.String" />
+        <NavigationProperty Name="Positions" Relationship="PositionsModel.Place_Positions_Position_Place" ToRole="Position_Place" FromRole="Place_Positions" />
+      </EntityType>
+      <EntityType Name="Position">
+        <Key>
+          <PropertyRef Name="PositionID" />
+        </Key>
+        <Property Name="PositionID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ReportedAt" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="Latitude" Type="Edm.Single" />
+        <Property Name="Longitude" Type="Edm.Single" />
+        <Property Name="DistanceFromLast" Type="Edm.Single" Nullable="false" />
+        <Property Name="CruiseID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PlaceID" Type="Edm.Int32" />
+        <Property Name="TimeZoneID" Type="Edm.Int32" />
+        <NavigationProperty Name="Cruise" Relationship="PositionsModel.Cruise_Positions_Position_Cruise" ToRole="Cruise_Positions" FromRole="Position_Cruise" />
+        <NavigationProperty Name="Place" Relationship="PositionsModel.Place_Positions_Position_Place" ToRole="Place_Positions" FromRole="Position_Place" />
+        <NavigationProperty Name="TimeZone" Relationship="PositionsModel.Position_TimeZone_TimeZone_Positions" ToRole="TimeZone_Positions" FromRole="Position_TimeZone" />
+      </EntityType>
+      <EntityType Name="TimeZone">
+        <Key>
+          <PropertyRef Name="TimeZoneID" />
+        </Key>
+        <Property Name="TimeZoneID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TimeZoneName" Type="Edm.String" />
+        <Property Name="GMTOffset" Type="Edm.Decimal" Nullable="false" />
+        <Property Name="DSTOffset" Type="Edm.Decimal" Nullable="false" />
+        <NavigationProperty Name="Positions" Relationship="PositionsModel.Position_TimeZone_TimeZone_Positions" ToRole="Position_TimeZone" FromRole="TimeZone_Positions" />
+      </EntityType>
+      <Association Name="Cruise_Positions_Position_Cruise">
+        <End Type="PositionsModel.Position" Role="Position_Cruise" Multiplicity="*" />
+        <End Type="PositionsModel.Cruise" Role="Cruise_Positions" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Place_Positions_Position_Place">
+        <End Type="PositionsModel.Position" Role="Position_Place" Multiplicity="*" />
+        <End Type="PositionsModel.Place" Role="Place_Positions" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Position_TimeZone_TimeZone_Positions">
+        <End Type="PositionsModel.TimeZone" Role="TimeZone_Positions" Multiplicity="0..1" />
+        <End Type="PositionsModel.Position" Role="Position_TimeZone" Multiplicity="*" />
+      </Association>
+    </Schema>
+    <Schema Namespace="EFDemos.WcfDataSvc" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="PositionsContext" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Cruises" EntityType="PositionsModel.Cruise" />
+        <EntitySet Name="Places" EntityType="PositionsModel.Place" />
+        <EntitySet Name="Positions" EntityType="PositionsModel.Position" />
+        <EntitySet Name="TimeZones" EntityType="PositionsModel.TimeZone" />
+        <AssociationSet Name="FK_Positions_Cruises" Association="PositionsModel.Cruise_Positions_Position_Cruise">
+          <End Role="Cruise_Positions" EntitySet="Cruises" />
+          <End Role="Position_Cruise" EntitySet="Positions" />
+        </AssociationSet>
+        <AssociationSet Name="FK_Positions_Places" Association="PositionsModel.Place_Positions_Position_Place">
+          <End Role="Place_Positions" EntitySet="Places" />
+          <End Role="Position_Place" EntitySet="Positions" />
+        </AssociationSet>
+        <AssociationSet Name="FK_Positions_TimeZones" Association="PositionsModel.Position_TimeZone_TimeZone_Positions">
+          <End Role="Position_TimeZone" EntitySet="Positions" />
+          <End Role="TimeZone_Positions" EntitySet="TimeZones" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

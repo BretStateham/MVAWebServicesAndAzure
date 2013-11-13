@@ -11,38 +11,393 @@ body{font-family:helvetica, arial, freesans, clean, sans-serif;color:#333;line-h
 <div class="markdown-body">
 <p><a name="Title"></a></p>
 
-<h1 id="MODULE_TITLE_Demo_Snippets">!!MODULE TITLE!! Demo Snippets</h1>
+<h1 id="Entity_Framework_Demo_Snippets">Entity Framework Demo Snippets</h1>
 
 <hr>
 
 <h2 id="FOR_ALL_DEMOS_MAKE_SURE_YOU_ARE_RUNNING_ON_WINDOWS_81_AND_VISUAL_STUDIO_2013_WITH_THE_WINDOWS_AZURE_SDK_22_OR_LATER__YOU_MUST_ALSO_RUN_VISUAL_STUDIO_2013_AS_ADMINISTRATOR">FOR ALL DEMOS, MAKE SURE YOU ARE RUNNING ON WINDOWS 8.1, AND VISUAL STUDIO 2013 WITH THE WINDOWS AZURE SDK 2.2 OR LATER.  YOU MUST ALSO RUN VISUAL STUDIO 2013 AS ADMINISTRATOR</h2>
 
-<h4 id="Demo_Name">Demo Name:</h4>
+<h4 id="Database_First_Demo">Database First Demo:</h4>
 
 <ul>
-<li><a href="#TaskTitle">Task Title</a></li>
+<li><a href="#OpenDemoProject">Open the Demo Project</a></li>
+<li><a href="#AddModelInDesigner">Add Entity Model Using Designer</a></li>
+<li><a href="#ConsumeFromWPF">Consume from WPF</a></li>
+</ul>
+
+<h4 id="Code_First_Demo">Code First Demo:</h4>
+
+<ul>
+<li><a href="#AddPositionClass">Add a Position Class to EFDemos.CodeFirst</a></li>
+<li><a href="#AddEntityFrameworkFromNuGet">Add Entity Framwork from NuGet</a></li>
+<li><a href="#AddPositionsContextClass">Add the PositionsContenxt DbContext Class</a></li>
+<li><a href="#ConsumeCodeFirstModelFromWPF">Consume the Code First Model from WPF</a></li>
+</ul>
+
+<h4 id="WCF_Data_Services_Demo">WCF Data Services Demo:</h4>
+
+<ul>
+<li><a href="#CreateModelInDesignerAgain">Create Model In Designer Again</a></li>
+<li><a href="#AddMicrosoftODataEntityFrameworkProviderPackage">Add the Microsoft.OData.EntityFrameworkProvider Pre-Release NuGet Package</a></li>
+<li><a href="#ConsumeWcfDataServiceInBrowser">Consume the WCF Data Service in the Browser</a></li>
+<li><a href="#ConsumeWcfDataServiceInWPFClient">Consume the WCF Data Service in the WPF Client</a></li>
 </ul>
 
 <hr>
 
-<h2 id="Demo_Name">Demo Name</h2>
+<h2 id="Database_First_Demo">Database First Demo</h2>
 
 <!-- ======================================================================= -->
 
-<p><a name="TaskTitle"></a></p>
+<p><a name="OpenDemoProject"></a></p>
 
-<h3 id="Task_Title">Task Title</h3>
+<h3 id="Open_the_Demo_Project">Open the Demo Project</h3>
 
 <!-- ======================================================================= -->
 
 <hr>
 
-<p>Simple Description</p>
+<p>For this demo, there is a pre-written demo project.  </p>
 
 <ul>
-<li><p>Step 1</p></li>
-<li><p>Step 2</p></li>
-<li><p>Step 3</p></li>
+<li><p>Open the &quot;\Demos\Begin\EFDemos\EFDemos.sln&quot; solution in Visual Studio 2013</p></li>
+<li><p>Review the contents of the solution</p>
+
+<ul>
+<li>EFDemos.DatabaseFirst</li>
+<li>EFDemos.CodeFirst</li>
+<li>EFDemos.WcfDataSvc</li>
+<li>EFDemos.WcfDataClient</li>
+</ul></li>
+<li><p>Open the EFDemos.DatabaseFirst project and review it's contents:</p>
+
+<ul>
+<li>MainPage.xaml has the basic UI.   A Button and a List View.</li>
+<li>MainPage.xaml.cs has no code other than an empty event handler. </li>
+</ul></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="AddModelInDesigner"></a></p>
+
+<h3 id="Add_Entity_Model_Using_Designer">Add Entity Model Using Designer</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Add an Entity Data Model to the project using the designer.</p>
+
+<ul>
+<li><p>Right-click the EFDemos.DatabaseFirst Project, and select &quot;Add&quot; | &quot;New Item...&quot;</p></li>
+<li><p>Pick &quot;Data&quot; | &quot;ADO.NET Entity Data Model&quot;.  Name the model PositionsEntityModel.edmx</p>
+
+<ul>
+<li>Generate from Database</li>
+<li>Connect to your Azure SQL Positions Database (re-create using the method from the previous lab if needed) </li>
+<li>Let it save the password in the conneciton string. </li>
+<li>Name the connection string &quot;PositionsContext&quot;.  This also becomes the name of the DbContext.</li>
+<li>Choose Entity Framwork 6.0</li>
+<li>Include all the tables, and leave the pluralize, etc. at defaults.</li>
+</ul></li>
+<li><p>Rename &quot;Cruis&quot; to &quot;Cruise&quot;, reposition entities and do a build.  </p></li>
+<li><p>Review the generated code, etc. </p></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="ConsumeFromWPF"></a></p>
+
+<h3 id="Consume_from_WPF">Consume from WPF</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Write code to use the Entity Framework</p>
+
+<ul>
+<li><p>In the EFDemos.DatabaseFirst project, open MainPage.xaml.cs.  </p></li>
+<li><p>Modify the GetPositionsButton_Click event handler to match:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">
+<span style="color:#0000FF">private</span> <span style="color:#0000FF">void</span> GetPositionsButton_Click(<span style="color:#0000FF">object</span> sender, RoutedEventArgs e)
+{
+  PositionsContext ctx = <span style="color:#0000FF">new</span> PositionsContext();
+
+  <span style="color:#0000FF">var</span> positions = (from p <span style="color:#0000FF">in</span> ctx.Positions
+                    where p.CruiseID == 1
+                    orderby p.ReportedAt
+                    select p).Take(5);
+
+  PositionsList.ItemsSource = positions.ToList();
+}
+
+</code></pre>
+
+<ul>
+<li>Run the EFDemos.DatabaseFirst project and ensure the data displays.<br></li>
+</ul>
+
+<h2 id="Code_First_Demo">Code First Demo</h2>
+
+<!-- ======================================================================= -->
+
+<p><a name="AddPositionClass"></a></p>
+
+<h3 id="Add_a_Position_Class_to_EFDemosCodeFirst">Add a Position Class to EFDemos.CodeFirst</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>First, well add a &quot;Plain Old CLR Class&quot; (POCO) class to the CodeFirst demo project</p>
+
+<ul>
+<li><p>Open the EFDemos.CodeFirst project in Solution Explorer</p></li>
+<li><p>Add a new class file named Position.cs</p></li>
+<li><p>Add the following code to the class definition:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">
+<span style="color:#0000FF">namespace</span> EFDemos.CodeFirst
+{
+  <span style="color:#0000FF">public</span> <span style="color:#0000FF">class</span> Position
+  {
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">int</span> PositionID { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span> Latitude { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">double</span> Longitude { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }
+  }
+}
+
+</code></pre>
+
+<ul>
+<li>Do a Build to make sure everything is working</li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="AddEntityFrameworkFromNuGet"></a></p>
+
+<h3 id="Add_Entity_Framwork_from_NuGet">Add Entity Framwork from NuGet</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Add the Entity Framework package from NuGet</p>
+
+<ul>
+<li><p>Right-click the EFDemos.CodeFirst project in the Solution Explorer, and select &quot;Manage NuGet Packages...&quot;</p></li>
+<li><p>Search for Online for &quot;EntityFramework&quot; and click &quot;Install&quot;</p></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="AddPositionsContextClass"></a></p>
+
+<h3 id="Add_the_PositionsContenxt_DbContext_Class">Add the PositionsContenxt DbContext Class</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Add a PositionsContext class that derives from the DbContext base class</p>
+
+<ul>
+<li><p>Add a new class to the project named PositionsContext.cs</p></li>
+<li><p>Add the following code to the class.  </p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">
+<span style="color:#0000FF">using</span> System.Data.Entity;
+
+<span style="color:#0000FF">namespace</span> EFDemos.CodeFirst
+{
+  <span style="color:#0000FF">public</span> <span style="color:#0000FF">class</span> PositionsContext : DbContext
+  {
+    <span style="color:#0000FF">public</span> DbSet&lt;Position&gt; Positions { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }
+  }
+}
+
+</code></pre>
+
+<!-- ======================================================================= -->
+
+<p><a name="ConsumeCodeFirstModelFromWPF"></a></p>
+
+<h3 id="Consume_the_Code_First_Model_from_WPF">Consume the Code First Model from WPF</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Add code to MainPage.xaml.cs to consume the model...</p>
+
+<ul>
+<li><p>Open MainPage.xaml.cs </p></li>
+<li><p>Modify the AddPosition_Click event handler to match:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">
+<span style="color:#0000FF">private</span> <span style="color:#0000FF">void</span> AddPosition_Click(<span style="color:#0000FF">object</span> sender, RoutedEventArgs e)
+{
+  <span style="color:#0000FF">using</span> (PositionsContext ctx = <span style="color:#0000FF">new</span> PositionsContext())
+  {
+    <span style="color:#0000FF">double</span> latitude = <span style="color:#0000FF">double</span>.TryParse(LatitudeText.Text, <span style="color:#0000FF">out</span> latitude) ? latitude : 0;
+    <span style="color:#0000FF">double</span> longitude = <span style="color:#0000FF">double</span>.TryParse(LongitudeText.Text, <span style="color:#0000FF">out</span> longitude) ? longitude : 0;
+    Position position = <span style="color:#0000FF">new</span> Position
+    {
+      Latitude = latitude,
+      Longitude = longitude
+    };
+    ctx.Positions.Add(position);
+    ctx.SaveChanges();
+
+    PositionsList.ItemsSource = ctx.Positions.ToList();
+
+  }
+}
+
+</code></pre>
+
+<ul>
+<li>Set EFDemos.CodeFirst as the startup project, and debug to confirm it works. </li>
+</ul>
+
+<h2 id="WCF_Data_Services_Demo">WCF Data Services Demo</h2>
+
+<!-- ======================================================================= -->
+
+<p><a name="CreateModelInDesignerAgain"></a></p>
+
+<h3 id="Create_Model_In_Designer_Again">Create Model In Designer Again</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>In the EFDemos.WcfDataSvc project, create an ADO.NET Entity Data Model using the designer EXACTLY like we did in the Database First demo.  </p>
+
+<ul>
+<li>Make sure to fix up &quot;Cruise&quot;</li>
+<li>Make sure to name the connection string &quot;PositionsContext&quot;</li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="AddMicrosoftODataEntityFrameworkProviderPackage"></a></p>
+
+<h3 id="Add_the_MicrosoftODataEntityFrameworkProvider_Pre-Release_NuGet_Package">Add the Microsoft.OData.EntityFrameworkProvider Pre-Release NuGet Package</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>WCF Data Service 5.6 needs some help to create a DataService on a DbContext rather than an ObjectContext.  Currently (as of 11/13/2013) this is done by installing the icrosoft.OData.EntityFrameworkProvider Pre-Release NuGet Package.</p>
+
+<ul>
+<li><p>Right-click the EFDemos.WcfDataSvc project and select &quot;Manage NuGet Packages&quot;</p></li>
+<li><p>Make sure to select &quot;Include Prerelease&quot; (not &quot;Stable&quot;) from the drop down at the top of the window</p></li>
+<li><p>Search Online for Microsoft.OData.EntityFrameworkProvider</p></li>
+<li><p>Select the &quot;WCF Data Services Entity Framework Provider&quot; and click Install.</p></li>
+<li><p>Add a new &quot;WCF Data Service 5.6&quot; file to the project named PositionsService.svc</p></li>
+<li><p>Modify the code to match:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">
+<span style="color:#0000FF">using</span> System.Data.Services;
+<span style="color:#0000FF">using</span> System.Data.Services.Common;
+<span style="color:#0000FF">using</span> System.Data.Services.Providers;
+
+<span style="color:#0000FF">namespace</span> EFDemos.WcfDataSvc
+{
+    <span style="color:#0000FF">public</span> <span style="color:#0000FF">class</span> PositionsService : EntityFrameworkDataService&lt; PositionsContext &gt;
+    {
+        <span style="color:#008000">// This method is called only once to initialize service-wide policies.</span>
+        <span style="color:#0000FF">public</span> <span style="color:#0000FF">static</span> <span style="color:#0000FF">void</span> InitializeService(DataServiceConfiguration config)
+        {
+            <span style="color:#008000">// TODO: set rules to indicate which entity sets and service operations are visible, updatable, etc.</span>
+            <span style="color:#008000">// Examples:</span>
+             config.SetEntitySetAccessRule(<span style="color:#8B0000">&quot;*&quot;</span>, EntitySetRights.All); <span style="color:#008000">//Don&#39;t do this!  Be more restrictive!</span>
+            <span style="color:#008000">// config.SetServiceOperationAccessRule(&quot;MyServiceOperation&quot;, ServiceOperationRights.All);</span>
+            config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V3;
+        }
+    }
+}
+
+</code></pre>
+
+<ul>
+<li>Do a build, and fix any errors. </li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="ConsumeWcfDataServiceInBrowser"></a></p>
+
+<h3 id="Consume_the_WCF_Data_Service_in_the_Browser">Consume the WCF Data Service in the Browser</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Test the service out in the browser...</p>
+
+<ul>
+<li><p>Set the EFDemos.WcfDataSvc project to be startup project</p></li>
+<li><p>Set the PositionsService.svc to be the startup page</p></li>
+<li><p>Debug the service.  </p></li>
+<li><p>The browser should open, and a default service result should display</p></li>
+<li><p>Try some OData queries (Fix the port):</p>
+
+<ul>
+<li>http://localhost:<port>/PositionsService.svc/Cruises</port></li>
+<li>http://localhost:<port>/PositionsService.svc/Positions(1)</port></li>
+<li>http://localhost:<port>/PositionsService.svc/Positions(1)?$expand=Place</port></li>
+<li>http://localhost:<port>/PositionsService.svc/Positions?$expand=Place&amp;$filter=Place/AdminName eq 'Bimini'</port></li>
+</ul></li>
+</ul>
+
+<!-- ======================================================================= -->
+
+<p><a name="ConsumeWcfDataServiceInWPFClient"></a></p>
+
+<h3 id="Consume_the_WCF_Data_Service_in_the_WPF_Client">Consume the WCF Data Service in the WPF Client</h3>
+
+<!-- ======================================================================= -->
+
+<hr>
+
+<p>Consume the WCF Data Service from the WPF Client.</p>
+
+<ul>
+<li><p>Stop debuggin any existing sessions.</p></li>
+<li><p>Open the EFDemos.WcfDataClient Project</p></li>
+<li><p>Right-click &quot;References&quot; and select &quot;Add Service Reference...&quot;</p></li>
+<li><p>Click the dropdown arrow next to &quot;Discove&quot; and select &quot;Services in Solution&quot;</p></li>
+<li><p>The PositionService.svc service should be found.  Copy the URL for it to the clipboard and save it somewhere.  You'll need it in a bit. </p></li>
+<li><p>Name the service reference PositionsService and click &quot;OK&quot;</p></li>
+<li><p>Update the MainPage.xaml.cs GetPositionsButton_Click event handler to match the following.  Make sure though to update the service URI with the one you copied for the service just a couple of steps back.:</p></li>
+</ul>
+
+<span class="codelanguage">C#</span><pre><code class="C#">
+      PositionsContext ctx = <span style="color:#0000FF">new</span> PositionsContext(<span style="color:#0000FF">new</span> Uri(<span style="color:#8B0000">&quot;&lt;PASTE SERVICE URI FROM ABOVE&quot;</span>));
+
+      <span style="color:#0000FF">var</span> positions = (from p <span style="color:#0000FF">in</span> ctx.Positions
+                       where p.CruiseID == 1
+                       orderby p.ReportedAt descending
+                       select p).Take(5);
+
+      PositionsList.ItemsSource = positions.ToList();
+
+</code></pre>
+
+<ul>
+<li>Start a debug session in Visual Studio to re-start the WcfDataSvc project.  Then in the solution explorer, right click the WcfDataClient project and choose &quot;Debug&quot; | &quot;Start new instance&quot;</li>
 </ul>
 
 </div>
