@@ -1,0 +1,48 @@
+﻿<a name="Title" />
+# !!MODULE TITLE!! Demo Snippets #
+---
+
+##FOR ALL DEMOS, MAKE SURE YOU ARE RUNNING ON WINDOWS 8.1, AND VISUAL STUDIO 2013 WITH THE WINDOWS AZURE SDK 2.2 OR LATER.  YOU MUST ALSO RUN VISUAL STUDIO 2013 AS ADMINISTRATOR##
+
+#### Demo Name: ####
+
+ - [Task Title](#TaskTitle)
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## Demo Name ##
+
+
+
+
+
+
+
+
+
+
+<!-- ======================================================================= -->
+<a name="TaskTitle" />
+### Task Title ###
+<!-- ======================================================================= -->
+---
+
+Simple Description
+
+ - Step 1
+
+ - Step 2
+
+ - Step 3
+
